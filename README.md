@@ -40,3 +40,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 `npm i @reduxjs/toolkit react-redux`
 `npm i js-cookie`
 `npm i --save-dev @types/js-cookie`
+
+## Animations
+
+`npm i framer-motion`
+
+## Icons
+
+`npm i @heroicons/react`
