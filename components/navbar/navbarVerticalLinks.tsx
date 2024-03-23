@@ -11,6 +11,7 @@ interface NavbarLinksProps {
   chevronIconRotation: boolean;
   handleLogout: () => void;
   showOptionsPracticeMenu: boolean;
+  setShowOptionsNavbar: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 function NavbarVerticalLinks({
@@ -20,6 +21,7 @@ function NavbarVerticalLinks({
   chevronIconRotation,
   handleLogout,
   showOptionsPracticeMenu,
+  setShowOptionsNavbar,
 }: NavbarLinksProps) {
   return (
     <>
@@ -42,9 +44,8 @@ function NavbarVerticalLinks({
                   </Link>
                   <ChevronDownIcon
                     className={`h-5 w-5 mb-[-3px] ${
-                      chevronIconRotation
-                        ? "rotate-180 transition-all duration-500"
-                        : ""
+                      chevronIconRotation &&
+                      "rotate-180 transition-all duration-500"
                     }`}
                   />
                 </button>
@@ -54,39 +55,45 @@ function NavbarVerticalLinks({
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    exit={{ opacity: 0, y: -20 }}
                     className="bg-white px-5 py-4 rounded-lg flex flex-col text-black gap-4"
                   >
-                    <Link
-                      href="/elegir-pensamiento"
-                      className="hover:text-dark-green-1"
-                    >
-                      Retar un pensamiento negativo
-                    </Link>
-                    <Link
-                      href="/meditaciones"
-                      className="hover:text-dark-green-1"
-                    >
-                      Hacer una meditación guiada
-                    </Link>
+                    <div onClick={() => setShowOptionsNavbar(false)}>
+                      <Link
+                        href="/elegir-pensamiento"
+                        className="hover:text-dark-green-1"
+                      >
+                        Retar un pensamiento negativo
+                      </Link>
+                    </div>
+                    <div onClick={() => setShowOptionsNavbar(false)}>
+                      <Link
+                        href="/meditaciones"
+                        className="hover:text-dark-green-1"
+                      >
+                        Hacer una meditación guiada
+                      </Link>
+                    </div>
                   </motion.div>
                 )}
-
-                <Link href="/aprender" className="hover:text-light-green">
-                  Aprender
-                </Link>
+                <div onClick={() => setShowOptionsNavbar(false)}>
+                  <Link href="/aprender" className="hover:text-light-green">
+                    Aprender
+                  </Link>
+                </div>
 
                 {name && (
                   <Link href="/seguimiento" className="hover:text-light-green">
                     Seguimiento
                   </Link>
                 )}
-                <Link
-                  href={name ? "/cuenta" : "/login"}
-                  className="hover:text-light-green"
-                >
-                  {name ? "Tu cuenta" : "Acceder"}
-                </Link>
+                <div onClick={() => setShowOptionsNavbar(false)}>
+                  <Link
+                    href={name ? "/cuenta" : "/login"}
+                    className="hover:text-light-green"
+                  >
+                    {name ? "Tu cuenta" : "Acceder"}
+                  </Link>
+                </div>
                 {name && (
                   <Link
                     href="/login"

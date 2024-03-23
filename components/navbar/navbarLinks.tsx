@@ -18,6 +18,7 @@ interface NavbarLinksProps {
   chevronIconRotation: boolean;
   handleLogout: () => void;
   showOptionsPracticeMenu: boolean;
+  handleShowOptionsNavbar: () => void;
 }
 
 function NavbarLinks({
@@ -30,6 +31,7 @@ function NavbarLinks({
   chevronIconRotation,
   handleLogout,
   showOptionsPracticeMenu,
+  handleShowOptionsNavbar,
 }: NavbarLinksProps) {
   return (
     <>
@@ -66,7 +68,7 @@ function NavbarLinks({
                 <Link href="/practicar">Practicar</Link>
                 <ChevronDownIcon className="h-5 w-5 mb-[-3px]" />
               </div>
-              <div className="absolute-menu">
+              <div className="navbar-practice-submenu">
                 <Link
                   href="/elegir-pensamiento"
                   className="hover:text-dark-green-1"
@@ -103,10 +105,7 @@ function NavbarLinks({
               </button>
             </Link>
 
-            <button
-              onClick={() => setShowOptionsNavbar(!showOptionsNavbar)}
-              className="z-20"
-            >
+            <button onClick={handleShowOptionsNavbar} className="z-20">
               <Bars3BottomRightIcon className="h-8 w-8 text-white lg:hidden block " />
             </button>
 
@@ -114,6 +113,7 @@ function NavbarLinks({
               name={name}
               handleLogout={handleLogout}
               showOptionsNavbar={showOptionsNavbar}
+              setShowOptionsNavbar={setShowOptionsNavbar}
               toggleOptionsPracticeMenu={toggleOptionsPracticeMenu}
               chevronIconRotation={chevronIconRotation}
               showOptionsPracticeMenu={showOptionsPracticeMenu}

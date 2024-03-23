@@ -6,14 +6,14 @@
 @tailwind utilities;
 
 .bg-gray-gradient {
-  @apply bg-gradient-to-b from-[#C4C3C3] to-black min-h-screen;
+  @apply bg-gradient-to-b from-[#C4C3C3] to-black;
 }
 
 .p-horizontal {
   @apply px-5;
 }
 
-.absolute-menu {
+.navbar-practice-submenu {
   position: absolute;
   top: 85px;
   right: -100px;
@@ -30,8 +30,12 @@
   pointer-events: none;
 }
 
-.relative:hover .absolute-menu,
-.relative:hover .absolute-menu > * {
+.relative:hover .navbar-practice-submenu,
+.relative:hover .navbar-practice-submenu > * {
   opacity: 1;
   pointer-events: auto;
+}
+
+.login-register-input {
+  @apply px-5 py-3 rounded-lg bg-dark border-[1px] border-white text-body-thin hover:border-light-green focus:outline-none active:outline-none;
 }

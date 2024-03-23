@@ -21,7 +21,7 @@ function Navbar() {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    const handleScrollMotion = () => {
+    const handleNavbarVisibility = () => {
       const currentScrollPosition = window.pageYOffset;
       if (
         currentScrollPosition > prevScrollPosition &&
@@ -33,37 +33,43 @@ function Navbar() {
       }
       setPrevScrollPosition(currentScrollPosition);
     };
-    window.addEventListener("scroll", handleScrollMotion);
+    window.addEventListener("scroll", handleNavbarVisibility);
     return () => {
-      window.removeEventListener("scroll", handleScrollMotion);
+      window.removeEventListener("scroll", handleNavbarVisibility);
     };
   }, [prevScrollPosition]);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScrollActivation = () => {
       if (showOptionsNavbar && window.innerWidth < 1024) {
         document.body.style.overflow = "hidden";
         setDarkBackground(true);
       } else {
         document.body.style.overflow = "auto";
         setDarkBackground(false);
+        setShowOptionsPracticeMenu(false);
       }
     };
-    handleScroll();
-    window.addEventListener("resize", handleScroll);
+    window.addEventListener("resize", handleScrollActivation);
     return () => {
-      window.removeEventListener("resize", handleScroll);
+      window.removeEventListener("resize", handleScrollActivation);
     };
   }, [showOptionsNavbar]);
 
   const handleLogout = () => {
     dispatch(logout());
+    setShowOptionsNavbar(false);
     router.push("/login");
   };
 
   const toggleOptionsPracticeMenu = () => {
     setShowOptionsPracticeMenu(!showOptionsPracticeMenu);
     setChevronIconRotation(!chevronIconRotation);
+  };
+
+  const handleShowOptionsNavbar = () => {
+    setShowOptionsPracticeMenu(false);
+    setShowOptionsNavbar(!showOptionsNavbar);
   };
 
   return (
@@ -78,6 +84,7 @@ function Navbar() {
         chevronIconRotation={chevronIconRotation}
         handleLogout={handleLogout}
         showOptionsPracticeMenu={showOptionsPracticeMenu}
+        handleShowOptionsNavbar={handleShowOptionsNavbar}
       />
     </>
   );
