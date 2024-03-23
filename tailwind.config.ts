@@ -8,46 +8,11 @@ const config: Config = {
   ],
   theme: {
     fontSize: {
-      "cover1-regular": [
-        "96px",
-        {
-          lineHeight: "140%",
-          fontWeight: "400",
-        },
-      ],
-      "cover1-medium": [
-        "96px",
-        {
-          lineHeight: "140%",
-          fontWeight: "500",
-        },
-      ],
       "cover1-semibold": [
         "96px",
         {
           lineHeight: "140%",
           fontWeight: "600",
-        },
-      ],
-      "cover1-bold": [
-        "96px",
-        {
-          lineHeight: "140%",
-          fontWeight: "700",
-        },
-      ],
-      "cover2-regular": [
-        "64px",
-        {
-          lineHeight: "140%",
-          fontWeight: "400",
-        },
-      ],
-      "cover2-medium": [
-        "64px",
-        {
-          lineHeight: "140%",
-          fontWeight: "500",
         },
       ],
       "cover2-semibold": [
@@ -57,95 +22,74 @@ const config: Config = {
           fontWeight: "600",
         },
       ],
-      "cover2-bold": [
-        "64px",
+      "heading1-thin": [
+        "36px",
         {
           lineHeight: "140%",
-          fontWeight: "700",
+          fontWeight: "400",
         },
       ],
       "heading1-regular": [
         "36px",
         {
           lineHeight: "140%",
-          fontWeight: "400",
-        },
-      ],
-      "heading1-medium": [
-        "36px",
-        {
-          lineHeight: "140%",
           fontWeight: "500",
-        },
-      ],
-      "heading1-semibold": [
-        "36px",
-        {
-          lineHeight: "140%",
-          fontWeight: "600",
         },
       ],
       "heading1-bold": [
         "36px",
         {
           lineHeight: "140%",
-          fontWeight: "700",
+          fontWeight: "600",
+        },
+      ],
+      "heading2-thin": [
+        "32px",
+        {
+          lineHeight: "140%",
+          fontWeight: "400",
         },
       ],
       "heading2-regular": [
         "32px",
         {
           lineHeight: "140%",
-          fontWeight: "400",
-        },
-      ],
-      "heading2-medium": [
-        "32px",
-        {
-          lineHeight: "140%",
           fontWeight: "500",
-        },
-      ],
-      "heading2-semibold": [
-        "32px",
-        {
-          lineHeight: "140%",
-          fontWeight: "600",
         },
       ],
       "heading2-bold": [
         "32px",
         {
           lineHeight: "140%",
-          fontWeight: "700",
+          fontWeight: "600",
         },
       ],
-      "heading3-regular": [
+      "heading3-thin": [
         "24px",
         {
           lineHeight: "140%",
           fontWeight: "400",
         },
       ],
-      "heading3-medium": [
+      "heading3-regular": [
         "24px",
         {
           lineHeight: "140%",
           fontWeight: "500",
         },
       ],
-      "heading3-semibold": [
+      "heading3-bold": [
         "24px",
         {
           lineHeight: "140%",
           fontWeight: "600",
         },
       ],
-      "heading3-bold": [
-        "24px",
+      "body-thin": [
+        "20px",
         {
           lineHeight: "140%",
-          fontWeight: "700",
+          fontWeight: "300",
         },
       ],
       "body-regular": [
@@ -155,53 +99,39 @@ const config: Config = {
           fontWeight: "400",
         },
       ],
-      "body-medium": [
-        "20px",
-        {
-          lineHeight: "140%",
-          fontWeight: "500",
-        },
-      ],
-      "body-semibold": [
+      "body-bold": [
         "20px",
         {
           lineHeight: "140%",
           fontWeight: "600",
         },
       ],
-      "body-bold": [
-        "20px",
-        {
-          lineHeight: "140%",
-          fontWeight: "700",
-        },
-      ],
-      "base-regular": [
+      "base-thin": [
         "16px",
         {
           lineHeight: "140%",
           fontWeight: "400",
         },
       ],
-      "base-medium": [
+      "base-regular": [
         "16px",
         {
           lineHeight: "140%",
           fontWeight: "500",
         },
       ],
-      "base-semibold": [
+      "base-bold": [
         "16px",
         {
           lineHeight: "140%",
           fontWeight: "600",
         },
       ],
-      "base-bold": [
-        "16px",
+      "small-thin": [
+        "14px",
         {
           lineHeight: "140%",
-          fontWeight: "700",
+          fontWeight: "300",
         },
       ],
       "small-regular": [
@@ -211,25 +141,11 @@ const config: Config = {
           fontWeight: "400",
         },
       ],
-      "small-medium": [
-        "14px",
-        {
-          lineHeight: "140%",
-          fontWeight: "500",
-        },
-      ],
-      "small-semibold": [
-        "14px",
-        {
-          lineHeight: "140%",
-          fontWeight: "600",
-        },
-      ],
       "small-bold": [
         "14px",
         {
           lineHeight: "140%",
-          fontWeight: "700",
+          fontWeight: "600",
         },
       ],
     },
@@ -245,6 +161,7 @@ const config: Config = {
         gray: "#8B8B8B",
         "light-green": "#68A576",
         "cta-green": "#0F9E2E",
+        "cta-green-hover": "#0B7C26",
         "dark-green-1": "#11421F",
         "dark-green-2": "#1A2E29",
         "gray-gradient": "C4C3C3",
