@@ -1,0 +1,12 @@
+{
+  "access-to-your-account": "Accede a tu cuenta",
+  "password": "Contraseña",
+  "did-you-forget-your-password": "¿Olvidaste tu contraseña?",
+  "email-is-mandatory": "El email es obligatorio",
+  "invalid-email": "Email invalido",
+  "password-is-required": "La contraseña es obligatoria",
+  "password-must-be-at-least-8-characters": "La contraseña debe tener al menos 8 caracteres",
+  "email-or-password-are-incorrect": "El email o la contraseña son incorrectos",
+  "continue": "Continuar",
+  "loading": "Cargando..."
+}
