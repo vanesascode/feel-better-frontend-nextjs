@@ -57,3 +57,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Forms
 
 `react-hook-form`
+
+## Internationalization
+
+`npm i i18next react-i18next i18next-resources-to-backend next-i18n-router`
