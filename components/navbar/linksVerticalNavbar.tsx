@@ -3,26 +3,28 @@
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
+import LanguageChangerVerticalNavbar from "./languageChangerVerticalNavbar";
+import { useTranslation } from "react-i18next";
 
 interface NavbarLinksProps {
   showOptionsNavbar: boolean;
   name: string | null;
-  toggleOptionsPracticeMenu: () => void;
-  chevronIconRotation: boolean;
+  setShowOptionsPracticeMenu: React.Dispatch<React.SetStateAction<boolean>>;
   handleLogout: () => void;
   showOptionsPracticeMenu: boolean;
   setShowOptionsNavbar: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-function NavbarVerticalLinks({
+function LinksVerticalNavbar({
   showOptionsNavbar,
   name,
-  toggleOptionsPracticeMenu,
-  chevronIconRotation,
+  setShowOptionsPracticeMenu,
   handleLogout,
   showOptionsPracticeMenu,
   setShowOptionsNavbar,
 }: NavbarLinksProps) {
+  const { t } = useTranslation();
+
   return (
     <>
       <AnimatePresence>
@@ -36,20 +38,21 @@ function NavbarVerticalLinks({
             >
               <div className="pt-24 pl-14 pr-10 flex flex-col gap-8">
                 <button
-                  className="flex items-center hover:text-light-green gap-3 justify-between"
-                  onClick={() => toggleOptionsPracticeMenu()}
+                  className="flex items-center hover:text-light-green justify-between"
+                  onClick={() =>
+                    setShowOptionsPracticeMenu(!showOptionsPracticeMenu)
+                  }
                 >
                   <Link href="/practicar" className="hover:text-light-green">
-                    Practicar
+                    {t("navbar:practice")}
                   </Link>
                   <ChevronDownIcon
                     className={`h-5 w-5 mb-[-3px] ${
-                      chevronIconRotation &&
+                      showOptionsPracticeMenu &&
                       "rotate-180 transition-all duration-500"
                     }`}
                   />
                 </button>
-
                 {showOptionsPracticeMenu && (
                   <motion.div
                     initial={{ opacity: 0, y: -20 }}
@@ -62,7 +65,7 @@ function NavbarVerticalLinks({
                         href="/elegir-pensamiento"
                         className="hover:text-dark-green-1"
                       >
-                        Retar un pensamiento negativo
+                        {t("navbar:challenge-a-negative-thought")}
                       </Link>
                     </div>
                     <div onClick={() => setShowOptionsNavbar(false)}>
@@ -70,20 +73,19 @@ function NavbarVerticalLinks({
                         href="/meditaciones"
                         className="hover:text-dark-green-1"
                       >
-                        Hacer una meditación guiada
+                        {t("navbar:do-a-guided-meditation")}
                       </Link>
                     </div>
                   </motion.div>
                 )}
                 <div onClick={() => setShowOptionsNavbar(false)}>
                   <Link href="/aprender" className="hover:text-light-green">
-                    Aprender
+                    {t("navbar:learn")}
                   </Link>
                 </div>
-
                 {name && (
                   <Link href="/seguimiento" className="hover:text-light-green">
-                    Seguimiento
+                    {t("navbar:follow-up")}
                   </Link>
                 )}
                 <div onClick={() => setShowOptionsNavbar(false)}>
@@ -91,7 +93,7 @@ function NavbarVerticalLinks({
                     href={name ? "/cuenta" : "/login"}
                     className="hover:text-light-green"
                   >
-                    {name ? "Tu cuenta" : "Acceder"}
+                    {name ? t("navbar:account") : t("navbar:login")}
                   </Link>
                 </div>
                 {name && (
@@ -100,9 +102,10 @@ function NavbarVerticalLinks({
                     onClick={handleLogout}
                     className="hover:text-light-green"
                   >
-                    Cerrar sesión
+                    {t("navbar:logout")}
                   </Link>
                 )}
+                <LanguageChangerVerticalNavbar />
               </div>
             </motion.div>
           </>
@@ -112,4 +115,4 @@ function NavbarVerticalLinks({
   );
 }
 
-export default NavbarVerticalLinks;
+export default LinksVerticalNavbar;
