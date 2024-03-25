@@ -1,0 +1,12 @@
+{
+  "access-to-your-account": "Log in into your account",
+  "password": "password",
+  "did-you-forget-your-password": "Did you forget your password?",
+  "email-is-mandatory": "Email is mandatory",
+  "invalid-email": "Invalid email",
+  "password-is-required": "Password is required",
+  "password-must-be-at-least-8-characters": "Password must be at least 8 characters",
+  "email-or-password-are-incorrect": "Email or password are incorrect",
+  "continue": "Continue",
+  "loading": "Loading..."
+}

@@ -15,9 +15,9 @@
 
 .navbar-practice-submenu {
   position: absolute;
-  top: 85px;
-  right: -100px;
-  left: -100px;
+  top: 78px;
+  right: -110px;
+  left: -110px;
   background-color: white;
   color: black;
   padding: 20px;
@@ -32,6 +32,29 @@
 
 .relative:hover .navbar-practice-submenu,
 .relative:hover .navbar-practice-submenu > * {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.navbar-language-submenu {
+  position: absolute;
+  top: 70px;
+  right: -15px;
+  left: -15px;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  opacity: 0;
+
+  transition: opacity 0.5s;
+  pointer-events: none;
+}
+
+.relative:hover .navbar-language-submenu,
+.relative:hover .navbar-language-submenu > * {
   opacity: 1;
   pointer-events: auto;
 }

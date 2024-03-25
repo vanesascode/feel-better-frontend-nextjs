@@ -6,7 +6,9 @@ import {
   Bars3BottomRightIcon,
   ChevronDownIcon,
 } from "@heroicons/react/24/solid";
-import NavbarVerticalLinks from "./navbarVerticalLinks";
+import LinksVerticalNavbar from "./linksVerticalNavbar";
+import { useTranslation } from "react-i18next";
+import LanguageChangerHorizontalNavbar from "./languageChangerHorizontalNavbar";
 
 interface NavbarLinksProps {
   showOptionsNavbar: boolean;
@@ -14,25 +16,25 @@ interface NavbarLinksProps {
   navbarHidden: boolean;
   darkBackground: boolean;
   name: string | null;
-  toggleOptionsPracticeMenu: () => void;
-  chevronIconRotation: boolean;
+  setShowOptionsPracticeMenu: React.Dispatch<React.SetStateAction<boolean>>;
   handleLogout: () => void;
   showOptionsPracticeMenu: boolean;
   handleShowOptionsNavbar: () => void;
 }
 
-function NavbarLinks({
+function LinksHorizontalNavbar({
   showOptionsNavbar,
   setShowOptionsNavbar,
   navbarHidden,
   darkBackground,
   name,
-  toggleOptionsPracticeMenu,
-  chevronIconRotation,
+  setShowOptionsPracticeMenu,
   handleLogout,
   showOptionsPracticeMenu,
   handleShowOptionsNavbar,
 }: NavbarLinksProps) {
+  const { t } = useTranslation();
+
   return (
     <>
       <AnimatePresence>
@@ -47,7 +49,6 @@ function NavbarLinks({
           ></motion.div>
         )}
       </AnimatePresence>
-
       <motion.nav
         variants={{ visible: { y: 0 }, hidden: { y: "-100%" } }}
         animate={navbarHidden ? "hidden" : "visible"}
@@ -65,57 +66,57 @@ function NavbarLinks({
 
             <div className="relative py-7 hidden lg:block">
               <div className="flex items-center hover:text-light-green gap-3 ">
-                <Link href="/practicar">Practicar</Link>
+                <Link href="/practicar">{t("navbar:practice")}</Link>
                 <ChevronDownIcon className="h-5 w-5 mb-[-3px]" />
               </div>
               <div className="navbar-practice-submenu">
                 <Link
                   href="/elegir-pensamiento"
-                  className="hover:text-dark-green-1"
+                  className="hover:text-cta-green-hover"
                 >
-                  Retar un pensamiento negativo
+                  {t("navbar:challenge-a-negative-thought")}
                 </Link>
-                <Link href="/meditaciones" className="hover:text-dark-green-1">
-                  Hacer una meditación guiada
+                <Link
+                  href="/meditaciones"
+                  className="hover:text-cta-green-hover"
+                >
+                  {t("navbar:do-a-guided-meditation")}
                 </Link>
               </div>
             </div>
-
             <Link
               href="/aprender"
               className="hidden lg:block hover:text-light-green"
             >
-              Aprender
+              {t("navbar:learn")}
             </Link>
-
             {name && (
               <Link
                 href="/seguimiento"
                 className="hidden lg:block hover:text-light-green"
               >
-                Seguimiento
+                {t("navbar:follow-up")}
               </Link>
             )}
           </div>
-
-          <div className="flex font-source text-body-regular">
+          <div className="flex font-source text-body-regular items-center">
             <Link href={name ? "/cuenta" : "/login"}>
               <button className="border-[1px] border-gray px-5 py-2 rounded-full hidden lg:block hover:bg-black">
-                {name ? "Tu cuenta" : "Acceder"}
+                {name ? t("navbar:account") : t("navbar:login")}
               </button>
             </Link>
-
+            <div className="ml-5">
+              <LanguageChangerHorizontalNavbar />
+            </div>
             <button onClick={handleShowOptionsNavbar} className="z-20">
-              <Bars3BottomRightIcon className="h-8 w-8 text-white lg:hidden block " />
+              <Bars3BottomRightIcon className="h-8 w-8 text-white lg:hidden block" />
             </button>
-
-            <NavbarVerticalLinks
+            <LinksVerticalNavbar
               name={name}
               handleLogout={handleLogout}
               showOptionsNavbar={showOptionsNavbar}
               setShowOptionsNavbar={setShowOptionsNavbar}
-              toggleOptionsPracticeMenu={toggleOptionsPracticeMenu}
-              chevronIconRotation={chevronIconRotation}
+              setShowOptionsPracticeMenu={setShowOptionsPracticeMenu}
               showOptionsPracticeMenu={showOptionsPracticeMenu}
             />
           </div>
@@ -125,4 +126,4 @@ function NavbarLinks({
   );
 }
 
-export default NavbarLinks;
+export default LinksHorizontalNavbar;

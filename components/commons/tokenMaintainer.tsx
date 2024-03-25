@@ -13,14 +13,14 @@ interface MyJwtPayload extends JwtPayload {
   exp: number;
 }
 
-export default function Home() {
+export default function TokenMaintainer() {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
     dispatch(maintainUserDataStoredinRedux());
   }, []);
 
-  const { name, token } = useAppSelector(selectAuth);
+  const { token } = useAppSelector(selectAuth);
 
   const extractTokenExpiration = (token: string | null) => {
     const decodedToken = decode(token || "") as MyJwtPayload;
@@ -41,11 +41,5 @@ export default function Home() {
     }
   }, [expirationTime, currentTime, dispatch]);
 
-  return (
-    <main className="bg-dark ">
-      <h1 className="text-heading2-bold text-white py-[500px] text-center">
-        Hello {name}
-      </h1>
-    </main>
-  );
+  return <></>;
 }

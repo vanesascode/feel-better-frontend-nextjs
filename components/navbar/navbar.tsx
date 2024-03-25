@@ -5,7 +5,7 @@ import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { logout } from "@/redux/features/authSlice";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import NavbarLinks from "./navbarLinks";
+import LinksHorizontalNavbar from "./linksHorizontalNavbar";
 
 function Navbar() {
   const [showOptionsNavbar, setShowOptionsNavbar] = useState<boolean>(false);
@@ -14,8 +14,6 @@ function Navbar() {
   const [navbarHidden, setNavbarHidden] = useState<boolean>(false);
   const [prevScrollPosition, setPrevScrollPosition] = useState<number>(0);
   const [darkBackground, setDarkBackground] = useState<boolean>(false);
-  const [chevronIconRotation, setChevronIconRotation] =
-    useState<boolean>(false);
   const router = useRouter();
   const { name } = useAppSelector(selectAuth);
   const dispatch = useAppDispatch();
@@ -43,28 +41,32 @@ function Navbar() {
     const handleScrollActivation = () => {
       if (showOptionsNavbar && window.innerWidth < 1024) {
         document.body.style.overflow = "hidden";
-        setDarkBackground(true);
       } else {
         document.body.style.overflow = "auto";
-        setDarkBackground(false);
-        setShowOptionsPracticeMenu(false);
       }
     };
+    handleScrollActivation();
     window.addEventListener("resize", handleScrollActivation);
     return () => {
       window.removeEventListener("resize", handleScrollActivation);
     };
   }, [showOptionsNavbar]);
 
+  useEffect(() => {
+    const handleDarkBackgroundVisualization = () => {
+      if (showOptionsNavbar && window.innerWidth < 1024) {
+        setDarkBackground(true);
+      } else {
+        setDarkBackground(false);
+      }
+    };
+    handleDarkBackgroundVisualization();
+  });
+
   const handleLogout = () => {
     dispatch(logout());
     setShowOptionsNavbar(false);
     router.push("/login");
-  };
-
-  const toggleOptionsPracticeMenu = () => {
-    setShowOptionsPracticeMenu(!showOptionsPracticeMenu);
-    setChevronIconRotation(!chevronIconRotation);
   };
 
   const handleShowOptionsNavbar = () => {
@@ -74,16 +76,15 @@ function Navbar() {
 
   return (
     <>
-      <NavbarLinks
+      <LinksHorizontalNavbar
         showOptionsNavbar={showOptionsNavbar}
         setShowOptionsNavbar={setShowOptionsNavbar}
         navbarHidden={navbarHidden}
         darkBackground={darkBackground}
         name={name}
-        toggleOptionsPracticeMenu={toggleOptionsPracticeMenu}
-        chevronIconRotation={chevronIconRotation}
         handleLogout={handleLogout}
         showOptionsPracticeMenu={showOptionsPracticeMenu}
+        setShowOptionsPracticeMenu={setShowOptionsPracticeMenu}
         handleShowOptionsNavbar={handleShowOptionsNavbar}
       />
     </>

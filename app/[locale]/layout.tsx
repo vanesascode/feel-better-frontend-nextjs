@@ -2,12 +2,11 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/redux/provider";
-import Navbar from "@/components/navbar/navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Feel Better",
-  description: "Web app to help people with chronic pain",
+  description: "Aplicación web para ayudar a gente con dolor crónico",
 };
 
 export default function RootLayout({
@@ -16,12 +15,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html>
       <body className={inter.className}>
-        <Providers>
-          <Navbar />
-          {children}{" "}
-        </Providers>
+        <Providers>{children} </Providers>
       </body>
     </html>
   );
