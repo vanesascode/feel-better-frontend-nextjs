@@ -1,8 +1,9 @@
 import { FormFields } from "@/components/login/loginLogic";
 import { SubmitHandler, useForm } from "react-hook-form";
-import CtaButton from "../commons.tsx/ctaButton";
+import CtaButton from "../commons/ctaButton";
 import { useState } from "react";
 import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
+import { useTranslation } from "react-i18next";
 
 interface LoginFormProps {
   handleSubmitLoginForm: SubmitHandler<FormFields>;
@@ -11,12 +12,12 @@ interface LoginFormProps {
 
 function LoginForm({ handleSubmitLoginForm, isLoginError }: LoginFormProps) {
   const [showPassword, setShowPassword] = useState(false);
-
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
   } = useForm<FormFields>();
+  const { t } = useTranslation();
 
   return (
     <form
@@ -24,13 +25,13 @@ function LoginForm({ handleSubmitLoginForm, isLoginError }: LoginFormProps) {
       text-body-regular text-white w-[350px]"
       onSubmit={handleSubmit(handleSubmitLoginForm)}
     >
-      <label>Email</label>
+      <label>{t("Email")}</label>
       <input
         {...register("email", {
-          required: "El email es obligatorio",
+          required: t("email-is-mandatory"),
           pattern: {
             value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-            message: "Email invalido",
+            message: t("invalid-email"),
           },
         })}
         type="text"
@@ -40,14 +41,14 @@ function LoginForm({ handleSubmitLoginForm, isLoginError }: LoginFormProps) {
       {errors.email && (
         <p className="text-red-500 text-base-regular">{errors.email.message}</p>
       )}
-      <label className="mt-4">Contraseña</label>
+      <label className="mt-4">{t("password")}</label>
       <div className="login-register-input flex justify-between items-center">
         <input
           {...register("password", {
-            required: "La contraseña es obligatoria",
+            required: t("password-is-required"),
             minLength: {
               value: 8,
-              message: "La contraseña debe tener al menos 8 caracteres.",
+              message: t("password-must-be-at-least-8-characters"),
             },
           })}
           type={showPassword ? "text" : "password"}
@@ -70,18 +71,19 @@ function LoginForm({ handleSubmitLoginForm, isLoginError }: LoginFormProps) {
           {errors.password.message}
         </p>
       )}
-
-      <p className="text-base-bold self-end mb-6">¿Olvidaste tu contraseña?</p>
+      <p className="text-base-bold self-end mb-6">
+        {t("did-you-forget-your-password")}
+      </p>
       {isLoginError && (
         <div className="flex justify-center">
           <p className="text-red-500 text-base-regular">
-            El email o la contraseña son incorrectos
+            {t("email-or-password-are-incorrect")}
           </p>
         </div>
       )}
       <div className="flex justify-center">
         <CtaButton disabled={isSubmitting} type="submit">
-          {isSubmitting ? "Cargando..." : "Continuar"}
+          {isSubmitting ? t("loading") : t("continue")}
         </CtaButton>
       </div>
     </form>
