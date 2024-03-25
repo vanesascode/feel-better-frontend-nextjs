@@ -1,0 +1,12 @@
+{
+  "access-to-your-account": "Connectez-vous à votre compte",
+  "password": "Mot de passe",
+  "did-you-forget-your-password": "Avez-vous oublié votre mot de passe?",
+  "email-is-mandatory": "L'email est obligatoire",
+  "invalid-email": "Email invalide",
+  "password-is-required": "Mot de passe requis",
+  "password-must-be-at-least-8-characters": "Mot de passe doit être d'au moins 8 caractères",
+  "email-or-password-are-incorrect": "Courriel ou mot de passe incorrect",
+  "continue": "Continuer",
+  "loading": "Chargement..."
+}
