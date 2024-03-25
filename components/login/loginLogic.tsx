@@ -16,13 +16,10 @@ export type FormFields = {
 function LoginLogic() {
   const dispatch = useAppDispatch();
   const router = useRouter();
-
   const { setError } = useForm<FormFields>();
-
   const handleSubmitLoginForm: SubmitHandler<FormFields> = async (data) => {
     await loginUser(data);
   };
-
   const [
     loginUser,
     { data: loginData, isSuccess: isLoginSuccess, isError: isLoginError },
