@@ -7,7 +7,7 @@ import i18nConfig from "@/i18nConfig";
 import { useState, useEffect } from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 
-function LanguageChangerHorizontalNavbar() {
+const LanguageChangerHorizontalNavbar = () => {
   const { i18n } = useTranslation();
   const currentLocale = i18n.language;
   const router = useRouter();
@@ -32,12 +32,12 @@ function LanguageChangerHorizontalNavbar() {
       router.refresh();
     };
     changeLanguageValue();
-  }, [languageValue, currentLocale, currentPathname, i18n, router]);
+  }, [languageValue, currentLocale]);
 
   return (
     <>
       <div className="relative py-3 hidden lg:block">
-        <div className="flex items-center gap-2 bg-dark font-source border-[1px] border-gray p-5 py-2 rounded-full  hover:bg-black outline-none active:outline-none w-300px uppercase">
+        <div className="flex items-center gap-2 bg-dark font-source border-[1px] border-gray p-5 py-2 rounded-full hover:bg-black outline-none active:outline-none w-300px uppercase transition duration-500 ease-in-out cursor-pointer">
           <div>{currentLocale}</div>
           <ChevronDownIcon className="h-5 w-5 mb-[-3px]" />
         </div>
@@ -70,6 +70,6 @@ function LanguageChangerHorizontalNavbar() {
       </div>
     </>
   );
-}
+};
 
 export default LanguageChangerHorizontalNavbar;
