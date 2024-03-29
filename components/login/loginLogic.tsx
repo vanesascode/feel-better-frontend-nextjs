@@ -13,7 +13,7 @@ export type FormFields = {
   password: string;
 };
 
-function LoginLogic() {
+const LoginLogic = () => {
   const dispatch = useAppDispatch();
   const router = useRouter();
   const { setError } = useForm<FormFields>();
@@ -48,6 +48,6 @@ function LoginLogic() {
       />
     </>
   );
-}
+};
 
 export default LoginLogic;
