@@ -22,7 +22,7 @@ interface NavbarLinksProps {
   handleShowOptionsNavbar: () => void;
 }
 
-function LinksHorizontalNavbar({
+const LinksHorizontalNavbar = ({
   showOptionsNavbar,
   setShowOptionsNavbar,
   navbarHidden,
@@ -32,7 +32,7 @@ function LinksHorizontalNavbar({
   handleLogout,
   showOptionsPracticeMenu,
   handleShowOptionsNavbar,
-}: NavbarLinksProps) {
+}: NavbarLinksProps) => {
   const { t } = useTranslation();
 
   return (
@@ -44,7 +44,7 @@ function LinksHorizontalNavbar({
             animate={{ opacity: 1 }}
             transition={{ duration: 0.35, ease: "easeInOut" }}
             exit={{ opacity: 0 }}
-            className="fixed top-0 left-0 right-0 w-full h-full bg-[#000000] bg-opacity-50 "
+            className="fixed top-0 left-0 right-0 w-full h-full bg-[#000000] bg-opacity-50 z-10"
             onClick={() => setShowOptionsNavbar(false)}
           ></motion.div>
         )}
@@ -53,9 +53,9 @@ function LinksHorizontalNavbar({
         variants={{ visible: { y: 0 }, hidden: { y: "-100%" } }}
         animate={navbarHidden ? "hidden" : "visible"}
         transition={{ duration: 0.35, ease: "easeInOut" }}
-        className="flex fixed top-0 w-full bg-dark drop-shadow-lg shadow-lg shadow-black/500 text-white p-horizontal justify-center"
+        className="flex fixed top-0 w-full bg-dark drop-shadow-lg shadow-lg shadow-black/500 text-white p-horizontal justify-center z-10"
       >
-        <div className="flex justify-between w-full max-w-[1440px] p-horizontal font-source items-center">
+        <div className="flex justify-between w-full max-w-[1440px] font-source items-center">
           <div className="flex gap-14 items-center text-body-regular">
             <button
               onClick={() => setShowOptionsNavbar(false)}
@@ -65,20 +65,20 @@ function LinksHorizontalNavbar({
             </button>
 
             <div className="relative py-7 hidden lg:block">
-              <div className="flex items-center hover:text-light-green gap-3 ">
+              <div className="flex items-center hover:text-light-green gap-3 transition duration-300 ease-in-out cursor-pointer">
                 <Link href="/practicar">{t("navbar:practice")}</Link>
                 <ChevronDownIcon className="h-5 w-5 mb-[-3px]" />
               </div>
               <div className="navbar-practice-submenu">
                 <Link
                   href="/elegir-pensamiento"
-                  className="hover:text-cta-green-hover"
+                  className="hover:text-cta-green-hover transition duration-300 ease-in-out cursor-pointer"
                 >
                   {t("navbar:challenge-a-negative-thought")}
                 </Link>
                 <Link
                   href="/meditaciones"
-                  className="hover:text-cta-green-hover"
+                  className="hover:text-cta-green-hover transition duration-300 ease-in-out cursor-pointer"
                 >
                   {t("navbar:do-a-guided-meditation")}
                 </Link>
@@ -86,14 +86,14 @@ function LinksHorizontalNavbar({
             </div>
             <Link
               href="/aprender"
-              className="hidden lg:block hover:text-light-green"
+              className="hidden lg:block hover:text-light-green transition duration-300 ease-in-out cursor-pointer"
             >
               {t("navbar:learn")}
             </Link>
             {name && (
               <Link
                 href="/seguimiento"
-                className="hidden lg:block hover:text-light-green"
+                className="hidden lg:block hover:text-light-green transition duration-300 ease-in-out cursor-pointer"
               >
                 {t("navbar:follow-up")}
               </Link>
@@ -101,7 +101,7 @@ function LinksHorizontalNavbar({
           </div>
           <div className="flex font-source text-body-regular items-center">
             <Link href={name ? "/cuenta" : "/login"}>
-              <button className="border-[1px] border-gray px-5 py-2 rounded-full hidden lg:block hover:bg-black">
+              <button className="border-[1px] border-gray px-5 py-2 rounded-full hidden lg:block hover:bg-black transition duration-500 ease-in-out">
                 {name ? t("navbar:account") : t("navbar:login")}
               </button>
             </Link>
@@ -124,6 +124,6 @@ function LinksHorizontalNavbar({
       </motion.nav>
     </>
   );
-}
+};
 
 export default LinksHorizontalNavbar;

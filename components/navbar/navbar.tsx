@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import LinksHorizontalNavbar from "./linksHorizontalNavbar";
 
-function Navbar() {
+const Navbar = () => {
   const [showOptionsNavbar, setShowOptionsNavbar] = useState<boolean>(false);
   const [showOptionsPracticeMenu, setShowOptionsPracticeMenu] =
     useState<boolean>(false);
@@ -61,6 +61,10 @@ function Navbar() {
       }
     };
     handleDarkBackgroundVisualization();
+    window.addEventListener("resize", handleDarkBackgroundVisualization);
+    return () => {
+      window.removeEventListener("resize", handleDarkBackgroundVisualization);
+    };
   });
 
   const handleLogout = () => {
@@ -89,6 +93,6 @@ function Navbar() {
       />
     </>
   );
-}
+};
 
 export default Navbar;

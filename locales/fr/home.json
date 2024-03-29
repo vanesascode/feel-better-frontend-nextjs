@@ -1,1 +1,13 @@
-{ "hello": "alo" }
+{
+  "hello": "Salut",
+  "welcome": "Vous n'avez probablement pas envie de faire quoi que ce soit aujourd'hui. Mais si vous restez un peu, vous vous sentirez un peu mieux...",
+  "start": "Commencer",
+  "activities-title": "Nous allons créer de nouvelles connexions neuronales qui transmettent le bien-être",
+  "activity-one": "Défiez les pensées négatives.",
+  "activity-two": "Faites une méditation guidée.",
+  "activity-three": "Apprenez-en davantage sur la douleur chronique.",
+  "activity-one-explanation": "À mesure que vous interrompez plus fréquemment la spirale des pensées négatives, les connexions neuronales qui envoient des signaux de douleur au cerveau s'affaiblissent, tandis que de nouvelles connexions qui transmettent des sentiments de sécurité, de calme et de bien-être se renforcent.",
+  "activity-two-explanation": "La méditation contribue à la formation de nouvelles connexions neuronales qui favorisent le bien-être en réduisant le stress, en encourageant la pleine conscience, en influençant la plasticité cérébrale et en cultivant la conscience de soi émotionnelle.",
+  "activity-three-explanation": "Comprendre la douleur chronique vous fournit des outils et des connaissances qui vous aident à gérer plus efficacement les impacts négatifs qu'elle génère. Cela vous aide également à réduire la peur et l'anxiété associées à la douleur, améliorant ainsi votre qualité de vie.",
+  "learn-more": "Savoir plus"
+}

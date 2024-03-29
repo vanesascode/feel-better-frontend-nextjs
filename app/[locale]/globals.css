@@ -10,7 +10,7 @@
 }
 
 .p-horizontal {
-  @apply px-5;
+  @apply px-5 md:px-10;
 }
 
 .navbar-practice-submenu {
@@ -61,4 +61,8 @@
 
 .login-register-input {
   @apply px-5 py-3 rounded-lg bg-dark border-[1px] border-white text-body-thin hover:border-light-green focus:outline-none active:outline-none;
+}
+
+.scroll-to-top-shadow {
+  box-shadow: 0 0 20px rgba(255, 251, 251, 0.5);
 }

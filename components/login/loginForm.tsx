@@ -10,7 +10,7 @@ interface LoginFormProps {
   isLoginError: boolean;
 }
 
-function LoginForm({ handleSubmitLoginForm, isLoginError }: LoginFormProps) {
+const LoginForm = ({ handleSubmitLoginForm, isLoginError }: LoginFormProps) => {
   const [showPassword, setShowPassword] = useState(false);
   const {
     register,
@@ -88,6 +88,6 @@ function LoginForm({ handleSubmitLoginForm, isLoginError }: LoginFormProps) {
       </div>
     </form>
   );
-}
+};
 
 export default LoginForm;

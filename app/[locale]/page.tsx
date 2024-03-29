@@ -2,7 +2,9 @@ import Navbar from "@/components/navbar/navbar";
 import initTranslations from "../i18n";
 import TranslationsProvider from "@/components/TranslationProvider";
 import TokenMaintainer from "@/components/commons/tokenMaintainer";
-import HomeContent from "@/components/home/homeContent";
+import HomeCover from "@/components/home/homeCover";
+import HomeActivities from "@/components/home/homeActivities";
+import HomeExplanationActivities from "@/components/home/homeExplanationActivities";
 
 const i18nNamespaces = ["home", "navbar"];
 
@@ -22,8 +24,15 @@ export default async function Home({ params }: { params: { locale: string } }) {
         locale={params.locale}
         namespaces={i18nNamespaces}
       >
-        <Navbar />
-        <HomeContent />
+        <header>
+          <Navbar />
+        </header>
+
+        <main>
+          <HomeCover />
+          <HomeActivities />
+          <HomeExplanationActivities />
+        </main>
       </TranslationsProvider>
     </>
   );

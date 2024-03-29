@@ -11,14 +11,14 @@ const config: Config = {
       "cover1-semibold": [
         "96px",
         {
-          lineHeight: "140%",
+          lineHeight: "120%",
           fontWeight: "600",
         },
       ],
       "cover2-semibold": [
         "64px",
         {
-          lineHeight: "140%",
+          lineHeight: "110%",
           fontWeight: "600",
         },
       ],
@@ -161,9 +161,10 @@ const config: Config = {
         gray: "#8B8B8B",
         "light-green": "#68A576",
         "cta-green": "#0F9E2E",
-        "cta-green-hover": "#0B7C26",
+        "cta-green-hover": "#108d2d",
         "dark-green-1": "#11421F",
         "dark-green-2": "#1A2E29",
+        "shadow-green": "#414E4A",
         "gray-gradient": "C4C3C3",
       },
     },
@@ -176,7 +177,10 @@ const config: Config = {
       md: "768px", // Tablet
       lg: "1024px", // Laptop S
       xl: "1280px", // Laptop M
-      xxl: "1440px", // Laptop L
+      xxl: "1440px", // Laptop L, Desktop S
+      xxxl: "1728px", // Desktop M
+      xxxxl: "1920px", // Desktop L
+      xxxxxl: "2560px", // 4k
     },
   },
   plugins: [],

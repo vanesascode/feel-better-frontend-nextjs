@@ -15,14 +15,14 @@ interface NavbarLinksProps {
   setShowOptionsNavbar: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-function LinksVerticalNavbar({
+const LinksVerticalNavbar = ({
   showOptionsNavbar,
   name,
   setShowOptionsPracticeMenu,
   handleLogout,
   showOptionsPracticeMenu,
   setShowOptionsNavbar,
-}: NavbarLinksProps) {
+}: NavbarLinksProps) => {
   const { t } = useTranslation();
 
   return (
@@ -113,6 +113,6 @@ function LinksVerticalNavbar({
       </AnimatePresence>
     </>
   );
-}
+};
 
 export default LinksVerticalNavbar;
