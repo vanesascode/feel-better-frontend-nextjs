@@ -1,1 +1,13 @@
-{ "hello": "hola" }
+{
+  "hello": "Hola",
+  "welcome": "Seguramente no te apetece hacer nada hoy. Pero si te quedas un rato te sentirás un poco mejor...",
+  "start": "Comenzar",
+  "activities-title": "Vamos a crear nuevas conexiones neuronales que transmitan bienestar",
+  "activity-one": "Retar pensamientos negativos.",
+  "activity-two": "Hacer una meditación guiada.",
+  "activity-three": "Aprender sobre el dolor crónico.",
+  "activity-one-explanation": "A medida que interrumpas la espiral de pensamientos negativos con mayor frecuencia, las conexiones neuronales que envían señales de dolor al cerebro se debilitarán, mientras que las nuevas conexiones que transmiten sensaciones de seguridad, calma y bienestar se fortalecerán.",
+  "activity-two-explanation": "La meditación contribuye a la formación de nuevas conexiones neuronales que promueven el bienestar al reducir el estrés, fomentar la atención plena, influir en la plasticidad cerebral y cultivar la autoconciencia emocional.",
+  "activity-three-explanation": "Entender el dolor crónico te proporciona herramientas y conocimientos que te ayudan a manejar el impacto negativo que genera de manera más efectiva. Además te ayuda a reducir el miedo y la ansiedad asociados con el dolor, mejorando tu calidad de vida.",
+  "learn-more": "Saber más"
+}

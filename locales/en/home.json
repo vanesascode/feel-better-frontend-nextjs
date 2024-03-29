@@ -1,1 +1,13 @@
-{ "hello": "hello" }
+{
+  "hello": "Hello",
+  "welcome": "You probably don't feel like doing anything today. But if you stay a while you'll feel a little better...",
+  "start": "Start",
+  "activities-title": "We are going to create new neural connections that transmit well-being",
+  "activity-one": "Challenge negative thoughts.",
+  "activity-two": "Do a guided meditation.",
+  "activity-three": "Learn about chronic pain.",
+  "activity-one-explanation": "As you interrupt the spiral of negative thoughts more frequently, the neural connections that send pain signals to the brain will weaken, while new connections that transmit feelings of safety, calm, and well-being will strengthen.",
+  "activity-two-explanation": "Meditation contributes to the formation of new neural connections that promote well-being by reducing stress, encouraging mindfulness, influencing brain plasticity, and cultivating emotional self-awareness.",
+  "activity-three-explanation": "Understanding chronic pain provides you with tools and knowledge that help you manage the negative impact it generates more effectively. It also helps you reduce the fear and anxiety associated with pain, improving your quality of life.",
+  "learn-more": "Learn more"
+}
