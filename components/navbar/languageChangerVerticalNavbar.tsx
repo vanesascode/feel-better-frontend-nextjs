@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 
-function LanguageChangerVerticalNavbar() {
+const LanguageChangerVerticalNavbar = () => {
   const { i18n } = useTranslation();
   const currentLocale = i18n.language;
   const router = useRouter();
@@ -35,7 +35,7 @@ function LanguageChangerVerticalNavbar() {
       router.refresh();
     };
     changeLanguageValue();
-  }, [languageValue, currentLocale, currentPathname, i18n, router]);
+  }, [languageValue]);
 
   return (
     <>
@@ -89,6 +89,6 @@ function LanguageChangerVerticalNavbar() {
       </div>
     </>
   );
-}
+};
 
 export default LanguageChangerVerticalNavbar;
