@@ -1,0 +1,19 @@
+{
+  "create-an-account": "Crea una cuenta",
+  "password": "Contraseña",
+  "repeat-password": "Repite la contraseña",
+  "name": "Nombre",
+  "name-is-mandatory": "El nombre es obligatorio",
+  "name-at-least-3-letter": "El nombre debe tener al menos 3 caracteres",
+  "email-is-mandatory": "El email es obligatorio",
+  "invalid-email": "Email invalido",
+  "email-already-exists": "Este email ya existe",
+  "password-is-required": "La contraseña es obligatoria",
+  "passwords-dont-match": "Las contraseñas no coinciden",
+  "password-must-be-at-least-8-characters": "La contraseña debe tener al menos 8 caracteres",
+  "sorry-server-error": "Lo sentimos, ha ocurrido un error. Por favor, prueba más tarde",
+  "continue": "Continuar",
+  "loading": "Cargando...",
+  "do-you-have-an-account": "¿Ya tienes una cuenta?",
+  "access-here": "Accede aquí"
+}
