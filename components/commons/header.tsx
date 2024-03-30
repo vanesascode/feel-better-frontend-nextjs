@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
 
-type HeaderProps = {
+interface HeaderProps {
   children: ReactNode;
-};
+}
 
 const Header = ({ children }: HeaderProps) => {
   return (

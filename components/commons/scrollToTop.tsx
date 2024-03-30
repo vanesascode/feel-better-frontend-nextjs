@@ -26,7 +26,7 @@ const ScrollToTop = () => {
     return () => {
       window.removeEventListener("scroll", handleShowScrollToTopArrow);
     };
-  }, [window.innerHeight]);
+  });
 
   return (
     <>

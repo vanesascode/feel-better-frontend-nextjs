@@ -2,12 +2,12 @@ import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/TranslationProvider";
 import ContentFrame from "@/components/commons/contentFrame";
 import Header from "@/components/commons/header";
-import LoginLogic from "@/components/login/loginLogic";
 import Navbar from "@/components/navbar/navbar";
+import RegisterLogic from "@/components/register/registerLogic";
 
-const i18nNamespaces = ["login"];
+const i18nNamespaces = ["register"];
 
-export default async function Login({
+export default async function Register({
   params,
 }: {
   params: { locale: string };
@@ -28,10 +28,10 @@ export default async function Login({
       >
         <Navbar />
         <Header>
-          <h1 className="text-heading2-bold">{t("access-to-your-account")}</h1>
+          <h1 className="text-heading2-bold">{t("create-an-account")}</h1>
         </Header>
         <ContentFrame>
-          <LoginLogic />
+          <RegisterLogic />
         </ContentFrame>
       </TranslationsProvider>
     </>

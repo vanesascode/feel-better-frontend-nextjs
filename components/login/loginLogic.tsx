@@ -8,10 +8,10 @@ import { setUser } from "@/redux/features/authSlice";
 import LoginForm from "@/components/login/loginForm";
 import { SubmitHandler, useForm } from "react-hook-form";
 
-export type FormFields = {
+export interface FormFields {
   email: string;
   password: string;
-};
+}
 
 const LoginLogic = () => {
   const dispatch = useAppDispatch();
