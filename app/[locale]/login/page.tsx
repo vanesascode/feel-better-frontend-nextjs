@@ -5,7 +5,7 @@ import Header from "@/components/commons/header";
 import LoginLogic from "@/components/login/loginLogic";
 import Navbar from "@/components/navbar/navbar";
 
-const i18nNamespaces = ["login", "navbar"];
+const i18nNamespaces = ["login"];
 
 export default async function Login({
   params,
