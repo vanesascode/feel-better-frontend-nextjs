@@ -8,5 +8,7 @@
   "password-must-be-at-least-8-characters": "Mot de passe doit être d'au moins 8 caractères",
   "email-or-password-are-incorrect": "Courriel ou mot de passe incorrect",
   "continue": "Continuer",
-  "loading": "Chargement..."
+  "loading": "Chargement...",
+  "dont-have-account-yet": "Vous n'avez pas encore de compte?",
+  "register": "S'inscrire"
 }
