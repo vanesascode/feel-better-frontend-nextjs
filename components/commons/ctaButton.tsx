@@ -1,12 +1,12 @@
 import { ReactNode } from "react";
 
-type CtaButtonProps = {
+interface CtaButtonProps {
   children: ReactNode;
   disabled?: boolean;
   type: "button" | "submit" | "reset" | undefined;
   onClick?: () => void;
   darkerShadow?: boolean;
-};
+}
 
 const CtaButton = ({
   children,
