@@ -21,10 +21,10 @@ const LoginForm = ({ handleSubmitLoginForm, isLoginError }: LoginFormProps) => {
   const { t } = useTranslation();
 
   return (
-    <>
+    <section>
       <form
         className="flex flex-col gap-2 font-source
-      text-body-regular text-white w-[350px]"
+      text-body-regular text-white w-[250px] sm:w-[350px] xs:w-[300px]"
         onSubmit={handleSubmit(handleSubmitLoginForm)}
       >
         <label>{t("Email")}</label>
@@ -39,6 +39,7 @@ const LoginForm = ({ handleSubmitLoginForm, isLoginError }: LoginFormProps) => {
           type="text"
           placeholder="example@example.com"
           className="login-register-input"
+          onChange={(e) => (e.target.value = e.target.value.toLowerCase())}
         />
         {errors.email && (
           <p className="text-red-500 text-base-regular">
@@ -93,13 +94,13 @@ const LoginForm = ({ handleSubmitLoginForm, isLoginError }: LoginFormProps) => {
       </form>
       <div className="mt-5">
         <Link href="/register">
-          <p className="text-base-bold self-end mb-6 text-white font-source cursor-pointer">
+          <p className="text-base-bold self-end mb-6 text-white font-source cursor-pointer text-center">
             {t("dont-have-account-yet")}{" "}
             <span className="text-cta-green">{t("register")}</span>
           </p>
         </Link>
       </div>
-    </>
+    </section>
   );
 };
 
