@@ -5,7 +5,7 @@ import Header from "@/components/commons/header";
 import LoginLogic from "@/components/login/loginLogic";
 import Navbar from "@/components/navbar/navbar";
 
-const i18nNamespaces = ["login"];
+const i18nNamespaces = ["login", "navbar"];
 
 export default async function Login({
   params,
@@ -26,13 +26,19 @@ export default async function Login({
         locale={params.locale}
         namespaces={i18nNamespaces}
       >
-        <Navbar />
-        <Header>
-          <h1 className="text-heading2-bold">{t("access-to-your-account")}</h1>
-        </Header>
-        <ContentFrame>
-          <LoginLogic />
-        </ContentFrame>
+        <header>
+          <Navbar />
+          <Header>
+            <h1 className="text-heading2-bold text-center px-3">
+              {t("access-to-your-account")}
+            </h1>
+          </Header>
+        </header>
+        <main>
+          <ContentFrame>
+            <LoginLogic />
+          </ContentFrame>
+        </main>
       </TranslationsProvider>
     </>
   );
