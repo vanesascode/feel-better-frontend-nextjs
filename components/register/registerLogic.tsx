@@ -38,6 +38,7 @@ const RegisterLogic = () => {
         setUser({
           _id: registerData.user._id,
           name: registerData.user.name,
+          email: registerData.user.email,
           token: registerData.token,
         })
       );
