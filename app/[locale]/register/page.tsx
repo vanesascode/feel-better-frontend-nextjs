@@ -5,7 +5,7 @@ import Header from "@/components/commons/header";
 import Navbar from "@/components/navbar/navbar";
 import RegisterLogic from "@/components/register/registerLogic";
 
-const i18nNamespaces = ["register"];
+const i18nNamespaces = ["register", "navbar"];
 
 export default async function Register({
   params,
@@ -26,13 +26,19 @@ export default async function Register({
         locale={params.locale}
         namespaces={i18nNamespaces}
       >
-        <Navbar />
-        <Header>
-          <h1 className="text-heading2-bold">{t("create-an-account")}</h1>
-        </Header>
-        <ContentFrame>
-          <RegisterLogic />
-        </ContentFrame>
+        <header>
+          <Navbar />
+          <Header>
+            <h1 className="text-heading2-bold text-center px-3">
+              {t("create-an-account")}
+            </h1>
+          </Header>
+        </header>
+        <main>
+          <ContentFrame>
+            <RegisterLogic />
+          </ContentFrame>
+        </main>
       </TranslationsProvider>
     </>
   );

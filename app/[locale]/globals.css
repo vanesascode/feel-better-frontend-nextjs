@@ -5,12 +5,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.bg-gray-gradient {
-  @apply bg-gradient-to-b from-[#C4C3C3] to-black;
+.account-boxes-shadow {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.p-horizontal {
-  @apply px-5 md:px-10;
+.bg-gray-gradient {
+  @apply bg-gradient-to-b from-[#C4C3C3] to-black;
 }
 
 .navbar-practice-submenu {
@@ -48,7 +48,6 @@
   justify-content: space-between;
   border-radius: 10px;
   opacity: 0;
-
   transition: opacity 0.5s;
   pointer-events: none;
 }
@@ -61,6 +60,10 @@
 
 .login-register-input {
   @apply px-5 py-3 rounded-lg bg-dark border-[1px] border-white text-body-thin hover:border-light-green focus:outline-none active:outline-none;
+}
+
+.p-horizontal {
+  @apply px-5 md:px-10;
 }
 
 .scroll-to-top-shadow {

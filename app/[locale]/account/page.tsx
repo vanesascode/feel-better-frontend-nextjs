@@ -1,13 +1,14 @@
 import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/TranslationProvider";
+import AccountLogic from "@/components/account/accountLogic";
 import ContentFrame from "@/components/commons/contentFrame";
 import Header from "@/components/commons/header";
-import LoginLogic from "@/components/login/loginLogic";
+import TokenMaintainer from "@/components/commons/tokenMaintainer";
 import Navbar from "@/components/navbar/navbar";
 
-const i18nNamespaces = ["login", "navbar"];
+const i18nNamespaces = ["account", "navbar"];
 
-export default async function Login({
+export default async function Account({
   params,
 }: {
   params: { locale: string };
@@ -21,6 +22,7 @@ export default async function Login({
 
   return (
     <>
+      <TokenMaintainer />
       <TranslationsProvider
         resources={resources}
         locale={params.locale}
@@ -30,13 +32,13 @@ export default async function Login({
           <Navbar />
           <Header>
             <h1 className="text-heading2-bold text-center px-3">
-              {t("access-to-your-account")}
+              {t("your-account")}
             </h1>
           </Header>
         </header>
         <main>
           <ContentFrame>
-            <LoginLogic />
+            <AccountLogic />
           </ContentFrame>
         </main>
       </TranslationsProvider>

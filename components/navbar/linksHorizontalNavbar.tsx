@@ -100,7 +100,7 @@ const LinksHorizontalNavbar = ({
             )}
           </div>
           <div className="flex font-source text-body-regular items-center">
-            <Link href={name ? "/cuenta" : "/login"}>
+            <Link href={name ? "/account" : "/login"}>
               <button className="border-[1px] border-gray px-5 py-2 rounded-full hidden lg:block hover:bg-black transition duration-500 ease-in-out">
                 {name ? t("navbar:account") : t("navbar:login")}
               </button>

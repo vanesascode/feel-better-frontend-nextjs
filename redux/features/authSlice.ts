@@ -5,12 +5,14 @@ import Cookies from "js-cookie";
 export interface AuthState {
   _id: string | null;
   name: string | null;
+  email: string | null;
   token: string | null;
 }
 
 const initialState: AuthState = {
   _id: null,
   name: null,
+  email: null,
   token: null,
 };
 
@@ -28,20 +30,23 @@ export const authSlice = createSlice({
           JSON.stringify({
             _id: action.payload._id,
             name: action.payload.name,
+            email: action.payload.email,
             token: action.payload.token,
           })
         );
 
         state._id = action.payload._id;
         state.name = action.payload.name;
+        state.email = action.payload.email;
         state.token = action.payload.token;
       }
     },
     maintainUserDataStoredinRedux: (state) => {
       const user = JSON.parse(localStorage.getItem("user") || "{}");
-      if (user.name && user.token && user._id) {
+      if (user.name && user.token && user._id && user.email) {
         state._id = user._id;
         state.name = user.name;
+        state.email = user.email;
         state.token = user.token;
       }
     },
@@ -51,6 +56,7 @@ export const authSlice = createSlice({
       localStorage.removeItem("user");
       state._id = null;
       state.name = null;
+      state.email = null;
       state.token = null;
     },
   },

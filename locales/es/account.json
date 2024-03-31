@@ -1,0 +1,23 @@
+{
+  "your-account": "Configuraciones de la cuenta",
+  "password": "Contraseña",
+  "repeat-password": "Repite la contraseña",
+  "name": "Nombre",
+  "save": "Guardar",
+  "saving": "Guardando...",
+  "passwords-dont-match": "Las contraseñas no coinciden",
+  "modify-account-details": "Edita los detalles de tu cuenta",
+  "logout-your-session": "Cierra tu sesión de usuario",
+  "logout": "Cerrar sesión",
+  "delete-your-account": "Elimina tu cuenta",
+  "your-data-will-be-deleted": "Todos tus registros de las actividades serán eliminados para siempre y no podrás recuperarlos.",
+  "delete": "Eliminar",
+  "sorry-server-error": "Lo sentimos, ha ocurrido un error. Por favor, prueba más tarde.",
+  "are-you-sure": "¿Seguro que quieres eliminar tu cuenta?",
+  "careful": "Cuidado",
+  "yes": "Si, elimínala",
+  "no": "No, cancela",
+  "ok": "De acuerdo",
+  "your-details-correctly-saved": "Los detalles de tu cuenta se han guardado correctamente.",
+  "login-again": "Accede de nuevo a tu cuenta para continuar."
+}

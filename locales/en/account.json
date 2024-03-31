@@ -1,0 +1,23 @@
+{
+  "your-account": "Account settings",
+  "password": "password",
+  "repeat-password": "Repeat password",
+  "name": "Name",
+  "save": "Save",
+  "saving": "Saving...",
+  "passwords-dont-match": "Passwords do not match",
+  "modify-account-details": "Modify your account details",
+  "logout-your-session": "Close your user session",
+  "logout": "Log out",
+  "delete-your-account": "Delete your account",
+  "your-data-will-be-deleted": "All your activity records will be deleted forever and you will not be able to recover them.",
+  "delete": "Delete",
+  "sorry-server-error": "Sorry an error occurred. Please, try later.",
+  "are-you-sure": "Are you sure you want to delete your account?",
+  "careful": "Careful",
+  "yes": "Yes, delete it",
+  "no": "No, cancel",
+  "ok": "Ok",
+  "your-details-correctly-saved": "Your account details have been successfully saved.",
+  "login-again": "log back into your account to continue."
+}
