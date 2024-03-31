@@ -27,7 +27,6 @@ export default async function Home({ params }: { params: { locale: string } }) {
         <header>
           <Navbar />
         </header>
-
         <main>
           <HomeCover />
           <HomeActivities />
