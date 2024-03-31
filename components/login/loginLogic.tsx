@@ -31,6 +31,7 @@ const LoginLogic = () => {
         setUser({
           _id: loginData.user._id,
           name: loginData.user.name,
+          email: loginData.user.email,
           token: loginData.token,
         })
       );
