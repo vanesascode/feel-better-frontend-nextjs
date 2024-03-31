@@ -161,7 +161,7 @@ const config: Config = {
         gray: "#8B8B8B",
         "light-green": "#68A576",
         "cta-green": "#0F9E2E",
-        "cta-green-hover": "#108d2d",
+        "cta-green-hover": "#10782d",
         "dark-green-1": "#11421F",
         "dark-green-2": "#1A2E29",
         "shadow-green": "#414E4A",
@@ -173,6 +173,7 @@ const config: Config = {
       xxs: "320px", // Mobile S
       xs: "375px", // Mobile M
       sm: "425px", // Mobile L
+      sm1: "470px",
       sm2: "575px",
       md: "768px", // Tablet
       lg: "1024px", // Laptop S
