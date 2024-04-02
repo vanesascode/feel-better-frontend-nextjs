@@ -76,9 +76,9 @@ const LoginForm = ({ handleSubmitLoginForm, isLoginError }: LoginFormProps) => {
             {errors.password.message}
           </p>
         )}
-        <p className="text-base-bold self-end mb-8">
-          {t("did-you-forget-your-password")}
-        </p>
+        <Link href="/recovery" className="text-base-bold self-end mb-8">
+          <p>{t("did-you-forget-your-password")}</p>
+        </Link>
         {isLoginError && (
           <div className="flex justify-center">
             <p className="text-red-500 text-base-regular">
