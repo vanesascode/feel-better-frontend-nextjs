@@ -19,5 +19,9 @@
   "no": "Non, annule",
   "ok": "D'accord",
   "your-details-correctly-saved": "Les détails de votre compte ont été enregistrés avec succès.",
-  "login-again": "reconnectez-vous à votre compte pour continuer."
+  "login-again": "reconnectez-vous à votre compte pour continuer.",
+  "invalid-email": "Email invalide",
+  "name-at-least-3-letter": "Le nom doit comporter au moins 3 caractères",
+  "password-must-be-at-least-8-characters": "Mot de passe doit être d'au moins 8 caractères",
+  "email-already-exists": "Ce courriel existe déjà"
 }
