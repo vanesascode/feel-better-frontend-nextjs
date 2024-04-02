@@ -9,6 +9,7 @@ import { useAppSelector } from "@/redux/hooks";
 import { selectAuth } from "@/redux/features/authSlice";
 import { logout } from "@/redux/features/authSlice";
 import EditedAccountDetailsConfirmation from "./editedAccountDetailsConfirmation";
+import { fetchExistingUsersEmails } from "@/api/users/users";
 
 export interface FormFields {
   name: string;
@@ -72,20 +73,12 @@ const AccountLogic = () => {
   };
 
   useEffect(() => {
-    async function fetchExistingUsersEmails() {
-      try {
-        const response = await fetch(
-          process.env.NEXT_PUBLIC_API_URL + "/users"
-        );
-        const data = await response.json();
-        const emails = data.map((user: any) => user.email);
-        setExistingUsersEmails(emails);
-      } catch (error) {
-        setServerErrorForModifyingAccount("Server error");
-      }
-    }
+    const getExistingUsersEmails = async () => {
+      const emails = await fetchExistingUsersEmails();
+      setExistingUsersEmails(emails);
+    };
 
-    fetchExistingUsersEmails();
+    getExistingUsersEmails();
   }, []);
 
   const handleLogout = () => {

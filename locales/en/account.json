@@ -19,5 +19,9 @@
   "no": "No, cancel",
   "ok": "Ok",
   "your-details-correctly-saved": "Your account details have been successfully saved.",
-  "login-again": "log back into your account to continue."
+  "login-again": "log back into your account to continue.",
+  "email-already-exists": "This email already exists",
+  "invalid-email": "Invalid email",
+  "name-at-least-3-letter": "Name must be at least 3 characters",
+  "password-must-be-at-least-8-characters": "Password must be at least 8 characters"
 }

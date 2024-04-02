@@ -90,7 +90,7 @@ const LinksVerticalNavbar = ({
                 )}
                 <div onClick={() => setShowOptionsNavbar(false)}>
                   <Link
-                    href={name ? "/cuenta" : "/login"}
+                    href={name ? "/account" : "/login"}
                     className="hover:text-light-green"
                   >
                     {name ? t("navbar:account") : t("navbar:login")}

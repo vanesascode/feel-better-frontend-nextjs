@@ -19,5 +19,9 @@
   "no": "No, cancela",
   "ok": "De acuerdo",
   "your-details-correctly-saved": "Los detalles de tu cuenta se han guardado correctamente.",
-  "login-again": "Accede de nuevo a tu cuenta para continuar."
+  "login-again": "Accede de nuevo a tu cuenta para continuar.",
+  "invalid-email": "Email invalido",
+  "name-at-least-3-letter": "El nombre debe tener al menos 3 caracteres",
+  "password-must-be-at-least-8-characters": "La contraseña debe tener al menos 8 caracteres",
+  "email-already-exists": "Este email ya existe"
 }

@@ -1,0 +1,9 @@
+{
+  "continue": "Continuer",
+  "loading": "Envoi en cours...",
+  "forgot-password": "Vous avez oublié votre mot de passe?",
+  "no-problem": "Pas de problème. Entrez simplement votre email ci-dessous. Nous vous enverrons un lien pour le réinitialiser.",
+  "email-not-registered": "Cet email n'est pas enregistré",
+  "email-is-mandatory": "Veuillez d'abord entrer votre email",
+  "invalid-email": "Email invalide"
+}

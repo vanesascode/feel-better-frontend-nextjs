@@ -5,6 +5,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply bg-dark;
+}
+
 .account-boxes-shadow {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
