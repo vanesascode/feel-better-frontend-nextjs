@@ -7,6 +7,7 @@ import { useAppDispatch } from "@/redux/hooks";
 import { setUser } from "@/redux/features/authSlice";
 import { SubmitHandler, useForm } from "react-hook-form";
 import RegisterForm from "./registerForm";
+import { fetchExistingUsersEmails } from "@/api/users/users";
 
 export interface FormFields {
   name: string;
@@ -51,20 +52,11 @@ const RegisterLogic = () => {
   }, [isRegisterSuccess, isRegisterError]);
 
   useEffect(() => {
-    async function fetchExistingUsersEmails() {
-      try {
-        const response = await fetch(
-          process.env.NEXT_PUBLIC_API_URL + "/users"
-        );
-        const data = await response.json();
-        const emails = data.map((user: any) => user.email);
-        setExistingUsersEmails(emails);
-      } catch (error) {
-        console.error("Error fetching existing users' emails:", error);
-      }
-    }
-
-    fetchExistingUsersEmails();
+    const getExistingUsersEmails = async () => {
+      const emails = await fetchExistingUsersEmails();
+      setExistingUsersEmails(emails);
+    };
+    getExistingUsersEmails();
   }, []);
 
   return (
