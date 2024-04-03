@@ -3,35 +3,28 @@
 import CtaButton from "../commons/ctaButton";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
-import { postRecoveryEmail } from "@/api/emails/emails";
-import { fetchExistingUsersEmails } from "@/api/users/users";
-import { useEffect, useState } from "react";
+import EmailSentForRecoveryConfirmation from "./emailSentForRecoveryConfirmation";
+import { FormFields } from "./recoveryLogic";
 
-export interface FormFields {
-  email: string;
+interface RecoveryFormProps {
+  existingUsersEmails: string[];
+  handleSubmitRecoveryForm: SubmitHandler<FormFields>;
+  sendingRecoveryEmailError: boolean;
+  showRecoveryEmailSentConfirmation: boolean;
 }
 
-const RecoveryForm = () => {
-  const [existingUsersEmails, setExistingUsersEmails] = useState<string[]>([]);
+const RecoveryForm = ({
+  existingUsersEmails,
+  handleSubmitRecoveryForm,
+  sendingRecoveryEmailError,
+  showRecoveryEmailSentConfirmation,
+}: RecoveryFormProps) => {
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
   } = useForm<FormFields>();
   const { t } = useTranslation();
-
-  useEffect(() => {
-    const getExistingUsersEmails = async () => {
-      const emails = await fetchExistingUsersEmails();
-      setExistingUsersEmails(emails);
-    };
-    getExistingUsersEmails();
-  }, []);
-
-  const handleSubmitLoginForm: SubmitHandler<FormFields> = async (data) => {
-    await postRecoveryEmail(data.email);
-    console.log(data);
-  };
 
   return (
     <section className="flex flex-col justify-center items-center">
@@ -41,7 +34,7 @@ const RecoveryForm = () => {
       <form
         className="flex flex-col gap-2 font-source
     text-body-regular text-white w-[250px] sm:w-[350px] xs:w-[300px]"
-        onSubmit={handleSubmit(handleSubmitLoginForm)}
+        onSubmit={handleSubmit(handleSubmitRecoveryForm)}
       >
         <input
           {...register("email", {
@@ -51,10 +44,12 @@ const RecoveryForm = () => {
               message: t("invalid-email"),
             },
             validate: (fieldValue) => {
-              if (!existingUsersEmails.includes(fieldValue)) {
-                return t("email-not-registered");
+              if (existingUsersEmails.length > 0) {
+                if (!existingUsersEmails.includes(fieldValue)) {
+                  return t("email-not-registered");
+                }
+                return true;
               }
-              return true;
             },
           })}
           type="text"
@@ -67,12 +62,20 @@ const RecoveryForm = () => {
             {errors.email.message}
           </p>
         )}
+        {sendingRecoveryEmailError && (
+          <p className="text-red-500 text-base-regular">
+            {t("sorry-server-error")}
+          </p>
+        )}
         <div className="flex justify-center mt-8">
           <CtaButton disabled={isSubmitting} type="submit" darkerShadow>
             {isSubmitting ? t("loading") : t("continue")}
           </CtaButton>
         </div>
       </form>
+      <EmailSentForRecoveryConfirmation
+        showRecoveryEmailSentConfirmation={showRecoveryEmailSentConfirmation}
+      />
     </section>
   );
 };
