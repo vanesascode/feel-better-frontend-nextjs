@@ -4,7 +4,7 @@ import ContentFrame from "@/components/commons/contentFrame";
 import Header from "@/components/commons/header";
 import TokenMaintainer from "@/components/commons/tokenMaintainer";
 import Navbar from "@/components/navbar/navbar";
-import RecoveryForm from "@/components/recovery/recoveryForm";
+import RecoveryLogic from "@/components/recovery/recoveryLogic";
 
 const i18nNamespaces = ["recovery", "navbar"];
 
@@ -38,7 +38,7 @@ export default async function Account({
         </header>
         <main>
           <ContentFrame>
-            <RecoveryForm />
+            <RecoveryLogic />
           </ContentFrame>
         </main>
       </TranslationsProvider>
