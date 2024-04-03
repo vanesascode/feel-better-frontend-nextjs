@@ -26,7 +26,6 @@ const RegisterForm = ({
     handleSubmit,
     formState: { errors, isSubmitting },
   } = useForm<FormFields>();
-
   const { t } = useTranslation();
 
   return (
@@ -63,10 +62,12 @@ const RegisterForm = ({
               message: t("invalid-email"),
             },
             validate: (fieldValue) => {
-              if (existingUsersEmails.includes(fieldValue)) {
-                return t("email-already-exists");
+              if (existingUsersEmails.length > 0) {
+                if (existingUsersEmails.includes(fieldValue)) {
+                  return t("email-already-exists");
+                }
+                return true;
               }
-              return true;
             },
           })}
           type="text"
@@ -79,7 +80,6 @@ const RegisterForm = ({
             {errors.email.message}
           </p>
         )}
-
         <label className="mt-4">{t("password")}</label>
         <div className="login-register-input flex justify-between items-center">
           <input
@@ -111,7 +111,6 @@ const RegisterForm = ({
             {errors.password.message}
           </p>
         )}
-
         <label className="mt-4">{t("repeat-password")}</label>
         <div className="login-register-input flex justify-between items-center ">
           <input
@@ -140,7 +139,6 @@ const RegisterForm = ({
             {errors.repeatPassword.message}
           </p>
         )}
-
         {isRegisterError && (
           <div className="flex justify-center text-center">
             <p className="text-red-500 text-base-regular">
