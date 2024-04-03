@@ -5,5 +5,8 @@
   "no-problem": "Ningún problema. Sólo tienes que introducir tu email a continuación. Te enviaremos un enlace para resetearla.",
   "email-not-registered": "Este email no está registrado",
   "email-is-mandatory": "Por favor, introduce primero tu email",
-  "invalid-email": "Email invalido"
+  "invalid-email": "Email invalido",
+  "sorry-server-error": "Lo sentimos, ha ocurrido un error. Por favor, prueba más tarde",
+  "correctly-sent": "Tu email ha sido correctamente enviado. Por favor, revisa tu bandeja de entrada.",
+  "spam-folder": "Si no lo encuentras, revisa tu carpeta de spam."
 }

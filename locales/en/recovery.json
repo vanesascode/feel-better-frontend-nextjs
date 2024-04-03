@@ -5,5 +5,8 @@
   "no-problem": "No problem. Just enter your email address below. We'll send you a link to reset it.",
   "email-not-registered": "This email is not registered",
   "email-is-mandatory": "Please enter your email first",
-  "invalid-email": "Invalid email"
+  "invalid-email": "Invalid email",
+  "sorry-server-error": "Sorry an error occurred. Please, try later",
+  "correctly-sent": "Your email has been correctly sent. Please check your inbox.",
+  "spam-folder": "If you can't find it, check your spam folder."
 }
