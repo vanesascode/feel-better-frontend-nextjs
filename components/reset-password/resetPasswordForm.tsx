@@ -1,22 +1,28 @@
-import { FormFields } from "@/components/register/registerLogic";
-import { SubmitHandler, useForm } from "react-hook-form";
+"use client";
+
 import CtaButton from "../commons/ctaButton";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
-import { useTranslation } from "react-i18next";
-import Link from "next/link";
+import ResetPasswordConfirmation from "./resetPasswordConfirmation";
+import { FormFields } from "./resetPasswordLogic";
 
-interface RegisterFormProps {
-  handleSubmitRegisterForm: SubmitHandler<FormFields>;
-  isRegisterError: boolean;
+interface ResetPasswordFormProps {
+  showPasswordResetConfirmation: boolean;
+  handleOkAnswerFromUser: () => void;
+  handleSubmitResetPasswordForm: SubmitHandler<FormFields>;
   existingUsersEmails: string[];
+  resetingPasswordError: boolean;
 }
 
-const RegisterForm = ({
-  handleSubmitRegisterForm,
-  isRegisterError,
+const ResetPasswordForm = ({
+  showPasswordResetConfirmation,
+  handleOkAnswerFromUser,
+  handleSubmitResetPasswordForm,
   existingUsersEmails,
-}: RegisterFormProps) => {
+  resetingPasswordError,
+}: ResetPasswordFormProps) => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const [showRepeatedPassword, setShowRepeatedPassword] =
     useState<boolean>(false);
@@ -29,31 +35,13 @@ const RegisterForm = ({
   const { t } = useTranslation();
 
   return (
-    <section>
+    <section className="flex flex-col justify-center items-center">
       <form
         className="flex flex-col gap-2 font-source
-      text-body-regular text-white w-[250px] sm:w-[350px] xs:w-[300px]"
-        onSubmit={handleSubmit(handleSubmitRegisterForm)}
+    text-body-regular text-white w-[250px] sm:w-[350px] xs:w-[300px]"
+        onSubmit={handleSubmit(handleSubmitResetPasswordForm)}
       >
-        <label>{t("name")}</label>
-        <input
-          {...register("name", {
-            required: t("name-is-mandatory"),
-            minLength: {
-              value: 3,
-              message: t("name-at-least-3-letter"),
-            },
-          })}
-          type="text"
-          placeholder="example"
-          className="login-register-input"
-        />
-        {errors.name && (
-          <p className="text-red-500 text-base-regular">
-            {errors.name.message}
-          </p>
-        )}
-        <label className="mt-4">{t("Email")}</label>
+        <label>{t("Email")}</label>
         <input
           {...register("email", {
             required: t("email-is-mandatory"),
@@ -63,8 +51,8 @@ const RegisterForm = ({
             },
             validate: (fieldValue) => {
               if (existingUsersEmails.length > 0) {
-                if (existingUsersEmails.includes(fieldValue)) {
-                  return t("email-already-exists");
+                if (!existingUsersEmails.includes(fieldValue)) {
+                  return t("email-not-registered");
                 }
                 return true;
               }
@@ -139,7 +127,7 @@ const RegisterForm = ({
             {errors.repeatPassword.message}
           </p>
         )}
-        {isRegisterError && (
+        {resetingPasswordError && (
           <div className="flex justify-center text-center">
             <p className="text-red-500 text-base-regular">
               {t("sorry-server-error")}
@@ -152,16 +140,12 @@ const RegisterForm = ({
           </CtaButton>
         </div>
       </form>
-      <div className="mt-5">
-        <Link href="/login">
-          <p className="text-base-bold self-end mb-6 text-white font-source cursor-pointer text-center">
-            {t("do-you-have-an-account")}{" "}
-            <span className="text-cta-green">{t("access-here")}</span>
-          </p>
-        </Link>
-      </div>
+      <ResetPasswordConfirmation
+        showPasswordResetConfirmation={showPasswordResetConfirmation}
+        handleOkAnswerFromUser={handleOkAnswerFromUser}
+      />
     </section>
   );
 };
 
-export default RegisterForm;
+export default ResetPasswordForm;

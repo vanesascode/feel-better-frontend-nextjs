@@ -4,9 +4,9 @@ import ContentFrame from "@/components/commons/contentFrame";
 import Header from "@/components/commons/header";
 import TokenMaintainer from "@/components/commons/tokenMaintainer";
 import Navbar from "@/components/navbar/navbar";
-import RecoveryLogic from "@/components/recovery/recoveryLogic";
+import ResetPasswordLogic from "@/components/reset-password/resetPasswordLogic";
 
-const i18nNamespaces = ["recovery", "navbar"];
+const i18nNamespaces = ["reset-password", "navbar"];
 
 export default async function Account({
   params,
@@ -32,13 +32,13 @@ export default async function Account({
           <Navbar />
           <Header>
             <h1 className="text-heading2-bold text-center px-3">
-              {t("forgot-password")}
+              {t("reset-password")}
             </h1>
           </Header>
         </header>
         <main>
           <ContentFrame>
-            <RecoveryLogic />
+            <ResetPasswordLogic />
           </ContentFrame>
         </main>
       </TranslationsProvider>
