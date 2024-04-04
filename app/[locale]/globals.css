@@ -63,11 +63,15 @@ body {
 }
 
 .login-register-input {
-  @apply px-5 py-3 rounded-lg bg-dark border-[1px] border-white text-body-thin hover:border-light-green focus:outline-none active:outline-none;
+  @apply px-5 py-3 rounded-lg bg-dark border-[1px] border-white sm:text-body-thin text-base-thin hover:border-light-green focus:outline-none active:outline-none;
 }
 
 .p-horizontal {
   @apply px-5 md:px-10;
+}
+
+.textarea-input {
+  @apply px-5 py-3 rounded-lg bg-dark border-[1px] sm:text-body-thin text-base-thin  border-light-green focus:outline-none active:outline-none;
 }
 
 .scroll-to-top-shadow {
