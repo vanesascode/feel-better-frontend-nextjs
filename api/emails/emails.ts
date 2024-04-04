@@ -9,7 +9,7 @@ export async function postRecoveryEmail(userEmail: string) {
   const data = await resend.emails.send({
     from: "FeelBetter <no-reply@mejoraconfeelbetter.online>",
     to: userEmail,
-    subject: "Password reset for your FeelBetter account",
+    subject: "Restablece la contraseña de tu cuenta de FeelBetter",
     react: RecoveryEmailTemplate({ userEmail: userEmail }),
     text: "",
   });

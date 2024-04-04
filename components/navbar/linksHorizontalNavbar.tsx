@@ -59,7 +59,7 @@ const LinksHorizontalNavbar = ({
           <div className="flex gap-14 items-center text-body-regular">
             <button
               onClick={() => setShowOptionsNavbar(false)}
-              className="text-heading2-bold z-20 py-5"
+              className="sm:text-heading2-bold text-body-bold z-20 py-5"
             >
               <Link href="/">FeelBetter</Link>
             </button>
@@ -71,7 +71,7 @@ const LinksHorizontalNavbar = ({
               </div>
               <div className="navbar-practice-submenu">
                 <Link
-                  href="/elegir-pensamiento"
+                  href="/choose-negative-thought"
                   className="hover:text-cta-green-hover transition duration-300 ease-in-out cursor-pointer"
                 >
                   {t("navbar:challenge-a-negative-thought")}
