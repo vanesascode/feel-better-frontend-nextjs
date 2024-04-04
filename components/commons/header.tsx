@@ -6,7 +6,7 @@ interface HeaderProps {
 
 const Header = ({ children }: HeaderProps) => {
   return (
-    <div className=" h-60 bg-dark flex justify-center items-center">
+    <div className="md:h-72 h-56 bg-dark flex justify-center items-center">
       <div className="pt-20 font-source text-white">{children}</div>
     </div>
   );
