@@ -62,7 +62,7 @@ const LinksVerticalNavbar = ({
                   >
                     <div onClick={() => setShowOptionsNavbar(false)}>
                       <Link
-                        href="/elegir-pensamiento"
+                        href="/choose-negative-thought"
                         className="hover:text-dark-green-1"
                       >
                         {t("navbar:challenge-a-negative-thought")}
