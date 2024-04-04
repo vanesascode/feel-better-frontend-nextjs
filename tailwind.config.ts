@@ -11,12 +11,19 @@ const config: Config = {
       "cover1-semibold": [
         "96px",
         {
-          lineHeight: "120%",
+          lineHeight: "100%",
           fontWeight: "600",
         },
       ],
       "cover2-semibold": [
         "64px",
+        {
+          lineHeight: "100%",
+          fontWeight: "600",
+        },
+      ],
+      "cover3-semibold": [
+        "54px",
         {
           lineHeight: "110%",
           fontWeight: "600",
