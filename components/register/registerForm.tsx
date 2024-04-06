@@ -31,8 +31,7 @@ const RegisterForm = ({
   return (
     <section>
       <form
-        className="flex flex-col gap-2 font-source
-      text-body-regular text-white w-[250px] sm:w-[350px] xs:w-[300px]"
+        className="flex flex-col gap-2 text-body-regular text-white w-[250px] sm:w-[350px] xs:w-[300px]"
         onSubmit={handleSubmit(handleSubmitRegisterForm)}
       >
         <label>{t("name")}</label>
@@ -154,7 +153,7 @@ const RegisterForm = ({
       </form>
       <div className="mt-5">
         <Link href="/login">
-          <p className="text-base-bold self-end mb-6 text-white font-source cursor-pointer text-center">
+          <p className="text-base-bold self-end mb-6 text-white cursor-pointer text-center">
             {t("do-you-have-an-account")}{" "}
             <span className="text-cta-green">{t("access-here")}</span>
           </p>

@@ -23,8 +23,7 @@ const LoginForm = ({ handleSubmitLoginForm, isLoginError }: LoginFormProps) => {
   return (
     <section>
       <form
-        className="flex flex-col gap-2 font-source
-      text-body-regular text-white w-[250px] sm:w-[350px] xs:w-[300px]"
+        className="flex flex-col gap-2 text-body-regular text-white w-[250px] sm:w-[350px] xs:w-[300px]"
         onSubmit={handleSubmit(handleSubmitLoginForm)}
       >
         <label>{t("Email")}</label>
@@ -94,7 +93,7 @@ const LoginForm = ({ handleSubmitLoginForm, isLoginError }: LoginFormProps) => {
       </form>
       <div className="mt-5">
         <Link href="/register">
-          <p className="text-base-bold self-end mb-6 text-white font-source cursor-pointer text-center">
+          <p className="text-base-bold self-end mb-6 text-white cursor-pointer text-center">
             {t("dont-have-account-yet")}{" "}
             <span className="text-cta-green">{t("register")}</span>
           </p>

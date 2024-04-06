@@ -3,7 +3,7 @@ import { RootState } from "../store";
 
 export interface ThoughtState {
   negativeThought: string | null;
-  positiveThought: string | null;
+  positiveThought?: string | null;
 }
 
 const initialState: ThoughtState = {
@@ -38,17 +38,21 @@ export const thoughtSlice = createSlice({
       }
     },
     maintainThoughtsDataStoredinRedux: (state) => {
-      const negativeThought = JSON.parse(
-        localStorage.getItem("negativeThought") || "{}"
-      );
-      if (negativeThought) {
-        state.negativeThought = negativeThought;
+      if ("negativeThought" in localStorage) {
+        const negativeThought = JSON.parse(
+          localStorage.getItem("negativeThought") || "{}"
+        );
+        if (negativeThought) {
+          state.negativeThought = negativeThought.negativeThought;
+        }
       }
-      const positiveThought = JSON.parse(
-        localStorage.getItem("positiveThought") || "{}"
-      );
-      if (positiveThought) {
-        state.positiveThought = positiveThought;
+      if ("positiveThought" in localStorage) {
+        const positiveThought = JSON.parse(
+          localStorage.getItem("positiveThought") || "{}"
+        );
+        if (positiveThought) {
+          state.positiveThought = positiveThought.positiveThought;
+        }
       }
     },
     eliminateThoughtsDataStoredinRedux: (state) => {

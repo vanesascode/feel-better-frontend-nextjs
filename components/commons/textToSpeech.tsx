@@ -34,7 +34,7 @@ const TextToSpeech = ({ textToSpeak }: { textToSpeak: string }) => {
 
   return (
     <SpeakerWaveIcon
-      className="h-10 w-10 text-white mt-[-10px] pb-2"
+      className="md:h-10 md:w-10 h-8 w-8 text-white mt-[-10px] pb-2"
       onClick={handleSpeech}
     >
       altavoz

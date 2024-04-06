@@ -55,7 +55,7 @@ const LinksHorizontalNavbar = ({
         transition={{ duration: 0.35, ease: "easeInOut" }}
         className="flex fixed top-0 w-full bg-dark drop-shadow-lg shadow-lg shadow-black/500 text-white p-horizontal justify-center z-10"
       >
-        <div className="flex justify-between w-full max-w-[1440px] font-source items-center">
+        <div className="flex justify-between w-full max-w-[1440px] items-center">
           <div className="flex gap-14 items-center text-body-regular">
             <button
               onClick={() => setShowOptionsNavbar(false)}
@@ -99,7 +99,7 @@ const LinksHorizontalNavbar = ({
               </Link>
             )}
           </div>
-          <div className="flex font-source text-body-regular items-center">
+          <div className="flex text-body-regular items-center">
             <Link href={name ? "/account" : "/login"}>
               <button className="border-[1px] border-gray px-5 py-2 rounded-full hidden lg:block hover:bg-black transition duration-500 ease-in-out">
                 {name ? t("navbar:account") : t("navbar:login")}

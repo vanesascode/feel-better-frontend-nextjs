@@ -37,7 +37,7 @@ const ResetPasswordForm = ({
   return (
     <section className="flex flex-col justify-center items-center">
       <form
-        className="flex flex-col gap-2 font-source
+        className="flex flex-col gap-2
     text-body-regular text-white w-[250px] sm:w-[350px] xs:w-[300px]"
         onSubmit={handleSubmit(handleSubmitResetPasswordForm)}
       >
