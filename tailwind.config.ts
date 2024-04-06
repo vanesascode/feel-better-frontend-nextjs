@@ -33,14 +33,14 @@ const config: Config = {
         "36px",
         {
           lineHeight: "140%",
-          fontWeight: "400",
+          fontWeight: "300",
         },
       ],
       "heading1-regular": [
         "36px",
         {
           lineHeight: "140%",
-          fontWeight: "500",
+          fontWeight: "400",
         },
       ],
       "heading1-bold": [
@@ -54,14 +54,14 @@ const config: Config = {
         "32px",
         {
           lineHeight: "140%",
-          fontWeight: "400",
+          fontWeight: "300",
         },
       ],
       "heading2-regular": [
         "32px",
         {
           lineHeight: "140%",
-          fontWeight: "500",
+          fontWeight: "400",
         },
       ],
       "heading2-bold": [
@@ -75,14 +75,14 @@ const config: Config = {
         "24px",
         {
           lineHeight: "140%",
-          fontWeight: "400",
+          fontWeight: "300",
         },
       ],
       "heading3-regular": [
         "24px",
         {
           lineHeight: "140%",
-          fontWeight: "500",
+          fontWeight: "400",
         },
       ],
       "heading3-bold": [
@@ -157,15 +157,11 @@ const config: Config = {
       ],
     },
     extend: {
-      fontFamily: {
-        source: ["Source Sans Pro", "sans-serif"],
-        epilogue: ["Epilogue", "sans-serif"],
-      },
       colors: {
         black: "#0a0a0a",
         dark: "#1A191B",
         white: "#FBFBFB",
-        gray: "#8B8B8B",
+        gray: "#BABABA",
         "light-green": "#68A576",
         "cta-green": "#0F9E2E",
         "cta-green-hover": "#10782d",
@@ -177,18 +173,18 @@ const config: Config = {
     },
 
     screens: {
-      xxs: "320px", // Mobile S
-      xs: "375px", // Mobile M
-      sm: "425px", // Mobile L
+      xxs: "320px",
+      xs: "375px",
+      sm: "425px",
       sm1: "470px",
       sm2: "575px",
-      md: "768px", // Tablet
-      lg: "1024px", // Laptop S
-      xl: "1280px", // Laptop M
-      xxl: "1440px", // Laptop L, Desktop S
-      xxxl: "1728px", // Desktop M
-      xxxxl: "1920px", // Desktop L
-      xxxxxl: "2560px", // 4k
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      xxl: "1440px",
+      xxxl: "1728px",
+      xxxxl: "1920px",
+      xxxxxl: "2560px",
     },
   },
   plugins: [],
