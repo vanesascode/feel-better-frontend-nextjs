@@ -32,8 +32,7 @@ const RecoveryForm = ({
         {t("no-problem")}
       </h2>
       <form
-        className="flex flex-col gap-2 font-source
-    text-body-regular text-white w-[250px] sm:w-[350px] xs:w-[300px]"
+        className="flex flex-col gap-2 text-body-regular text-white w-[250px] sm:w-[350px] xs:w-[300px]"
         onSubmit={handleSubmit(handleSubmitRecoveryForm)}
       >
         <input
