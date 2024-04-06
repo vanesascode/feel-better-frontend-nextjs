@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { useAppDispatch } from "@/redux/hooks";
 import { setNegativeThought } from "@/redux/features/thoughtSlice";
 import { useTranslation } from "react-i18next";
+import SelectorButton from "./selectorButton";
 
 const NegativeThoughtSelector = () => {
   const [selectedNegativeThought, setSelectedNegativeThought] = useState("");
@@ -42,90 +43,73 @@ const NegativeThoughtSelector = () => {
           className="textarea-input"
           placeholder={t("write-here")}
         />
-        <button
+        <SelectorButton
           onClick={() => {
-            console.log(selectedNegativeThought);
             setSelectedNegativeThought(t("thought-1"));
           }}
-          className="login-register-input"
         >
           {t("thought-1")}
-        </button>
-        <button
+        </SelectorButton>
+        <SelectorButton
           onClick={() => {
-            console.log(selectedNegativeThought);
             setSelectedNegativeThought(t("thought-2"));
           }}
-          className="login-register-input"
         >
           {t("thought-2")}
-        </button>
-        <button
+        </SelectorButton>
+
+        <SelectorButton
           onClick={() => {
-            console.log(selectedNegativeThought);
             setSelectedNegativeThought(t("thought-3"));
           }}
-          className="login-register-input"
         >
           {t("thought-3")}
-        </button>
-        <button
+        </SelectorButton>
+        <SelectorButton
           onClick={() => {
-            console.log(selectedNegativeThought);
             setSelectedNegativeThought(t("thought-4"));
           }}
-          className="login-register-input"
         >
           {t("thought-4")}
-        </button>
-        <button
+        </SelectorButton>
+        <SelectorButton
           onClick={() => {
-            console.log(selectedNegativeThought);
             setSelectedNegativeThought(t("thought-5"));
           }}
-          className="login-register-input"
         >
           {t("thought-5")}
-        </button>
-        <button
+        </SelectorButton>
+        <SelectorButton
           onClick={() => {
-            console.log(selectedNegativeThought);
             setSelectedNegativeThought(t("thought-6"));
           }}
-          className="login-register-input"
         >
           {t("thought-6")}
-        </button>
-        <button
+        </SelectorButton>
+        <SelectorButton
           onClick={() => {
-            console.log(selectedNegativeThought);
             setSelectedNegativeThought(t("thought-7"));
           }}
-          className="login-register-input"
         >
           {t("thought-7")}
-        </button>
-        <button
+        </SelectorButton>
+        <SelectorButton
           onClick={() => {
-            console.log(selectedNegativeThought);
             setSelectedNegativeThought(t("thought-8"));
           }}
-          className="login-register-input"
         >
           {t("thought-8")}
-        </button>
-        <button
+        </SelectorButton>
+        <SelectorButton
           onClick={() => {
-            console.log(selectedNegativeThought);
             setSelectedNegativeThought(t("thought-9"));
           }}
-          className="login-register-input mb-8"
         >
           {t("thought-9")}
-        </button>
+        </SelectorButton>
         {chooseNegativeThoughtFirstMessage && (
           <p className="text-red-500 text-base-regular text-center">
-            Please select a negative thought first
+            {t("choose-first")}
           </p>
         )}
       </div>
