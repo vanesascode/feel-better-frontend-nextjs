@@ -40,14 +40,13 @@ const AccountForm = ({
   const { t } = useTranslation();
 
   return (
-    <section className="w-[250px] sm:w-[350px] xs:w-[300px] font-source">
+    <section className="w-[250px] sm:w-[350px] xs:w-[300px]">
       <article>
         <h2 className="text-heading3-bold text-center text-light-green mb-5">
           {t("modify-account-details")}
         </h2>
         <form
-          className="flex flex-col gap-2 font-source
-      text-body-regular text-white "
+          className="flex flex-col gap-2 text-body-regular text-white "
           onSubmit={handleSubmit(handleSubmitAccountChanges)}
         >
           <label>{t("name")}</label>
