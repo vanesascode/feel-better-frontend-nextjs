@@ -32,7 +32,7 @@ export default async function ChooseNegativeThought({
         <header>
           <Navbar />
           <Header>
-            <h1 className="md:text-heading2-bold text-heading3-bold text-center px-3 mb-6 font-source">
+            <h1 className="md:text-heading2-bold text-heading3-bold text-center px-3 mb-6">
               {t("choose-negative-thought")}
             </h1>
 
