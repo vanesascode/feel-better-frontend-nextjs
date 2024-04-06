@@ -14,7 +14,7 @@ const HomeCover = () => {
       <div className="bg-dark sm:h-20 h-14"></div>
       <article
         className={`bg-dark bg-cover bg-center pr-10 xxl:h-[850px] lg:h-[700px] md:h-[600px] sm:h-[500px] ${
-          name ? "h-[480px]" : "xs:h-[470px] h-[450px]"
+          name ? "h-[480px]" : "xs:h-[470px] h-[450px] "
         }  relative`}
         style={{
           backgroundImage: "url('/home/home-cover-background.jpg')",
@@ -63,7 +63,7 @@ const HomeCover = () => {
             )}
             {name && name?.length <= 8 && <div>{name}</div>}
           </h1>
-          <h2 className="md:text-heading3-thin text-base-thin text-white pl-[10%] lg:pl-[13%] max-w-[50%] lg:max-w-[55%] xxl:max-w-[60%] font-source">
+          <h2 className="md:text-heading3-thin text-base-thin text-white pl-[10%] lg:pl-[13%] max-w-[50%] lg:max-w-[55%] xxl:max-w-[60%]">
             {t("welcome")}
           </h2>
           <div className="pl-[10%] lg:pl-[13%] mt-6">
