@@ -155,7 +155,7 @@ const AccountForm = ({
             </div>
           )}
           <div className="flex justify-center mt-8">
-            <CtaButton disabled={isSubmitting} type="submit" darkerShadow>
+            <CtaButton disabled={isSubmitting} type="submit" darkerShadow green>
               {isSubmitting ? t("saving") : t("save")}
             </CtaButton>
           </div>
