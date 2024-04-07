@@ -5,6 +5,7 @@ import TokenMaintainer from "@/components/commons/tokenMaintainer";
 import HomeCover from "@/components/home/homeCover";
 import HomeActivities from "@/components/home/homeActivities";
 import HomeExplanationActivities from "@/components/home/homeExplanationActivities";
+import ContentFrame from "@/components/commons/contentFrame";
 
 const i18nNamespaces = ["home", "navbar"];
 
@@ -30,7 +31,9 @@ export default async function Home({ params }: { params: { locale: string } }) {
         <main>
           <HomeCover />
           <HomeActivities />
-          <HomeExplanationActivities />
+          <ContentFrame>
+            <HomeExplanationActivities />
+          </ContentFrame>
         </main>
       </TranslationsProvider>
     </>
