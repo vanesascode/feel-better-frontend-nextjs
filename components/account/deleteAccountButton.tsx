@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import DeleteAccountConfirmation from "./deleteAccountConfirmation";
+import CtaButton from "../commons/ctaButton";
 
 interface DeleteAccountButtonProps {
   handleDeleteAccount: () => void;
@@ -54,12 +55,14 @@ const DeleteAccountButton = ({
           </div>
         )}
         <div className="flex justify-center mt-5">
-          <button
+          <CtaButton
             onClick={showMenuForDeletingAccountConfirmation}
-            className="py-2 rounded-full bg-red-500 md:text-heading3-bold text-body-bold md:w-[250px] w-[180px] hover:bg-red-700 text-white shadow-md  shadow-black transition duration-500 ease-in-out"
+            darkerShadow
+            type="button"
+            red
           >
             {t("delete")}
-          </button>
+          </CtaButton>
         </div>
       </article>
     </>
