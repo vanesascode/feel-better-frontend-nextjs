@@ -86,7 +86,7 @@ const LoginForm = ({ handleSubmitLoginForm, isLoginError }: LoginFormProps) => {
           </div>
         )}
         <div className="flex justify-center">
-          <CtaButton disabled={isSubmitting} type="submit" darkerShadow>
+          <CtaButton disabled={isSubmitting} type="submit" darkerShadow green>
             {isSubmitting ? t("loading") : t("continue")}
           </CtaButton>
         </div>

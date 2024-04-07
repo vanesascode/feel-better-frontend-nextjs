@@ -44,6 +44,7 @@ const EmailSentForRecoveryConfirmation = ({
                 onClick={() => router.push("/")}
                 type="button"
                 darkerShadow
+                green
               >
                 {t("ok")}
               </CtaButton>

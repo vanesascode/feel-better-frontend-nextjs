@@ -67,7 +67,7 @@ const RecoveryForm = ({
           </p>
         )}
         <div className="flex justify-center mt-8">
-          <CtaButton disabled={isSubmitting} type="submit" darkerShadow>
+          <CtaButton disabled={isSubmitting} type="submit" darkerShadow green>
             {isSubmitting ? t("loading") : t("continue")}
           </CtaButton>
         </div>

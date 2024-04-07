@@ -113,7 +113,7 @@ const NegativeThoughtSelector = () => {
           </p>
         )}
       </div>
-      <CtaButton darkerShadow type="button" onClick={handleGoToNextStep}>
+      <CtaButton darkerShadow type="button" onClick={handleGoToNextStep} green>
         {t("continue")}
       </CtaButton>
     </section>

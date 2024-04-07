@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import CtaButton from "../commons/ctaButton";
 
 interface LogoutButtonProps {
   handleLogout: () => void;
@@ -13,12 +14,9 @@ const LogoutButton = ({ handleLogout }: LogoutButtonProps) => {
         {t("logout-your-session")}
       </h2>
       <div className="flex justify-center">
-        <button
-          onClick={handleLogout}
-          className="py-2 rounded-full bg-white md:text-heading3-bold text-body-bold md:w-[250px] w-[180px] hover:bg-gray text-dark shadow-md  shadow-black transition duration-500 ease-in-out"
-        >
+        <CtaButton onClick={handleLogout} darkerShadow type="button" white>
           {t("logout")}
-        </button>
+        </CtaButton>
       </div>
     </article>
   );

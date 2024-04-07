@@ -23,7 +23,12 @@ const IsNegativeThoughtTrueContent = () => {
       </h2>
       <NegativeThoughtChosen />
       <BreathingBall />
-      <CtaButton darkerShadow type="button" onClick={() => router.push("/")}>
+      <CtaButton
+        darkerShadow
+        type="button"
+        onClick={() => router.push("/")}
+        green
+      >
         {t("continue")}
       </CtaButton>
       <p className="text-body-thin text-center text-gray pt-10 max-w-[1024px]">

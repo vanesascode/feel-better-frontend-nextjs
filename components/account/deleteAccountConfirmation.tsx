@@ -46,16 +46,21 @@ const DeleteAccountConfirmation = ({
                 <p className="text-body-regular text-center text-white mb-5">
                   {t("are-you-sure")}
                 </p>
-                <button
-                  onClick={handleLogoutAndDeleteAccount}
-                  className="py-2 rounded-full bg-white md:text-heading3-bold text-body-bold md:w-[250px] w-[180px] hover:bg-gray text-dark shadow-md  shadow-black transition duration-500 ease-in-out mb-5"
-                >
-                  {t("yes")}
-                </button>
+                <div className="mb-5">
+                  <CtaButton
+                    onClick={handleLogoutAndDeleteAccount}
+                    type="button"
+                    darkerShadow
+                    white
+                  >
+                    {t("yes")}
+                  </CtaButton>
+                </div>
                 <CtaButton
                   onClick={() => setShowDeleteAccountConfirmation(false)}
                   type="button"
                   darkerShadow
+                  green
                 >
                   {t("no")}
                 </CtaButton>
