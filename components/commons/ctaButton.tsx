@@ -6,6 +6,9 @@ interface CtaButtonProps {
   type: "button" | "submit" | "reset" | undefined;
   onClick?: () => void;
   darkerShadow?: boolean;
+  white?: boolean;
+  red?: boolean;
+  green?: boolean;
 }
 
 const CtaButton = ({
@@ -14,12 +17,19 @@ const CtaButton = ({
   type,
   onClick,
   darkerShadow,
+  white,
+  green,
+  red,
 }: CtaButtonProps) => {
   return (
     <button
-      className={`py-2 rounded-full bg-cta-green md:text-heading3-bold text-body-bold md:w-[250px] w-[180px] hover:bg-cta-green-hover text-white shadow-md ${
+      className={`py-2 rounded-full ${
+        green && "bg-cta-green hover:bg-cta-green-hover text-white"
+      }  ${white && "hover:bg-gray text-dark bg-white"} ${
+        red && "bg-red-500 hover:bg-red-700 text-white"
+      }  md:text-heading3-bold xs:text-body-bold text-base-bold md:w-[250px] w-[190px] shadow-md ${
         darkerShadow ? "shadow-black" : "shadow-shadow-green"
-      }  transition duration-500 ease-in-out  `}
+      }  transition duration-500 ease-in-out `}
       disabled={disabled}
       type={type}
       onClick={onClick}
