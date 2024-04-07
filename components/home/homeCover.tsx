@@ -67,7 +67,9 @@ const HomeCover = () => {
             {t("welcome")}
           </h2>
           <div className="pl-[10%] lg:pl-[13%] mt-6">
-            <CtaButton type="button">{t("start")}</CtaButton>
+            <CtaButton type="button" green>
+              {t("start")}
+            </CtaButton>
           </div>
         </div>
       </article>
