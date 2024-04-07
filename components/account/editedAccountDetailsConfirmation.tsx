@@ -54,6 +54,7 @@ const EditedAccountDetailsConfirmation = ({
                   onClick={handleOkAnswerFromUser}
                   type="button"
                   darkerShadow
+                  green
                 >
                   {t("ok")}
                 </CtaButton>
