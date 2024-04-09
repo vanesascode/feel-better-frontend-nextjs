@@ -1,42 +1,35 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import CtaButton from "../commons/ctaButton";
-import { useRouter } from "next/navigation";
-import { useAppDispatch } from "@/redux/hooks";
-import { setNegativeThought } from "@/redux/features/thoughtSlice";
 import { useTranslation } from "react-i18next";
 import SelectorButton from "./selectorButton";
+import PopupAskingToLogin from "./popupAskingToLogin";
 
-const NegativeThoughtSelector = () => {
-  const [selectedNegativeThought, setSelectedNegativeThought] = useState("");
-  const [
-    chooseNegativeThoughtFirstMessage,
-    setChooseNegativeThoughtFirstMessage,
-  ] = useState(false);
-  const router = useRouter();
-  const dispatch = useAppDispatch();
+interface NegativeThoughtSelectorFormProps {
+  selectedNegativeThought: string;
+  setSelectedNegativeThought: React.Dispatch<React.SetStateAction<string>>;
+  chooseNegativeThoughtFirstMessage: boolean;
+  handleGoToNextStep: () => void;
+  showPopupAskingToLogin: boolean;
+  setShowPopupAskingToLogin: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const NegativeThoughtSelectorForm = ({
+  selectedNegativeThought,
+  setSelectedNegativeThought,
+  chooseNegativeThoughtFirstMessage,
+  handleGoToNextStep,
+  showPopupAskingToLogin,
+  setShowPopupAskingToLogin,
+}: NegativeThoughtSelectorFormProps) => {
   const { t } = useTranslation();
 
-  useEffect(() => {
-    if (selectedNegativeThought) {
-      dispatch(setNegativeThought(selectedNegativeThought));
-    }
-  }, [selectedNegativeThought]);
-
-  const handleGoToNextStep = () => {
-    if (!selectedNegativeThought) {
-      setChooseNegativeThoughtFirstMessage(true);
-      return;
-    }
-    router.push("/is-negative-thought-true");
-  };
   return (
     <section className="flex flex-col justify-center items-center w-full gap-2">
       <h2 className="md:text-heading3-bold text-body-bold text-center text-white mb-5">
         {t("write-or-choose-thought")}
       </h2>
-      <div className="flex flex-col w-full max-w-[600px] text-body-thin text-white gap-5">
+      <div className="flex flex-col w-full max-w-[600px] text-body-thin text-white gap-5 mb-5">
         <textarea
           value={selectedNegativeThought}
           onChange={(e) => setSelectedNegativeThought(e.target.value)}
@@ -116,8 +109,12 @@ const NegativeThoughtSelector = () => {
       <CtaButton darkerShadow type="button" onClick={handleGoToNextStep} green>
         {t("continue")}
       </CtaButton>
+      <PopupAskingToLogin
+        showPopupAskingToLogin={showPopupAskingToLogin}
+        setShowPopupAskingToLogin={setShowPopupAskingToLogin}
+      />
     </section>
   );
 };
 
-export default NegativeThoughtSelector;
+export default NegativeThoughtSelectorForm;
