@@ -23,13 +23,13 @@ const BreathingBall = () => {
       transition={{
         scale: { duration: 15, ease: "easeInOut", repeat: Infinity },
       }}
-      className="bg-dark bg-cover bg-center h-[380px] w-[380px] rounded-full my-12 border-[2px] border-white"
+      className="bg-dark bg-cover bg-center sm2:h-[380px] sm2:w-[380px] sm:h-[310px] sm:w-[310px] xs:h-[270px] xs:w-[270px] h-[230px] w-[230px] rounded-full md:my-8 my-5 border-[2px] border-white"
       style={{
         backgroundImage: "url('/thoughts/breathing-leaves.png')",
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-cover3-semibold text-center">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white md:text-cover3-semibold  text-heading1-bold text-center">
         {toggleBreathe ? t("breathe-in") : t("breathe-out")}
       </div>
     </motion.div>
