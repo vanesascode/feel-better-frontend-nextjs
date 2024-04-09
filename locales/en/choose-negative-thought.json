@@ -12,5 +12,8 @@
   "thought-9": "I should be able to handle the pain better.",
   "write-here": "Write here...",
   "choose-first": "Please choose a negative thought first",
-  "continue": "Continue"
+  "continue": "Continue",
+  "ask-login": "If you want to keep track of your practice, log in to your account first.",
+  "ignore": "Ignore",
+  "access": "Login"
 }
