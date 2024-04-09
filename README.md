@@ -38,12 +38,15 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Redux for auth and cookies
 
 `npm i @reduxjs/toolkit react-redux`
+
 `npm i js-cookie`
+
 `npm i --save-dev @types/js-cookie`
 
 ### Expiration of token:
 
 `npm i jsonwebtoken`
+
 `npm i --save-dev @types/jsonwebtoken`
 
 ## Animations
@@ -69,3 +72,15 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## To send emails
 
 `npm i resend`
+
+## For the cookies consent bar
+
+`npm i cookies-next`
+
+## For the speech recognition
+
+`npm i react-speech-recognition`
+
+`npm i regenerator-runtime`
+
+`npm i --save-dev @types/react-speech-recognition`
