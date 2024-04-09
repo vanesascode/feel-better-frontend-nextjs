@@ -40,10 +40,10 @@ const ScrollToTop = () => {
             className="fixed xxxxl:right-[10%] xxxxxl:right-[15%] md:bottom-10 md:right-10 bottom-5 right-5 "
           >
             <button
-              className="text-white p-3 rounded-full bg-dark scroll-to-top-shadow"
+              className="text-white xs:p-3 p-2 rounded-full bg-dark scroll-to-top-shadow"
               onClick={scrollToTop}
             >
-              <ArrowUpIcon className="w-8 h-8 text-white" />
+              <ArrowUpIcon className="xs:w-8 xs:h-8 w-6 h-6 text-white" />
             </button>
           </motion.div>
         )}
