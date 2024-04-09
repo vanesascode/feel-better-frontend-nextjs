@@ -12,5 +12,8 @@
   "thought-9": "Debería poder manejar mejor el dolor.",
   "write-here": "Escribe aquí...",
   "choose-first": "Por favor escoge primero un pensamiento negativo",
-  "continue": "Continuar"
+  "continue": "Continuar",
+  "ask-login": "Si quieres mantener un seguimiento con tu práctica, accede primero a tu cuenta.",
+  "ignore": "Ignorar",
+  "access": "Acceder"
 }
