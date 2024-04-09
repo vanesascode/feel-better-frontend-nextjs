@@ -31,7 +31,7 @@ const EmailSentForRecoveryConfirmation = ({
             }}
             transition={{ duration: 0.35, ease: "easeInOut" }}
             exit={{ opacity: 0 }}
-            className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-[250px] md:w-[420px] xs:w-[300px] bg-dark p-10 sm:p-14 rounded-lg"
+            className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-[250px] md:w-[420px] xs:w-[300px] bg-dark p-10 rounded-lg"
           >
             <div className="flex flex-col items-center">
               <h2 className="text-heading3-bold text-center text-white">
@@ -46,7 +46,7 @@ const EmailSentForRecoveryConfirmation = ({
                 darkerShadow
                 green
               >
-                {t("ok")}
+                Ok
               </CtaButton>
             </div>
           </motion.div>
