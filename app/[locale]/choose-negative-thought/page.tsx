@@ -1,6 +1,6 @@
 import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/TranslationProvider";
-import NegativeThoughtSelector from "@/components/choose-negative-thought/negativeThoughtSelector";
+import NegativeThoughtSelectorLogic from "@/components/choose-negative-thought/negativeThoughtSelectorLogic";
 import ContentFrame from "@/components/commons/contentFrame";
 import Header from "@/components/commons/header";
 import TokenMaintainer from "@/components/commons/tokenMaintainer";
@@ -49,7 +49,7 @@ export default async function ChooseNegativeThought({
         </header>
         <main>
           <ContentFrame>
-            <NegativeThoughtSelector />
+            <NegativeThoughtSelectorLogic />
           </ContentFrame>
         </main>
       </TranslationsProvider>
