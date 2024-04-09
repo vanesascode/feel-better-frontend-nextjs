@@ -57,13 +57,13 @@ const LanguageChangerVerticalNavbar = () => {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="bg-white px-20 py-4 rounded-lg flex text-black justify-between gap-2"
+              className="bg-white px-10 py-4 rounded-lg text-black flex"
             >
               <button
                 onClick={() => setLanguageValue("es")}
                 className={`${
                   currentLocale === "es" ? "hidden" : ""
-                } hover:text-cta-green-hover`}
+                } hover:text-cta-green-hover w-[50%] flex justify-center items-center`}
               >
                 ES
               </button>
@@ -71,7 +71,7 @@ const LanguageChangerVerticalNavbar = () => {
                 onClick={() => setLanguageValue("en")}
                 className={`${
                   currentLocale === "en" ? "hidden" : ""
-                } hover:text-cta-green-hover`}
+                } hover:text-cta-green-hover w-[50%] flex justify-center items-center`}
               >
                 EN
               </button>
@@ -79,7 +79,7 @@ const LanguageChangerVerticalNavbar = () => {
                 onClick={() => setLanguageValue("fr")}
                 className={`${
                   currentLocale === "fr" ? "hidden" : ""
-                } hover:text-cta-green-hover`}
+                } hover:text-cta-green-hover w-[50%] flex justify-center items-center`}
               >
                 FR
               </button>
