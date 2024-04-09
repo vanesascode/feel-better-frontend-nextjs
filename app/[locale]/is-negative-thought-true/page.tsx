@@ -2,6 +2,7 @@ import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/TranslationProvider";
 import ContentFrame from "@/components/commons/contentFrame";
 import Header from "@/components/commons/header";
+import ThoughtsMaintainer from "@/components/commons/thoughtsMaintainer";
 import TokenMaintainer from "@/components/commons/tokenMaintainer";
 import IsNegativeThoughtTrueContent from "@/components/is-negative-thought-true/isNegativeThoughtTrueContent";
 import Navbar from "@/components/navbar/navbar";
@@ -24,6 +25,7 @@ export default async function IsNegativeThoughtTrue({
   return (
     <>
       <TokenMaintainer />
+      <ThoughtsMaintainer />
       <TranslationsProvider
         resources={resources}
         locale={params.locale}

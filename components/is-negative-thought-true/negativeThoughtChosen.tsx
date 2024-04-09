@@ -1,29 +1,27 @@
-import Image from "next/image";
 import { useAppSelector } from "@/redux/hooks";
-import {
-  maintainThoughtsDataStoredinRedux,
-  selectThought,
-} from "@/redux/features/thoughtSlice";
-import { useAppDispatch } from "@/redux/hooks";
-import { useEffect } from "react";
+import { selectThought } from "@/redux/features/thoughtSlice";
+
+const formatNegativeThought = (negativeThought: string) => {
+  const words = negativeThought?.split(" ");
+  const formattedWords = words
+    ? words.map((word) => {
+        if (word.length > 15) {
+          const matchedWords = word.match(/.{1,15}/g);
+          return matchedWords ? matchedWords.join(" ") : "";
+        }
+        return word;
+      })
+    : [];
+  return formattedWords.join(" ");
+};
 
 const NegativeThoughtChosen = () => {
   const { negativeThought } = useAppSelector(selectThought);
-  const dispatch = useAppDispatch();
-
-  useEffect(() => {
-    dispatch(maintainThoughtsDataStoredinRedux());
-  }, []);
+  const formattedNegativeThought = formatNegativeThought(negativeThought || "");
 
   return (
-    <div className="flex justify-center items-center text-body-thin text-gray bg-dark-green-2 lg:px-16 md:px-10 px-5 py-5 rounded-lg gap-5 xs:flex-row flex-col">
-      <Image
-        src="/home/head-icon.svg"
-        alt="head icon accompanying the negative thought"
-        width={30}
-        height={30}
-      />
-      <p>{negativeThought}</p>
+    <div className="flex justify-center items-center md:text-body-thin text-base-thin text-gray bg-dark-green-2 lg:px-16 md:px-10 px-5 py-5 rounded-lg gap-5 xs:flex-row flex-col">
+      <p>{formattedNegativeThought}</p>
     </div>
   );
 };
