@@ -27,7 +27,12 @@ const NegativeThoughtTextarea = ({
       <textarea
         rows={3}
         value={selectedNegativeThought}
-        onChange={(e) => setSelectedNegativeThought(e.target.value)}
+        onChange={(e) => {
+          const negativeThought = e.target.value;
+          if (negativeThought !== " ") {
+            setSelectedNegativeThought(negativeThought);
+          }
+        }}
         className="bg-dark w-full focus:outline-none active:outline-none"
         placeholder={t("write-here")}
       />
