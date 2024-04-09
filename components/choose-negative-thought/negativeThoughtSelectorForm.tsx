@@ -4,6 +4,7 @@ import CtaButton from "../commons/ctaButton";
 import { useTranslation } from "react-i18next";
 import SelectorButton from "./selectorButton";
 import PopupAskingToLogin from "./popupAskingToLogin";
+import NegativeThoughtTextarea from "./negativeThoughtTextarea";
 
 interface NegativeThoughtSelectorFormProps {
   selectedNegativeThought: string;
@@ -30,11 +31,9 @@ const NegativeThoughtSelectorForm = ({
         {t("write-or-choose-thought")}
       </h2>
       <div className="flex flex-col w-full max-w-[600px] text-body-thin text-white gap-5 mb-5">
-        <textarea
-          value={selectedNegativeThought}
-          onChange={(e) => setSelectedNegativeThought(e.target.value)}
-          className="textarea-input"
-          placeholder={t("write-here")}
+        <NegativeThoughtTextarea
+          selectedNegativeThought={selectedNegativeThought}
+          setSelectedNegativeThought={setSelectedNegativeThought}
         />
         <SelectorButton
           onClick={() => {
@@ -50,7 +49,6 @@ const NegativeThoughtSelectorForm = ({
         >
           {t("thought-2")}
         </SelectorButton>
-
         <SelectorButton
           onClick={() => {
             setSelectedNegativeThought(t("thought-3"));
