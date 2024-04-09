@@ -58,44 +58,47 @@ const LinksVerticalNavbar = ({
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="bg-white px-5 py-4 rounded-lg flex flex-col text-black gap-4"
+                    className="bg-white px-5 py-4 rounded-lg flex xs:flex-row flex-col text-black gap-10"
                   >
-                    <div onClick={() => setShowOptionsNavbar(false)}>
-                      <Link
-                        href="/choose-negative-thought"
-                        className="hover:text-dark-green-1"
-                      >
-                        {t("navbar:challenge-a-negative-thought")}
-                      </Link>
-                    </div>
-                    <div onClick={() => setShowOptionsNavbar(false)}>
-                      <Link
-                        href="/meditaciones"
-                        className="hover:text-dark-green-1"
-                      >
-                        {t("navbar:do-a-guided-meditation")}
-                      </Link>
-                    </div>
+                    <Link
+                      href="/choose-negative-thought"
+                      className="hover:text-dark-green-1"
+                      onClick={() => setShowOptionsNavbar(false)}
+                    >
+                      {t("navbar:challenge-a-negative-thought")}
+                    </Link>
+                    <Link
+                      href="/meditaciones"
+                      className="hover:text-dark-green-1"
+                      onClick={() => setShowOptionsNavbar(false)}
+                    >
+                      {t("navbar:do-a-guided-meditation")}
+                    </Link>
                   </motion.div>
                 )}
-                <div onClick={() => setShowOptionsNavbar(false)}>
-                  <Link href="/aprender" className="hover:text-light-green">
-                    {t("navbar:learn")}
-                  </Link>
-                </div>
+                <Link
+                  href="/aprender"
+                  className="hover:text-light-green"
+                  onClick={() => setShowOptionsNavbar(false)}
+                >
+                  {t("navbar:learn")}
+                </Link>
                 {name && (
-                  <Link href="/seguimiento" className="hover:text-light-green">
+                  <Link
+                    href="/seguimiento"
+                    className="hover:text-light-green"
+                    onClick={() => setShowOptionsNavbar(false)}
+                  >
                     {t("navbar:follow-up")}
                   </Link>
                 )}
-                <div onClick={() => setShowOptionsNavbar(false)}>
-                  <Link
-                    href={name ? "/account" : "/login"}
-                    className="hover:text-light-green"
-                  >
-                    {name ? t("navbar:account") : t("navbar:login")}
-                  </Link>
-                </div>
+                <Link
+                  href={name ? "/account" : "/login"}
+                  className="hover:text-light-green"
+                  onClick={() => setShowOptionsNavbar(false)}
+                >
+                  {name ? t("navbar:account") : t("navbar:login")}
+                </Link>
                 {name && (
                   <Link
                     href="/login"
