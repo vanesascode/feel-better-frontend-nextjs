@@ -37,7 +37,6 @@ export default async function IsNegativeThoughtTrue({
             <h1 className="md:text-heading2-bold text-heading3-bold text-center px-3 mb-6">
               {t("is-thought-true")}
             </h1>
-
             <div className="max-w-[400px] sm:mb-0 mb-3">
               <Image
                 src="/thoughts/thoughts-step-2.png"
