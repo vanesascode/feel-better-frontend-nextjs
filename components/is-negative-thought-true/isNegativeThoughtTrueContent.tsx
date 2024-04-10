@@ -29,7 +29,7 @@ const IsNegativeThoughtTrueContent = () => {
       <CtaButton
         darkerShadow
         type="button"
-        onClick={() => router.push("/")}
+        onClick={() => router.push("/write-alternative-thought")}
         green
       >
         {t("continue")}
