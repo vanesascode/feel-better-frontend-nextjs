@@ -6,7 +6,7 @@ import SelectorButton from "./selectorButton";
 import PopupAskingToLogin from "./popupAskingToLogin";
 import NegativeThoughtTextarea from "./negativeThoughtTextarea";
 
-interface NegativeThoughtSelectorFormProps {
+interface ChooseNegativeThoughtFormProps {
   selectedNegativeThought: string;
   setSelectedNegativeThought: React.Dispatch<React.SetStateAction<string>>;
   chooseNegativeThoughtFirstMessage: boolean;
@@ -15,14 +15,14 @@ interface NegativeThoughtSelectorFormProps {
   setShowPopupAskingToLogin: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const NegativeThoughtSelectorForm = ({
+const ChooseNegativeThoughtForm = ({
   selectedNegativeThought,
   setSelectedNegativeThought,
   chooseNegativeThoughtFirstMessage,
   handleGoToNextStep,
   showPopupAskingToLogin,
   setShowPopupAskingToLogin,
-}: NegativeThoughtSelectorFormProps) => {
+}: ChooseNegativeThoughtFormProps) => {
   const { t } = useTranslation();
 
   return (
@@ -115,4 +115,4 @@ const NegativeThoughtSelectorForm = ({
   );
 };
 
-export default NegativeThoughtSelectorForm;
+export default ChooseNegativeThoughtForm;
