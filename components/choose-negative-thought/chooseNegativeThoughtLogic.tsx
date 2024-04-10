@@ -6,15 +6,17 @@ import { useAppDispatch } from "@/redux/hooks";
 import { setNegativeThought } from "@/redux/features/thoughtSlice";
 import { useAppSelector } from "@/redux/hooks";
 import { selectAuth } from "@/redux/features/authSlice";
-import NegativeThoughtSelectorForm from "./negativeThoughtSelectorForm";
+import ChooseNegativeThoughtForm from "./chooseNegativeThoughtForm";
 
-const NegativeThoughtSelectorLogic = () => {
-  const [selectedNegativeThought, setSelectedNegativeThought] = useState("");
-  const [showPopupAskingToLogin, setShowPopupAskingToLogin] = useState(false);
+const ChooseNegativeThoughtLogic = () => {
+  const [selectedNegativeThought, setSelectedNegativeThought] =
+    useState<string>("");
+  const [showPopupAskingToLogin, setShowPopupAskingToLogin] =
+    useState<boolean>(false);
   const [
     chooseNegativeThoughtFirstMessage,
     setChooseNegativeThoughtFirstMessage,
-  ] = useState(false);
+  ] = useState<boolean>(false);
   const router = useRouter();
   const dispatch = useAppDispatch();
   const { name } = useAppSelector(selectAuth);
@@ -42,7 +44,7 @@ const NegativeThoughtSelectorLogic = () => {
   };
 
   return (
-    <NegativeThoughtSelectorForm
+    <ChooseNegativeThoughtForm
       handleGoToNextStep={handleGoToNextStep}
       selectedNegativeThought={selectedNegativeThought}
       setSelectedNegativeThought={setSelectedNegativeThought}
@@ -53,4 +55,4 @@ const NegativeThoughtSelectorLogic = () => {
   );
 };
 
-export default NegativeThoughtSelectorLogic;
+export default ChooseNegativeThoughtLogic;
