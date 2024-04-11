@@ -40,7 +40,6 @@ const ResetPasswordLogic = () => {
       setResetingPasswordError(false);
       setShowPasswordResetConfirmation(true);
     } catch (error) {
-      console.log(error);
       setResetingPasswordError(true);
     }
   };
