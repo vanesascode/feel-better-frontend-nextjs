@@ -27,7 +27,7 @@ const WriteAlternativeThoughtLogic = () => {
       setWritePositiveThoughtFirstMessage(true);
       return;
     }
-    router.push("/is-negative-thought-true");
+    router.push("/reinforce-positive-thought");
   };
   return (
     <WriteAlternativeThoughtForm
