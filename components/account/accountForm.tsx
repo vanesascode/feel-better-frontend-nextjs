@@ -14,9 +14,9 @@ interface AccountFormProps {
   handleSubmitAccountChanges: SubmitHandler<FormFields>;
   existingUsersEmails: string[];
   handleLogout: () => void;
-  serverErrorForModifyingAccount?: string;
+  serverErrorForModifyingAccount?: boolean;
   handleDeleteAccount: () => void;
-  serverErrorForDeletingAccount?: string;
+  serverErrorForDeletingAccount?: boolean;
   showConfirmationAccountDetailsSavedCorrectly: boolean;
   setShowConfirmationAccountDetailsSavedCorrectly: React.Dispatch<
     React.SetStateAction<boolean>
