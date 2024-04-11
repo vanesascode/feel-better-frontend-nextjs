@@ -8,7 +8,6 @@ import AccountForm from "./accountForm";
 import { useAppSelector } from "@/redux/hooks";
 import { selectAuth } from "@/redux/features/authSlice";
 import { logout } from "@/redux/features/authSlice";
-import EditedAccountDetailsConfirmation from "./editedAccountDetailsConfirmation";
 import { fetchExistingUsersEmails } from "@/api/users/users";
 
 export interface FormFields {
@@ -64,7 +63,6 @@ const AccountLogic = () => {
       const filteredData = Object.fromEntries(
         Object.entries(data).filter(([key, value]) => value !== "")
       );
-      console.log(filteredData);
       await editCurrentUserAccountDetails(filteredData);
       setShowConfirmationAccountDetailsSavedCorrectly(true);
     } catch (error) {
@@ -109,15 +107,6 @@ const AccountLogic = () => {
 
   return (
     <>
-      <EditedAccountDetailsConfirmation
-        handleLogout={handleLogout}
-        showConfirmationAccountDetailsSavedCorrectly={
-          showConfirmationAccountDetailsSavedCorrectly
-        }
-        setShowConfirmationAccountDetailsSavedCorrectly={
-          setShowConfirmationAccountDetailsSavedCorrectly
-        }
-      />
       <AccountForm
         handleSubmitAccountChanges={handleSubmitAccountChanges}
         existingUsersEmails={existingUsersEmails}
@@ -125,6 +114,12 @@ const AccountLogic = () => {
         serverErrorForModifyingAccount={serverErrorForModifyingAccount}
         handleDeleteAccount={handleDeleteAccount}
         serverErrorForDeletingAccount={serverErrorForDeletingAccount}
+        showConfirmationAccountDetailsSavedCorrectly={
+          showConfirmationAccountDetailsSavedCorrectly
+        }
+        setShowConfirmationAccountDetailsSavedCorrectly={
+          setShowConfirmationAccountDetailsSavedCorrectly
+        }
       />
     </>
   );
