@@ -45,7 +45,7 @@ const RegisterForm = ({
           })}
           type="text"
           placeholder="example"
-          className="login-register-input"
+          className="white-green-input"
         />
         {errors.name && (
           <p className="text-red-500 text-base-regular">
@@ -71,7 +71,7 @@ const RegisterForm = ({
           })}
           type="text"
           placeholder="example@example.com"
-          className="login-register-input"
+          className="white-green-input"
           onChange={(e) => (e.target.value = e.target.value.toLowerCase())}
         />
         {errors.email && (
@@ -80,7 +80,7 @@ const RegisterForm = ({
           </p>
         )}
         <label className="mt-4">{t("password")}</label>
-        <div className="login-register-input flex justify-between items-center">
+        <div className="white-green-input flex justify-between items-center">
           <input
             {...register("password", {
               required: t("password-is-required"),
@@ -111,7 +111,7 @@ const RegisterForm = ({
           </p>
         )}
         <label className="mt-4">{t("repeat-password")}</label>
-        <div className="login-register-input flex justify-between items-center ">
+        <div className="white-green-input flex justify-between items-center ">
           <input
             {...register("repeatPassword", {
               required: t("password-is-required"),
