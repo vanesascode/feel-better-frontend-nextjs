@@ -30,3 +30,44 @@ export async function resetPassword({ email, password }: ResetPasswordProps) {
     throw new Error("Error resetting password");
   }
 }
+
+interface currentUserAccountDetailsProps {
+  name?: string;
+  email?: string;
+  password?: string;
+  _id: string | null;
+}
+
+export async function editCurrentUserAccountDetails({
+  name,
+  email,
+  password,
+  _id,
+}: currentUserAccountDetailsProps) {
+  try {
+    await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users/${_id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, email, password }),
+    });
+  } catch (error) {
+    console.error("Error:", error);
+    throw error;
+  }
+}
+
+export async function deleteCurrentUserAccount(_id: string | null) {
+  try {
+    await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users/${_id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  } catch (error) {
+    console.error("Error:", error);
+    throw error;
+  }
+}
