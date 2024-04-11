@@ -7,7 +7,7 @@ interface SelectorButtonProps {
 
 const SelectorButton = ({ children, onClick }: SelectorButtonProps) => {
   return (
-    <button onClick={onClick} className="login-register-input">
+    <button onClick={onClick} className="white-green-input">
       {children}
     </button>
   );
