@@ -42,7 +42,7 @@ const WriteAlternativeThoughtForm = ({
           {t("choose-first")}
         </p>
       )}
-      <div className="mt-5">
+      <div className="mt-10">
         <CtaButton
           darkerShadow
           type="button"
