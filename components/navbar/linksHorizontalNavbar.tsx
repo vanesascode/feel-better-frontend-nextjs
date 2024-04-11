@@ -66,7 +66,7 @@ const LinksHorizontalNavbar = ({
 
             <div className="relative py-7 hidden lg:block">
               <div className="flex items-center hover:text-light-green gap-3 transition duration-300 ease-in-out cursor-pointer">
-                <Link href="/practicar">{t("navbar:practice")}</Link>
+                <Link href="/practice">{t("navbar:practice")}</Link>
                 <ChevronDownIcon className="h-5 w-5 mb-[-3px]" />
               </div>
               <div className="navbar-practice-submenu">
@@ -85,14 +85,14 @@ const LinksHorizontalNavbar = ({
               </div>
             </div>
             <Link
-              href="/aprender"
+              href="/learn"
               className="hidden lg:block hover:text-light-green transition duration-300 ease-in-out cursor-pointer"
             >
               {t("navbar:learn")}
             </Link>
             {name && (
               <Link
-                href="/seguimiento"
+                href="/follow-up"
                 className="hidden lg:block hover:text-light-green transition duration-300 ease-in-out cursor-pointer"
               >
                 {t("navbar:follow-up")}
