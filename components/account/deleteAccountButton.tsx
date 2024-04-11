@@ -5,7 +5,7 @@ import CtaButton from "../commons/ctaButton";
 
 interface DeleteAccountButtonProps {
   handleDeleteAccount: () => void;
-  serverErrorForDeletingAccount?: string;
+  serverErrorForDeletingAccount?: boolean;
   handleLogout: () => void;
 }
 
