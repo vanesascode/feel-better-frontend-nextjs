@@ -53,7 +53,7 @@ const RecoveryForm = ({
           })}
           type="text"
           placeholder="example@example.com"
-          className="login-register-input"
+          className="white-green-input"
           onChange={(e) => (e.target.value = e.target.value.toLowerCase())}
         />
         {errors.email && (

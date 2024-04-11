@@ -65,7 +65,7 @@ body {
   pointer-events: auto;
 }
 
-.login-register-input {
+.white-green-input {
   @apply px-5 py-3 rounded-lg bg-dark border-[1px] border-white sm:text-body-thin text-base-thin hover:border-light-green focus:outline-none active:outline-none;
 }
 

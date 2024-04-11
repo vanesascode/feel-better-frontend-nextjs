@@ -8,6 +8,7 @@ import { useAppSelector } from "@/redux/hooks";
 import { selectAuth } from "@/redux/features/authSlice";
 import LogoutButton from "./logoutButton";
 import DeleteAccountButton from "./deleteAccountButton";
+import EditedAccountDetailsConfirmation from "./editedAccountDetailsConfirmation";
 
 interface AccountFormProps {
   handleSubmitAccountChanges: SubmitHandler<FormFields>;
@@ -16,6 +17,10 @@ interface AccountFormProps {
   serverErrorForModifyingAccount?: string;
   handleDeleteAccount: () => void;
   serverErrorForDeletingAccount?: string;
+  showConfirmationAccountDetailsSavedCorrectly: boolean;
+  setShowConfirmationAccountDetailsSavedCorrectly: React.Dispatch<
+    React.SetStateAction<boolean>
+  >;
 }
 
 const AccountForm = ({
@@ -25,6 +30,8 @@ const AccountForm = ({
   serverErrorForModifyingAccount,
   handleDeleteAccount,
   serverErrorForDeletingAccount,
+  showConfirmationAccountDetailsSavedCorrectly,
+  setShowConfirmationAccountDetailsSavedCorrectly,
 }: AccountFormProps) => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const [showRepeatedPassword, setShowRepeatedPassword] =
@@ -59,7 +66,7 @@ const AccountForm = ({
             })}
             type="text"
             placeholder={name ?? ""}
-            className="login-register-input"
+            className="white-green-input"
           />
           {errors.name && (
             <p className="text-red-500 text-base-regular">
@@ -82,7 +89,7 @@ const AccountForm = ({
             })}
             type="text"
             placeholder={email ?? ""}
-            className="login-register-input"
+            className="white-green-input"
             onChange={(e) => (e.target.value = e.target.value.toLowerCase())}
           />
           {errors.email && (
@@ -91,7 +98,7 @@ const AccountForm = ({
             </p>
           )}
           <label className="mt-4">{t("password")}</label>
-          <div className="login-register-input flex justify-between items-center">
+          <div className="white-green-input flex justify-between items-center">
             <input
               {...register("password", {
                 minLength: {
@@ -121,7 +128,7 @@ const AccountForm = ({
             </p>
           )}
           <label className="mt-4">{t("repeat-password")}</label>
-          <div className="login-register-input flex justify-between items-center ">
+          <div className="white-green-input flex justify-between items-center ">
             <input
               {...register("repeatPassword", {
                 validate: (value) =>
@@ -166,6 +173,15 @@ const AccountForm = ({
         handleDeleteAccount={handleDeleteAccount}
         serverErrorForDeletingAccount={serverErrorForDeletingAccount}
         handleLogout={handleLogout}
+      />
+      <EditedAccountDetailsConfirmation
+        handleLogout={handleLogout}
+        showConfirmationAccountDetailsSavedCorrectly={
+          showConfirmationAccountDetailsSavedCorrectly
+        }
+        setShowConfirmationAccountDetailsSavedCorrectly={
+          setShowConfirmationAccountDetailsSavedCorrectly
+        }
       />
     </section>
   );

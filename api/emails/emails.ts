@@ -13,7 +13,6 @@ export async function postRecoveryEmail(userEmail: string) {
     react: RecoveryEmailTemplate({ userEmail: userEmail }),
     text: "",
   });
-  console.log(data);
   if (data.error !== null) {
     return Error("Error sending recovery email");
   }

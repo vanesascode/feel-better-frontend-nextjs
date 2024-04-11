@@ -43,7 +43,7 @@ const LinksVerticalNavbar = ({
                     setShowOptionsPracticeMenu(!showOptionsPracticeMenu)
                   }
                 >
-                  <Link href="/practicar" className="hover:text-light-green">
+                  <Link href="/practice" className="hover:text-light-green">
                     {t("navbar:practice")}
                   </Link>
                   <ChevronDownIcon
@@ -77,7 +77,7 @@ const LinksVerticalNavbar = ({
                   </motion.div>
                 )}
                 <Link
-                  href="/aprender"
+                  href="/learn"
                   className="hover:text-light-green"
                   onClick={() => setShowOptionsNavbar(false)}
                 >
@@ -85,7 +85,7 @@ const LinksVerticalNavbar = ({
                 </Link>
                 {name && (
                   <Link
-                    href="/seguimiento"
+                    href="/follow-up"
                     className="hover:text-light-green"
                     onClick={() => setShowOptionsNavbar(false)}
                   >
