@@ -8,7 +8,11 @@ import AccountForm from "./accountForm";
 import { useAppSelector } from "@/redux/hooks";
 import { selectAuth } from "@/redux/features/authSlice";
 import { logout } from "@/redux/features/authSlice";
-import { fetchExistingUsersEmails } from "@/api/users/users";
+import {
+  deleteCurrentUserAccount,
+  editCurrentUserAccountDetails,
+  fetchExistingUsersEmails,
+} from "@/api/users/users";
 
 export interface FormFields {
   name: string;
@@ -20,9 +24,9 @@ export interface FormFields {
 const AccountLogic = () => {
   const [existingUsersEmails, setExistingUsersEmails] = useState<string[]>([]);
   const [serverErrorForModifyingAccount, setServerErrorForModifyingAccount] =
-    useState<string>("");
+    useState<boolean>(false);
   const [serverErrorForDeletingAccount, setServerErrorForDeletingAccount] =
-    useState<string>("");
+    useState<boolean>(false);
   const [
     showConfirmationAccountDetailsSavedCorrectly,
     setShowConfirmationAccountDetailsSavedCorrectly,
@@ -31,42 +35,20 @@ const AccountLogic = () => {
   const dispatch = useAppDispatch();
   const { _id } = useAppSelector(selectAuth);
 
-  interface currentUserAccountDetailsProps {
-    name?: string;
-    email?: string;
-    password?: string;
-  }
-
-  const editCurrentUserAccountDetails = async ({
-    name,
-    email,
-    password,
-  }: currentUserAccountDetailsProps) => {
-    try {
-      await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users/${_id}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ name, email, password }),
-      });
-    } catch (error) {
-      console.error("Error:", error);
-      throw error;
-    }
-  };
-
   const handleSubmitAccountChanges: SubmitHandler<FormFields> = async (
     data
   ) => {
     try {
-      const filteredData = Object.fromEntries(
-        Object.entries(data).filter(([key, value]) => value !== "")
-      );
+      const filteredData = {
+        ...Object.fromEntries(
+          Object.entries(data).filter(([key, value]) => value !== "")
+        ),
+        _id: _id,
+      };
       await editCurrentUserAccountDetails(filteredData);
       setShowConfirmationAccountDetailsSavedCorrectly(true);
     } catch (error) {
-      setServerErrorForModifyingAccount("Server error");
+      setServerErrorForModifyingAccount(true);
     }
   };
 
@@ -86,22 +68,11 @@ const AccountLogic = () => {
 
   const handleDeleteAccount = async () => {
     try {
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/users/${_id}`,
-        {
-          method: "DELETE",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      if (!response.ok) {
-        setServerErrorForDeletingAccount("Server error");
-      }
-      return response;
+      await deleteCurrentUserAccount(_id);
+      handleLogout();
     } catch (error) {
       console.error("Error:", error);
-      setServerErrorForDeletingAccount("Server error");
+      setServerErrorForDeletingAccount(true);
     }
   };
 
