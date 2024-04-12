@@ -1,13 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useRegisterUserMutation } from "@/redux/services/authApi";
 import { useAppDispatch } from "@/redux/hooks";
 import { setUser } from "@/redux/features/authSlice";
-import { SubmitHandler, useForm } from "react-hook-form";
+import { SubmitHandler } from "react-hook-form";
 import RegisterForm from "./registerForm";
-import { fetchExistingUsersEmails } from "@/api/users/users";
+import { useExistingUsersEmails } from "@/hooks/useExistingUsersEmails";
 
 export interface FormFields {
   name: string;
@@ -17,10 +17,9 @@ export interface FormFields {
 }
 
 const RegisterLogic = () => {
-  const [existingUsersEmails, setExistingUsersEmails] = useState<string[]>([]);
   const dispatch = useAppDispatch();
   const router = useRouter();
-  const { setError } = useForm<FormFields>();
+  const { existingUsersEmails } = useExistingUsersEmails();
   const handleSubmitRegisterForm: SubmitHandler<FormFields> = async (data) => {
     await registerUser(data);
   };
@@ -44,20 +43,8 @@ const RegisterLogic = () => {
         })
       );
       router.push("/");
-    } else if (isRegisterError) {
-      setError("root", {
-        message: "Lo sentimos, ha habido un problema con el servidor",
-      });
     }
-  }, [isRegisterSuccess, isRegisterError]);
-
-  useEffect(() => {
-    const getExistingUsersEmails = async () => {
-      const emails = await fetchExistingUsersEmails();
-      setExistingUsersEmails(emails);
-    };
-    getExistingUsersEmails();
-  }, []);
+  }, [isRegisterSuccess]);
 
   return (
     <>
