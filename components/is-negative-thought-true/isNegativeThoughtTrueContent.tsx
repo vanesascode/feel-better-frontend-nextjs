@@ -5,11 +5,14 @@ import { useRouter } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
 import BreathingBall from "./breathingBall";
-import NegativeThoughtChosen from "./negativeThoughtChosen";
+import { useAppSelector } from "@/redux/hooks";
+import { selectThought } from "@/redux/features/thoughtSlice";
+import ThoughtChosen from "../commons/thoughtChosen";
 
 const IsNegativeThoughtTrueContent = () => {
   const router = useRouter();
   const { t } = useTranslation();
+  const { negativeThought } = useAppSelector(selectThought);
 
   return (
     <section className="flex flex-col justify-center items-center w-full gap-2">
@@ -21,7 +24,7 @@ const IsNegativeThoughtTrueContent = () => {
           </span>
         </Link>
       </h2>
-      <NegativeThoughtChosen />
+      <ThoughtChosen thought={negativeThought} />
       <BreathingBall />
       <p className="md:text-body-thin text-base-thin text-center text-gray mb-10 max-w-[1024px]">
         {t("take-your-time")}
