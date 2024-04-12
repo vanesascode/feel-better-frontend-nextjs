@@ -29,6 +29,7 @@ const WriteAlternativeThoughtLogic = () => {
     }
     router.push("/reinforce-positive-thought");
   };
+
   return (
     <WriteAlternativeThoughtForm
       handleGoToNextStep={handleGoToNextStep}
