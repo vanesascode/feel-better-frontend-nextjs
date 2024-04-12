@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/redux/provider";
 import Script from "next/script";
-import { CookiesConsentBar } from "@/components/cookies-consent-bar/cookiesConsentBar";
+import { CookiesConsentLogic } from "@/components/cookies-consent-bar/cookiesConsentLogic";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -33,7 +33,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Providers>{children}</Providers>
-        <CookiesConsentBar />
+        <CookiesConsentLogic />
       </body>
     </html>
   );
