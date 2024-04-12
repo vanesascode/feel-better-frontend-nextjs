@@ -1,9 +1,11 @@
 import React from "react";
 import CtaButton from "../commons/ctaButton";
 import { useTranslation } from "react-i18next";
-import NegativeThoughtChosen from "../is-negative-thought-true/negativeThoughtChosen";
 import PositiveThoughtTextarea from "./positiveThoughtTextarea";
 import Link from "next/link";
+import { useAppSelector } from "@/redux/hooks";
+import { selectThought } from "@/redux/features/thoughtSlice";
+import ThoughtChosen from "../commons/thoughtChosen";
 
 interface WriteAlternativeThoughtFormProps {
   selectedPositiveThought: string;
@@ -19,6 +21,7 @@ const WriteAlternativeThoughtForm = ({
   writePositiveThoughtFirstMessage,
 }: WriteAlternativeThoughtFormProps) => {
   const { t } = useTranslation();
+  const { negativeThought } = useAppSelector(selectThought);
 
   return (
     <section className="flex flex-col justify-center items-center w-full gap-2">
@@ -30,7 +33,7 @@ const WriteAlternativeThoughtForm = ({
           </span>
         </Link>
       </h2>
-      <NegativeThoughtChosen />
+      <ThoughtChosen thought={negativeThought} />
       <div className="flex flex-col w-full max-w-[1024px] text-body-thin text-white gap-5 mt-5">
         <PositiveThoughtTextarea
           selectedPositiveThought={selectedPositiveThought}
