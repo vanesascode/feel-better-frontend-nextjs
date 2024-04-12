@@ -2,12 +2,12 @@
 
 import { SubmitHandler } from "react-hook-form";
 import { resetPassword } from "@/api/users/users";
-import { fetchExistingUsersEmails } from "@/api/users/users";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAppDispatch } from "@/redux/hooks";
 import { logout } from "@/redux/features/authSlice";
 import ResetPasswordForm from "./resetPasswordForm";
+import { useExistingUsersEmails } from "@/hooks/useExistingUsersEmails";
 
 export interface FormFields {
   email: string;
@@ -16,21 +16,13 @@ export interface FormFields {
 }
 
 const ResetPasswordLogic = () => {
-  const [existingUsersEmails, setExistingUsersEmails] = useState<string[]>([]);
   const [resetingPasswordError, setResetingPasswordError] =
     useState<boolean>(false);
   const [showPasswordResetConfirmation, setShowPasswordResetConfirmation] =
     useState<boolean>(false);
   const router = useRouter();
   const dispatch = useAppDispatch();
-
-  useEffect(() => {
-    const getExistingUsersEmails = async () => {
-      const emails = await fetchExistingUsersEmails();
-      setExistingUsersEmails(emails);
-    };
-    getExistingUsersEmails();
-  }, []);
+  const { existingUsersEmails } = useExistingUsersEmails();
 
   const handleSubmitResetPasswordForm: SubmitHandler<FormFields> = async (
     data
