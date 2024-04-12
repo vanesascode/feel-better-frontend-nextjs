@@ -2,30 +2,22 @@
 
 import { SubmitHandler } from "react-hook-form";
 import { postRecoveryEmail } from "@/api/emails/emails";
-import { fetchExistingUsersEmails } from "@/api/users/users";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import RecoveryForm from "./recoveryForm";
+import { useExistingUsersEmails } from "@/hooks/useExistingUsersEmails";
 
 export interface FormFields {
   email: string;
 }
 
 const RecoveryLogic = () => {
-  const [existingUsersEmails, setExistingUsersEmails] = useState<string[]>([]);
   const [
     showRecoveryEmailSentConfirmation,
     setShowRecoveryEmailSentConfirmation,
   ] = useState<boolean>(false);
   const [sendingRecoveryEmailError, setSendingRecoveryEmailError] =
     useState<boolean>(false);
-
-  useEffect(() => {
-    const getExistingUsersEmails = async () => {
-      const emails = await fetchExistingUsersEmails();
-      setExistingUsersEmails(emails);
-    };
-    getExistingUsersEmails();
-  }, []);
+  const { existingUsersEmails } = useExistingUsersEmails();
 
   const handleSubmitRecoveryForm: SubmitHandler<FormFields> = async (data) => {
     try {

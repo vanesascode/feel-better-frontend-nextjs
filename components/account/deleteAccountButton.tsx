@@ -5,7 +5,7 @@ import CtaButton from "../commons/ctaButton";
 
 interface DeleteAccountButtonProps {
   handleDeleteAccount: () => void;
-  serverErrorForDeletingAccount?: string;
+  serverErrorForDeletingAccount?: boolean;
   handleLogout: () => void;
 }
 
@@ -27,10 +27,6 @@ const DeleteAccountButton = ({
     } catch (error) {
       console.error("Error:", error);
     }
-  };
-
-  const showMenuForDeletingAccountConfirmation = () => {
-    setShowDeleteAccountConfirmation(true);
   };
 
   return (
@@ -56,7 +52,7 @@ const DeleteAccountButton = ({
         )}
         <div className="flex justify-center mt-5">
           <CtaButton
-            onClick={showMenuForDeletingAccountConfirmation}
+            onClick={() => setShowDeleteAccountConfirmation(true)}
             darkerShadow
             type="button"
             red

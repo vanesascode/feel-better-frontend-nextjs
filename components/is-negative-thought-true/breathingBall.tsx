@@ -1,18 +1,11 @@
+import { useToggleBreathingInstructions } from "@/hooks/useToggleBreathingInstructions";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const BreathingBall = () => {
   const { t } = useTranslation();
-  const [toggleBreathe, setToggleBreathe] = useState(false);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setToggleBreathe((prevState) => !prevState);
-    }, 7500);
-
-    return () => clearInterval(interval);
-  }, []);
+  const { toggleBreathe } = useToggleBreathingInstructions();
 
   return (
     <motion.div

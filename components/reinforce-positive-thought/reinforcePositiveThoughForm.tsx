@@ -1,9 +1,11 @@
 import SelectorButton from "../choose-negative-thought/selectorButton";
 import CtaButton from "../commons/ctaButton";
+import ThoughtChosen from "../commons/thoughtChosen";
 import FeelingBetterPopupExplanation from "./feelingBetterPopupExplanation";
 import FeelingTheSamePopupExplanation from "./feelingTheSamePopupExplanation";
-import PositiveThoughtChosen from "./positiveThoughtChosen";
 import { useTranslation } from "react-i18next";
+import { useAppSelector } from "@/redux/hooks";
+import { selectThought } from "@/redux/features/thoughtSlice";
 
 interface ReinforcePositiveThoughtFormProps {
   handleGoToNextStep: () => void;
@@ -35,6 +37,7 @@ const ReinforcePositiveThoughtForm = ({
   savingThoughtsError,
 }: ReinforcePositiveThoughtFormProps) => {
   const { t } = useTranslation();
+  const { positiveThought } = useAppSelector(selectThought);
 
   return (
     <section className="flex flex-col justify-center items-center w-full gap-2">
@@ -46,7 +49,7 @@ const ReinforcePositiveThoughtForm = ({
         {t("how-you-feel")}
       </h2>
       <p className="mb-3 text-cover2-semibold">{feelingSelected}</p>
-      <PositiveThoughtChosen />
+      <ThoughtChosen thought={positiveThought} />
       <div className="grid sm2:grid-cols-4 grid-cols-2 gap-5 mt-5 text-white">
         <SelectorButton onClick={() => setFeelingSelected("😃")}>
           <p>😃</p>

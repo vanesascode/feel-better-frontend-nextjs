@@ -1,31 +1,17 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Link from "next/link";
-import { hasCookie, setCookie } from "cookies-next";
 import CtaButton from "../commons/ctaButton";
 
-const CookiesConsentBar = () => {
-  const [showConsent, setShowConsent] = useState(true);
+interface CookiesConsentFormProps {
+  rejectCookies: () => void;
+  acceptCookies: () => void;
+}
 
-  useEffect(() => {
-    setShowConsent(hasCookie("cookieConsent"));
-  }, []);
-
-  const acceptCookies = () => {
-    setCookie("cookieConsent", "true");
-    setShowConsent(true);
-  };
-
-  const rejectCookies = () => {
-    setCookie("cookieConsent", "false");
-    setShowConsent(true);
-  };
-
-  if (showConsent) {
-    return null;
-  }
-
+const CookiesConsentForm = ({
+  rejectCookies,
+  acceptCookies,
+}: CookiesConsentFormProps) => {
   return (
     <div className="fixed inset-0 bg-opacity-70 bg-dark z-[5000]">
       <section className="flex fixed bottom-0 left-0 right-0 justify-center items-center p-horizontal py-5 bg-dark">
@@ -85,4 +71,4 @@ const CookiesConsentBar = () => {
   );
 };
 
-export { CookiesConsentBar };
+export default CookiesConsentForm;
