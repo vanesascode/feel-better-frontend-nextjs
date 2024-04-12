@@ -1,41 +1,14 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { usePathname } from "next/navigation";
-import { useTranslation } from "react-i18next";
-import i18nConfig from "@/i18nConfig";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
+import { useLanguageChanger } from "@/hooks/useLanguageChanger";
 
 const LanguageChangerVerticalNavbar = () => {
-  const { i18n } = useTranslation();
-  const currentLocale = i18n.language;
-  const router = useRouter();
-  const currentPathname = usePathname();
-  const [languageValue, setLanguageValue] = useState<string>(currentLocale);
   const [showLanguageOptionMenu, setShowLanguageOptionMenu] =
     useState<boolean>(false);
-
-  useEffect(() => {
-    const changeLanguageValue = () => {
-      const newLocale = languageValue;
-      const days = 1;
-      const date = new Date();
-      date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-      const expires = date.toUTCString();
-      document.cookie = `NEXT_LOCALE=${newLocale};expires=${expires};path=/`;
-      if (currentLocale === i18nConfig.defaultLocale) {
-        router.push("/" + newLocale + currentPathname);
-      } else {
-        router.push(
-          currentPathname.replace(`/${currentLocale}`, `/${newLocale}`)
-        );
-      }
-      router.refresh();
-    };
-    changeLanguageValue();
-  }, [languageValue]);
+  const { setLanguageValue, currentLocale } = useLanguageChanger();
 
   return (
     <>
