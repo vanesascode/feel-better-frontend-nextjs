@@ -29,10 +29,6 @@ const DeleteAccountButton = ({
     }
   };
 
-  const showMenuForDeletingAccountConfirmation = () => {
-    setShowDeleteAccountConfirmation(true);
-  };
-
   return (
     <>
       <DeleteAccountConfirmation
@@ -56,7 +52,7 @@ const DeleteAccountButton = ({
         )}
         <div className="flex justify-center mt-5">
           <CtaButton
-            onClick={showMenuForDeletingAccountConfirmation}
+            onClick={() => setShowDeleteAccountConfirmation(true)}
             darkerShadow
             type="button"
             red
