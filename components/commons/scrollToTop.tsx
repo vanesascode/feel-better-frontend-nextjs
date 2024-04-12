@@ -1,32 +1,18 @@
 "use client";
 
 import { ArrowUpIcon } from "@heroicons/react/24/outline";
-import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useShowScrollToTopArrow } from "@/hooks/useShowScrollToTopArrow";
 
 const ScrollToTop = () => {
-  const [showScrollToTopArrow, setShowScrollToTopArrow] = useState(false);
+  const { showScrollToTopArrow } = useShowScrollToTopArrow();
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   };
-
-  useEffect(() => {
-    const handleShowScrollToTopArrow = () => {
-      const currentScrollPosition = window.pageYOffset;
-      if (currentScrollPosition > 900) {
-        setShowScrollToTopArrow(true);
-      } else {
-        setShowScrollToTopArrow(false);
-      }
-    };
-    window.addEventListener("scroll", handleShowScrollToTopArrow);
-    return () => {
-      window.removeEventListener("scroll", handleShowScrollToTopArrow);
-    };
-  });
 
   return (
     <>
