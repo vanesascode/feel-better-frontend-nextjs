@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   Bars3BottomRightIcon,
   ChevronDownIcon,
@@ -9,6 +9,7 @@ import {
 import LinksVerticalNavbar from "./linksVerticalNavbar";
 import { useTranslation } from "react-i18next";
 import LanguageChangerHorizontalNavbar from "./languageChangerHorizontalNavbar";
+import DarkBackgroundWhenVerticalNavbarOpen from "./darkBackgroundWhenVerticalNavbarOpen";
 
 interface NavbarLinksProps {
   showOptionsNavbar: boolean;
@@ -37,18 +38,11 @@ const LinksHorizontalNavbar = ({
 
   return (
     <>
-      <AnimatePresence>
-        {showOptionsNavbar && darkBackground && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.35, ease: "easeInOut" }}
-            exit={{ opacity: 0 }}
-            className="fixed top-0 left-0 right-0 w-full h-full bg-[#000000] bg-opacity-50 z-10"
-            onClick={() => setShowOptionsNavbar(false)}
-          ></motion.div>
-        )}
-      </AnimatePresence>
+      <DarkBackgroundWhenVerticalNavbarOpen
+        showOptionsNavbar={showOptionsNavbar}
+        setShowOptionsNavbar={setShowOptionsNavbar}
+        darkBackground={darkBackground}
+      />
       <motion.nav
         variants={{ visible: { y: 0 }, hidden: { y: "-100%" } }}
         animate={navbarHidden ? "hidden" : "visible"}
