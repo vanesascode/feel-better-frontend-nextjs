@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAppDispatch } from "@/redux/hooks";
 import { SubmitHandler } from "react-hook-form";
@@ -11,8 +11,8 @@ import { logout } from "@/redux/features/authSlice";
 import {
   deleteCurrentUserAccount,
   editCurrentUserAccountDetails,
-  fetchExistingUsersEmails,
 } from "@/api/users/users";
+import { useExistingUsersEmails } from "@/hooks/useExistingUsersEmails";
 
 export interface FormFields {
   name: string;
@@ -22,7 +22,6 @@ export interface FormFields {
 }
 
 const AccountLogic = () => {
-  const [existingUsersEmails, setExistingUsersEmails] = useState<string[]>([]);
   const [serverErrorForModifyingAccount, setServerErrorForModifyingAccount] =
     useState<boolean>(false);
   const [serverErrorForDeletingAccount, setServerErrorForDeletingAccount] =
@@ -34,6 +33,7 @@ const AccountLogic = () => {
   const router = useRouter();
   const dispatch = useAppDispatch();
   const { _id } = useAppSelector(selectAuth);
+  const { existingUsersEmails } = useExistingUsersEmails();
 
   const handleSubmitAccountChanges: SubmitHandler<FormFields> = async (
     data
@@ -52,15 +52,6 @@ const AccountLogic = () => {
     }
   };
 
-  useEffect(() => {
-    const getExistingUsersEmails = async () => {
-      const emails = await fetchExistingUsersEmails();
-      setExistingUsersEmails(emails);
-    };
-
-    getExistingUsersEmails();
-  }, []);
-
   const handleLogout = () => {
     dispatch(logout());
     router.push("/login");
@@ -69,9 +60,7 @@ const AccountLogic = () => {
   const handleDeleteAccount = async () => {
     try {
       await deleteCurrentUserAccount(_id);
-      handleLogout();
     } catch (error) {
-      console.error("Error:", error);
       setServerErrorForDeletingAccount(true);
     }
   };
