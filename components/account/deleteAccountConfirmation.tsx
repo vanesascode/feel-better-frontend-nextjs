@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import CtaButton from "../commons/ctaButton";
+import PopupsBackground from "../commons/popupsBackground";
 
 interface DeleteAccountConfirmationProps {
   handleLogoutAndDeleteAccount: () => void;
@@ -22,14 +23,9 @@ const DeleteAccountConfirmation = ({
       <AnimatePresence>
         {showDeleteAccountConfirmation && (
           <>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.35, ease: "easeInOut" }}
-              exit={{ opacity: 0 }}
-              className="fixed top-0 left-0 right-0 w-full h-full bg-[#ffffff] bg-opacity-30 z-10"
+            <PopupsBackground
               onClick={() => setShowDeleteAccountConfirmation(false)}
-            ></motion.div>
+            />
             <motion.div
               initial={{ opacity: 0 }}
               animate={{
