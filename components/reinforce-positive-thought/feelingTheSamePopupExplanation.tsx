@@ -66,7 +66,7 @@ const FeelingTheSamePopupExplanation = ({
                 </div>
                 {savingThoughtsError && (
                   <p className="text-red-500 text-base-regular text-center mt-5">
-                    {t("server-error")}
+                    {t("sorry-server-error")}
                   </p>
                 )}
                 <CtaButton
