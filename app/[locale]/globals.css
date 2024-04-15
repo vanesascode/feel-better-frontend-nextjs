@@ -80,3 +80,25 @@ body {
 .scroll-to-top-shadow {
   box-shadow: 0 0 20px rgba(255, 251, 251, 0.5);
 }
+
+/* calendar specific classes */
+
+.rbc-today,
+.rbc-bg {
+  background-color: #208336 !important;
+}
+
+.rbc-btn-group button:first-child {
+  background-color: #208336 !important;
+  font-weight: 700;
+}
+
+.rbc-show-more {
+  color: transparent !important;
+  background-color: transparent !important;
+  font-size: xx-small !important;
+}
+
+.rbc-event-content {
+  background-color: transparent !important;
+}
