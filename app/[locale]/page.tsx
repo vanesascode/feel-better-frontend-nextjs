@@ -1,5 +1,5 @@
 import Navbar from "@/components/navbar/navbar";
-import initTranslations from "../i18n";
+import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/TranslationProvider";
 import TokenMaintainer from "@/components/commons/tokenMaintainer";
 import HomeCover from "@/components/home/homeCover";
