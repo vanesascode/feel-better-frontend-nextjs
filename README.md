@@ -84,3 +84,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 `npm i regenerator-runtime`
 
 `npm i --save-dev @types/react-speech-recognition`
+
+## For the follow-up calendar
+
+`npm i --save react-big-calendar`
+
+`npm i @types/react-big-calendar`
+
+`npm i dayjs`
