@@ -52,20 +52,23 @@ export async function fetchThoughtsByUserAndFeeling({
 
 interface deleteCalendarThoughtProps {
   token: string | null;
-  item_id: string | null;
+  thought_id: string | null;
 }
 
 export async function deleteCalendarThought({
   token,
-  item_id,
+  thought_id,
 }: deleteCalendarThoughtProps) {
   try {
-    await fetch(`${process.env.NEXT_PUBLIC_API_URL}/userthoughts/${item_id}`, {
-      method: "DELETE",
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
+    await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/userthoughts/${thought_id}`,
+      {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
   } catch (error) {
     throw error;
   }
@@ -73,7 +76,7 @@ export async function deleteCalendarThought({
 
 interface editCalendarThoughtProps {
   token: string | null;
-  item_id: string | null;
+  thought_id: string | null;
   positiveThought: string;
   negativeThought: string;
   feeling: string;
@@ -81,20 +84,23 @@ interface editCalendarThoughtProps {
 
 export async function editCalendarThought({
   token,
-  item_id,
+  thought_id,
   positiveThought,
   negativeThought,
   feeling,
 }: editCalendarThoughtProps) {
   try {
-    await fetch(`${process.env.NEXT_PUBLIC_API_URL}/userthoughts/${item_id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify({ positiveThought, negativeThought, feeling }),
-    });
+    await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/userthoughts/${thought_id}`,
+      {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ positiveThought, negativeThought, feeling }),
+      }
+    );
   } catch (error) {
     throw error;
   }
