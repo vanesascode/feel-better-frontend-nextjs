@@ -29,6 +29,13 @@ const config: Config = {
           fontWeight: "600",
         },
       ],
+      "cover4-semibold": [
+        "44px",
+        {
+          lineHeight: "110%",
+          fontWeight: "600",
+        },
+      ],
       "heading1-thin": [
         "36px",
         {
