@@ -17,6 +17,8 @@ export interface Thought {
 
 export const useGetThoughtsByUser = () => {
   const [thoughts, setThoughts] = useState<Thought[]>([]);
+  const [getThouthgsByUserError, setGetThouthgsByUserError] =
+    useState<boolean>(false);
   const dispatch = useAppDispatch();
   useEffect(() => {
     dispatch(maintainUserDataStoredinRedux());
@@ -25,11 +27,16 @@ export const useGetThoughtsByUser = () => {
   const { token, _id } = useAppSelector(selectAuth);
 
   const fetchThoughts = async () => {
-    const thoughtsData = await fetchThoughtsByUser({
-      token,
-      _id,
-    });
-    setThoughts(thoughtsData);
+    try {
+      const thoughtsData = await fetchThoughtsByUser({
+        token,
+        _id,
+      });
+      setThoughts(thoughtsData);
+      console.log("thoughtsData", thoughtsData);
+    } catch (error) {
+      setGetThouthgsByUserError(true);
+    }
   };
 
   useEffect(() => {
@@ -39,5 +46,6 @@ export const useGetThoughtsByUser = () => {
   return {
     thoughts,
     token,
+    getThouthgsByUserError,
   };
 };
