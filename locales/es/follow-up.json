@@ -1,0 +1,12 @@
+{
+  "today": "Hoy",
+  "previous": "Atrás",
+  "next": "Siguiente",
+  "instructions": "Haz click en un día del calendario con un pensamiento alternativo o filtra por como te sentiste clicando en un emoticono.",
+  "sorry-server-error": "Lo sentimos, ha ocurrido un error. Por favor, prueba más tarde",
+  "follow-up-title": "Seguimiento pensamientos alternativos",
+  "congrats": "¡Enhorabuena, has practicado",
+  "times": "veces!",
+  "time": "vez!",
+  "no-thoughts-yet": "Haz click aquí para empezar a practicar"
+}
