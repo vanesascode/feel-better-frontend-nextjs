@@ -2,7 +2,7 @@
 
 import CtaButton from "../commons/ctaButton";
 import { useTranslation } from "react-i18next";
-import SelectorButton from "./selectorButton";
+import SelectorButton from "../commons/selectorButton";
 import PopupAskingToLogin from "./popupAskingToLogin";
 import NegativeThoughtTextarea from "./negativeThoughtTextarea";
 

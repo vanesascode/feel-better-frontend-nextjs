@@ -1,4 +1,4 @@
-import SelectorButton from "../choose-negative-thought/selectorButton";
+import SelectorButton from "../commons/selectorButton";
 import CtaButton from "../commons/ctaButton";
 import ThoughtChosen from "../commons/thoughtChosen";
 import FeelingBetterPopupExplanation from "./feelingBetterPopupExplanation";

@@ -1,0 +1,12 @@
+{
+  "today": "Today",
+  "previous": "Previous",
+  "next": "Next",
+  "instructions": "Click on a calendar day with an alternative thought or filter by how you felt by clicking on an emoticon.",
+  "sorry-server-error": "Sorry an error occurred. Please, try later",
+  "follow-up-title": "Alternative thoughts tracking",
+  "congrats": "Congrats, you have practiced",
+  "times": "times!",
+  "time": "time!",
+  "no-thoughts-yet": "Click here to start practicing"
+}
