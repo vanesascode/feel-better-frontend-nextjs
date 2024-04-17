@@ -8,5 +8,12 @@
   "congrats": "Félicitations, vous avez pratiqué",
   "times": "fois!",
   "time": "fois!",
-  "no-thoughts-yet": "Cliquez ici pour commencer à pratiquer"
+  "no-thoughts-yet": "Cliquez ici pour commencer à pratiquer",
+  "positive-thought": "Pensée positive:",
+  "negative-thought": "Pensée négative:",
+  "are-you-sure": "Êtes-vous sûr de vouloir supprimer cette pensée alternative?",
+  "careful": "Prudent",
+  "yes": "Oui, supprime-le",
+  "no": "Non, annule",
+  "feeling": "Sentiment"
 }
