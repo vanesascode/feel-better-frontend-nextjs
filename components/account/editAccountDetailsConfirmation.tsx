@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import CtaButton from "../commons/ctaButton";
 import PopupsBackground from "../commons/popupsBackground";
 
-interface EditedAccountDetailsConfirmationProps {
+interface EditAccountDetailsConfirmationProps {
   handleLogout: () => void;
   showConfirmationAccountDetailsSavedCorrectly: boolean;
   setShowConfirmationAccountDetailsSavedCorrectly: React.Dispatch<
@@ -11,11 +11,11 @@ interface EditedAccountDetailsConfirmationProps {
   >;
 }
 
-const EditedAccountDetailsConfirmation = ({
+const EditAccountDetailsConfirmation = ({
   handleLogout,
   showConfirmationAccountDetailsSavedCorrectly,
   setShowConfirmationAccountDetailsSavedCorrectly,
-}: EditedAccountDetailsConfirmationProps) => {
+}: EditAccountDetailsConfirmationProps) => {
   const { t } = useTranslation();
 
   const handleOkAnswerFromUser = () => {
@@ -62,4 +62,4 @@ const EditedAccountDetailsConfirmation = ({
   );
 };
 
-export default EditedAccountDetailsConfirmation;
+export default EditAccountDetailsConfirmation;
