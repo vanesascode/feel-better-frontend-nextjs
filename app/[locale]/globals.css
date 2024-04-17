@@ -66,7 +66,7 @@ body {
 }
 
 .white-green-input {
-  @apply px-5 py-3 rounded-lg bg-dark border-[1px] border-white sm:text-body-thin text-base-thin hover:border-light-green focus:outline-none active:outline-none;
+  @apply px-5 py-3 rounded-lg bg-dark border-[1px] border-white sm:text-body-thin xs:text-base-thin text-small-thin hover:border-light-green focus:outline-none active:outline-none;
 }
 
 .p-horizontal {
@@ -125,11 +125,12 @@ body {
 .rbc-show-more {
   color: transparent !important;
   background-color: transparent !important;
-  font-size: xx-small !important;
+  height: 0.001rem !important;
 }
 
 .rbc-event-content {
   background-color: transparent !important;
+  cursor: pointer !important;
 }
 
 .rbc-button-link {
@@ -175,4 +176,10 @@ body {
 .rbc-toolbar {
   display: flex !important;
   flex-direction: row !important;
+}
+
+.rbc-row-segment {
+  cursor: pointer !important;
+  background-color: transparent !important;
+  height: 0.001rem !important;
 }
