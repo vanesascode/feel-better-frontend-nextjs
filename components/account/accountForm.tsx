@@ -8,7 +8,7 @@ import { useAppSelector } from "@/redux/hooks";
 import { selectAuth } from "@/redux/features/authSlice";
 import LogoutButton from "./logoutButton";
 import DeleteAccountButton from "./deleteAccountButton";
-import EditedAccountDetailsConfirmation from "./editedAccountDetailsConfirmation";
+import EditAccountDetailsConfirmation from "./editAccountDetailsConfirmation";
 
 interface AccountFormProps {
   handleSubmitAccountChanges: SubmitHandler<FormFields>;
@@ -174,7 +174,7 @@ const AccountForm = ({
         serverErrorForDeletingAccount={serverErrorForDeletingAccount}
         handleLogout={handleLogout}
       />
-      <EditedAccountDetailsConfirmation
+      <EditAccountDetailsConfirmation
         handleLogout={handleLogout}
         showConfirmationAccountDetailsSavedCorrectly={
           showConfirmationAccountDetailsSavedCorrectly
