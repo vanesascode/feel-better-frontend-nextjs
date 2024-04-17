@@ -6,7 +6,7 @@ import {
 import ModalToEditThought from "./modalToEditThought";
 import CalendarThoughtsUi from "./calendarThoughtsUi";
 import { CalendarEvent } from "./calendarUi";
-import ModalToDeleteThought from "./modalToDeleteThought";
+import DeleteThoughtConfirmation from "./deleteThoughtConfirmation";
 import PopupsBackground from "../commons/popupsBackground";
 
 interface CalendarThoughtsProps {
@@ -108,7 +108,7 @@ const CalendarThoughtsLogic = ({
         modalToEditThought={modalToEditThought}
       />
 
-      <ModalToDeleteThought
+      <DeleteThoughtConfirmation
         setModalToDeleteThought={setModalToDeleteThought}
         modalToDeleteThought={modalToDeleteThought}
         handleDeleteThought={handleDeleteThought}
