@@ -37,7 +37,7 @@ const PositiveThoughtTextarea = ({
         placeholder={t("write-alternative-though")}
       />
       <MicrophoneIcon
-        className={`self-end md:h-8 md:w-8 h-6 w-6 mr-[-10px] ${
+        className={`self-end md:h-8 md:w-8 h-6 w-6 mr-[0.625rem] ${
           listening ? "text-cta-green" : "text-white "
         }`}
         onClick={() => SpeechRecognition.startListening()}
