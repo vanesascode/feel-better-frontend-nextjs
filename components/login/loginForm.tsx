@@ -23,7 +23,7 @@ const LoginForm = ({ handleSubmitLoginForm, isLoginError }: LoginFormProps) => {
   return (
     <section>
       <form
-        className="flex flex-col gap-2 text-body-regular text-white w-[250px] sm:w-[350px] xs:w-[300px]"
+        className="flex flex-col gap-2 text-body-regular text-white w-[15.6rem] sm:w-[23.1rem] xs:w-[18.75rem]"
         onSubmit={handleSubmit(handleSubmitLoginForm)}
       >
         <label>{t("Email")}</label>
