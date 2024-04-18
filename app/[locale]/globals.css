@@ -13,7 +13,7 @@ body {
 }
 
 .account-boxes-shadow {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.5);
 }
 
 .bg-gray-gradient {
@@ -22,17 +22,17 @@ body {
 
 .navbar-practice-submenu {
   position: absolute;
-  top: 78px;
-  right: -110px;
-  left: -110px;
+  top: 4.87rem;
+  right: -6.87rem;
+  left: -6.87rem;
   background-color: white;
   color: black;
-  padding: 20px;
+  padding: 1.25rem;
   display: flex;
   justify-content: space-between;
   border-radius: 10px;
   opacity: 0;
-  gap: 30px;
+  gap: 1.87rem;
   transition: opacity 0.5s;
   pointer-events: none;
 }
@@ -45,12 +45,12 @@ body {
 
 .navbar-language-submenu {
   position: absolute;
-  top: 70px;
-  right: -15px;
-  left: -15px;
+  top: 4.37rem;
+  right: -0.93rem;
+  left: -0.93rem;
   background-color: white;
   color: black;
-  padding: 20px;
+  padding: 1.25rem;
   display: flex;
   justify-content: space-between;
   border-radius: 10px;
@@ -78,7 +78,7 @@ body {
 }
 
 .scroll-to-top-shadow {
-  box-shadow: 0 0 20px rgba(255, 251, 251, 0.5);
+  box-shadow: 0 0 1.25rem rgba(255, 251, 251, 0.5);
 }
 
 /* calendar specific classes */
@@ -108,7 +108,7 @@ body {
 .rbc-btn-group button {
   color: #fbfbfb !important;
   font-weight: bold !important;
-  padding: 10px 10px !important;
+  padding: 0.62rem 0.62rem !important;
 }
 
 @media (max-width: 768px) {
@@ -141,36 +141,36 @@ body {
 .rbc-toolbar-label {
   color: #fbfbfb !important;
   font-size: x-large;
-  margin-top: 10px !important;
+  margin-top: 0.62rem !important;
 }
 
 @media (max-width: 768px) {
   .rbc-toolbar-label {
     font-size: large !important;
-    margin-left: 30px;
+    margin-left: 1.87rem;
   }
 }
 
 @media (max-width: 520px) {
   .rbc-toolbar-label {
     font-size: medium !important;
-    margin-left: 10px;
+    margin-left: 0.62rem;
   }
 }
 
 @media (max-width: 380px) {
   .rbc-toolbar-label {
-    margin-left: 0px;
+    margin-left: 0;
   }
 }
 
 .rbc-header {
   color: #fbfbfb !important;
-  padding: 10px 0px !important;
+  padding: 0.62rem 0 !important;
 }
 
 .rbc-month-view {
-  margin-top: 10px !important;
+  margin-top: 0.62rem !important;
 }
 
 .rbc-toolbar {
