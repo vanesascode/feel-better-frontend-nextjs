@@ -43,7 +43,7 @@ const ReinforcePositiveThoughtForm = ({
     <section className="flex flex-col justify-center items-center w-full gap-2">
       <h2
         className={`md:text-heading3-bold text-body-bold text-center text-white ${
-          feelingSelected ? "mb-3" : "mb-[-12px]"
+          feelingSelected ? "mb-3" : "mb-[-0.75rem]"
         }`}
       >
         {t("how-you-feel")}
