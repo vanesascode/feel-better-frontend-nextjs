@@ -30,7 +30,7 @@ const ChooseNegativeThoughtForm = ({
       <h2 className="md:text-heading3-bold text-body-bold text-center text-white mb-5">
         {t("write-or-choose-thought")}
       </h2>
-      <div className="flex flex-col w-full max-w-[600px] text-body-thin text-white gap-5 mb-10">
+      <div className="flex flex-col w-full max-w-[37.5rem] text-body-thin text-white gap-5 mb-10">
         <NegativeThoughtTextarea
           selectedNegativeThought={selectedNegativeThought}
           setSelectedNegativeThought={setSelectedNegativeThought}
