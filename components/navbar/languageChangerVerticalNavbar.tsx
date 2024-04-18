@@ -14,12 +14,12 @@ const LanguageChangerVerticalNavbar = () => {
     <>
       <div className="block lg:hidden">
         <div
-          className="flex items-center bg-dark hover:text-light-green outline-none active:outline-none uppercase justify-between pb-[32px] cursor-pointer"
+          className="flex items-center bg-dark hover:text-light-green outline-none active:outline-none uppercase justify-between pb-[2rem] cursor-pointer"
           onClick={() => setShowLanguageOptionMenu(!showLanguageOptionMenu)}
         >
           <div>{currentLocale}</div>
           <ChevronDownIcon
-            className={`h-5 w-5 mb-[-3px] ${
+            className={`h-5 w-5 mb-[2rem] ${
               showLanguageOptionMenu && "rotate-180 transition-all duration-500"
             }`}
           />

@@ -34,7 +34,7 @@ const LinksVerticalNavbar = ({
               initial={{ x: "-100%" }}
               animate={{ x: 0 }}
               transition={{ duration: 0.5 }}
-              className="absolute top-0 left-0 z-10 bg-dark h-screen sm2:w-[400px] max-sm2:right-0 text-body-regular lg:hidden block"
+              className="absolute top-0 left-0 z-10 bg-dark h-screen sm2:w-[25rem] max-sm2:right-0 text-body-regular lg:hidden block max-h-[100vh] overflow-y-auto"
             >
               <div className="pt-24 pl-14 pr-10 flex flex-col gap-8">
                 <button
@@ -47,7 +47,7 @@ const LinksVerticalNavbar = ({
                     {t("navbar:practice")}
                   </Link>
                   <ChevronDownIcon
-                    className={`h-5 w-5 mb-[-3px] ${
+                    className={`h-5 w-5 mb-[-0.1875rem] ${
                       showOptionsPracticeMenu &&
                       "rotate-180 transition-all duration-500"
                     }`}

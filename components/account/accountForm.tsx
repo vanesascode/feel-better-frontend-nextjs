@@ -47,7 +47,7 @@ const AccountForm = ({
   const { t } = useTranslation();
 
   return (
-    <section className="w-[250px] sm:w-[350px] xs:w-[300px]">
+    <section className="w-[15.6rem] sm:w-[23.1rem] xs:w-[18.75rem]">
       <article>
         <h2 className="text-heading3-bold text-center text-light-green mb-5">
           {t("modify-account-details")}

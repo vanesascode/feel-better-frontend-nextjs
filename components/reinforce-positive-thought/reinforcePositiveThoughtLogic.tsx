@@ -1,6 +1,6 @@
 "use client";
 
-import ReinforcePositiveThoughtForm from "./reinforcePositiveThoughForm";
+import ReinforcePositiveThoughtForm from "./reinforcePositiveThoughtForm";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useAppSelector } from "@/redux/hooks";

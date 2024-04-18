@@ -53,7 +53,7 @@ const EditThoughtPopup = ({
                 >
                   <div className="flex flex-col gap-1 my-5">
                     <div className="flex md:flex-row flex-col gap-1 items-center mb-5">
-                      <label className="md:text-body-bold text-base-bold md:w-1/6 md:mb-0 mb-2 max-md:text-center md:mr-5">
+                      <label className="md:text-body-bold text-base-bold md:w-1/6 md:mb-0 mb-2 max-md:text-center md:mr-5 text-gray">
                         {t("negative-thought")}{" "}
                       </label>
                       <textarea
@@ -66,7 +66,7 @@ const EditThoughtPopup = ({
                       />
                     </div>
                     <div className="flex md:flex-row flex-col gap-1 items-center mb-5">
-                      <label className="md:text-body-bold text-base-bold md:w-1/6 md:mb-0 mb-2 max-md:text-center md:mr-5">
+                      <label className="md:text-body-bold text-base-bold md:w-1/6 md:mb-0 mb-2 max-md:text-center md:mr-5 text-gray">
                         {t("positive-thought")}{" "}
                       </label>
                       <textarea

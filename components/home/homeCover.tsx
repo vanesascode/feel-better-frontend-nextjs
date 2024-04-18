@@ -13,8 +13,8 @@ const HomeCover = () => {
     <>
       <div className="bg-dark sm:h-20 h-14"></div>
       <article
-        className={`bg-dark bg-cover bg-center pr-10 xxl:h-[850px] lg:h-[700px] md:h-[600px] sm:h-[500px] ${
-          name ? "h-[480px]" : "xs:h-[470px] h-[450px] "
+        className={`bg-dark bg-cover bg-center pr-10 xxl:h-[53.12rem] lg:h-[43.75rem] md:h-[37.5rem] sm:h-[31.25rem] ${
+          name ? "h-[30rem]" : "xs:h-[29.37rem] h-[28.12rem] "
         }  relative`}
         style={{
           backgroundImage: "url('/home/home-cover-background.jpg')",
@@ -35,7 +35,7 @@ const HomeCover = () => {
               <div
                 style={{
                   whiteSpace: "nowrap",
-                  fontSize: "clamp(16px, 5vw, 96px)",
+                  fontSize: "clamp(1rem, 5vw, 6rem)",
                 }}
               >
                 {name}
@@ -45,7 +45,7 @@ const HomeCover = () => {
               <div
                 style={{
                   whiteSpace: "nowrap",
-                  fontSize: "clamp(10px, 10vw, 96px)",
+                  fontSize: "clamp(0.62rem, 10vw, 6rem)",
                 }}
               >
                 {name}
@@ -55,7 +55,7 @@ const HomeCover = () => {
               <div
                 style={{
                   whiteSpace: "nowrap",
-                  fontSize: "clamp(10px, 10vw, 96px)",
+                  fontSize: "clamp(0.62rem, 10vw, 6rem)",
                 }}
               >
                 {name}

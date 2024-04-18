@@ -9,154 +9,154 @@ const config: Config = {
   theme: {
     fontSize: {
       "cover1-semibold": [
-        "96px",
+        "6rem",
         {
           lineHeight: "100%",
           fontWeight: "600",
         },
       ],
       "cover2-semibold": [
-        "64px",
+        "4rem",
         {
           lineHeight: "100%",
           fontWeight: "600",
         },
       ],
       "cover3-semibold": [
-        "54px",
+        "3.4rem",
         {
           lineHeight: "110%",
           fontWeight: "600",
         },
       ],
       "cover4-semibold": [
-        "44px",
+        "2.75rem",
         {
           lineHeight: "110%",
           fontWeight: "600",
         },
       ],
       "heading1-thin": [
-        "36px",
+        "2.25rem",
         {
           lineHeight: "140%",
           fontWeight: "300",
         },
       ],
       "heading1-regular": [
-        "36px",
+        "2.25rem",
         {
           lineHeight: "140%",
           fontWeight: "400",
         },
       ],
       "heading1-bold": [
-        "36px",
+        "2.25rem",
         {
           lineHeight: "140%",
           fontWeight: "600",
         },
       ],
       "heading2-thin": [
-        "32px",
+        "2rem",
         {
           lineHeight: "140%",
           fontWeight: "300",
         },
       ],
       "heading2-regular": [
-        "32px",
+        "2rem",
         {
           lineHeight: "140%",
           fontWeight: "400",
         },
       ],
       "heading2-bold": [
-        "32px",
+        "2rem",
         {
           lineHeight: "140%",
           fontWeight: "600",
         },
       ],
       "heading3-thin": [
-        "24px",
+        "1.5rem",
         {
           lineHeight: "140%",
           fontWeight: "300",
         },
       ],
       "heading3-regular": [
-        "24px",
+        "1.5rem",
         {
           lineHeight: "140%",
           fontWeight: "400",
         },
       ],
       "heading3-bold": [
-        "24px",
+        "1.5rem",
         {
           lineHeight: "140%",
           fontWeight: "600",
         },
       ],
       "body-thin": [
-        "20px",
+        "1.25rem",
         {
           lineHeight: "140%",
           fontWeight: "300",
         },
       ],
       "body-regular": [
-        "20px",
+        "1.25rem",
         {
           lineHeight: "140%",
           fontWeight: "400",
         },
       ],
       "body-bold": [
-        "20px",
+        "1.25rem",
         {
           lineHeight: "140%",
           fontWeight: "600",
         },
       ],
       "base-thin": [
-        "16px",
+        "1rem",
         {
           lineHeight: "140%",
           fontWeight: "400",
         },
       ],
       "base-regular": [
-        "16px",
+        "1rem",
         {
           lineHeight: "140%",
           fontWeight: "500",
         },
       ],
       "base-bold": [
-        "16px",
+        "1rem",
         {
           lineHeight: "140%",
           fontWeight: "600",
         },
       ],
       "small-thin": [
-        "14px",
+        "0.87rem",
         {
           lineHeight: "140%",
           fontWeight: "300",
         },
       ],
       "small-regular": [
-        "14px",
+        "0.87rem",
         {
           lineHeight: "140%",
           fontWeight: "400",
         },
       ],
       "small-bold": [
-        "14px",
+        "0.87rem",
         {
           lineHeight: "140%",
           fontWeight: "600",
@@ -178,20 +178,19 @@ const config: Config = {
         "gray-gradient": "C4C3C3",
       },
     },
-
     screens: {
-      xxs: "320px",
-      xs: "375px",
-      sm: "425px",
-      sm1: "470px",
-      sm2: "575px",
-      md: "768px",
-      lg: "1024px",
-      xl: "1280px",
-      xxl: "1440px",
-      xxxl: "1728px",
-      xxxxl: "1920px",
-      xxxxxl: "2560px",
+      xxs: "20rem",
+      xs: "23.4375rem",
+      sm: "26.5625rem",
+      sm1: "29.375rem",
+      sm2: "35.9375rem",
+      md: "48rem",
+      lg: "64rem",
+      xl: "80rem",
+      xxl: "90rem",
+      xxxl: "108rem",
+      xxxxl: "120rem",
+      xxxxxl: "160rem",
     },
   },
   plugins: [],

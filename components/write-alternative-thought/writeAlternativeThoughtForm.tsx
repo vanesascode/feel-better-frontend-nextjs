@@ -34,7 +34,7 @@ const WriteAlternativeThoughtForm = ({
         </Link>
       </h2>
       <ThoughtChosen thought={negativeThought} />
-      <div className="flex flex-col w-full max-w-[1024px] text-body-thin text-white gap-5 mt-5">
+      <div className="flex flex-col w-full max-w-[64rem] text-body-thin text-white gap-5 mt-5">
         <PositiveThoughtTextarea
           selectedPositiveThought={selectedPositiveThought}
           setSelectedPositiveThought={setSelectedPositiveThought}

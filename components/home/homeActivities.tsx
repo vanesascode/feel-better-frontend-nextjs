@@ -9,7 +9,7 @@ const HomeActivities = () => {
   return (
     <>
       <section className="bg-dark p-horizontal flex justify-center">
-        <div className="max-w-[1440px]">
+        <div className="max-w-[90rem]">
           <h3 className="md:text-heading2-bold text-heading3-bold text-white text-center md:pt-20 sm:pt-14 pt-10 md:pb-14 sm:pb-10 pb-8 p-horizontal">
             {t("activities-title")}
           </h3>

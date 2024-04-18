@@ -26,7 +26,7 @@ const CalendarThoughtsUi = ({
   return (
     <section>
       {selectedDate && (
-        <div className="xl:p-5">
+        <div className={selectedThoughts.length > 0 ? "p-5" : "p-0"}>
           <ul>
             {selectedThoughts.map((thought, index) => (
               <div
@@ -42,7 +42,7 @@ const CalendarThoughtsUi = ({
                     </p>
                     <p>{thought.feeling}</p>
                   </div>
-                  <div className="flex md:gap-5 sm:gap-3 gap-2">
+                  <div className="flex md:gap-5 gap-3">
                     <button
                       onClick={() =>
                         handleOpenModalToEditThought(
@@ -62,7 +62,6 @@ const CalendarThoughtsUi = ({
                     </button>
                   </div>
                 </div>
-
                 <li>
                   <p className="md:text-body-bold text-base-bold  mb-2">
                     {t("negative-thought")}{" "}

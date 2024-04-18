@@ -16,7 +16,7 @@ const BreathingBall = () => {
       transition={{
         scale: { duration: 15, ease: "easeInOut", repeat: Infinity },
       }}
-      className="bg-dark bg-cover bg-center sm2:h-[380px] sm2:w-[380px] sm:h-[310px] sm:w-[310px] xs:h-[270px] xs:w-[270px] h-[230px] w-[230px] rounded-full md:my-8 my-5 border-[2px] border-white"
+      className="bg-dark bg-cover bg-center sm2:h-[23.75rem] sm2:w-[23.75rem] sm:h-[19.37rem] sm:w-[19.37rem] xs:h-[16.87rem] xs:w-[16.87rem] h-[14.37rem] w-[14.37rem] rounded-full md:my-8 my-5 border-[0.125rem] border-white"
       style={{
         backgroundImage: "url('/thoughts/breathing-leaves.png')",
         backgroundRepeat: "no-repeat",

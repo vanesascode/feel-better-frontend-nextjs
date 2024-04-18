@@ -8,7 +8,7 @@ const LoadingCircle = () => {
         alt="loading"
         width={400}
         height={400}
-        className="p-[50px]"
+        className="p-[3.12rem]"
       />
     </div>
   );

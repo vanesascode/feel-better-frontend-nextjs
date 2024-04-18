@@ -36,7 +36,7 @@ export default async function ChooseNegativeThought({
               {t("choose-negative-thought")}
             </h1>
 
-            <div className="max-w-[400px] sm:mb-0 mb-3">
+            <div className="max-w-[25rem] sm:mb-0 mb-3">
               <Image
                 src="/thoughts/thoughts-step-1.png"
                 alt="step 1: choose a negative thought"

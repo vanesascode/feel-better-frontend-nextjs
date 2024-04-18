@@ -15,7 +15,7 @@ const CookiesConsentForm = ({
   return (
     <div className="fixed inset-0 bg-opacity-70 bg-dark z-[5000]">
       <section className="flex fixed bottom-0 left-0 right-0 justify-center items-center p-horizontal py-5 bg-dark">
-        <div className="max-w-[1440px] flex lg:justify-start items-center lg:gap-28 gap-5 lg:flex-row flex-col">
+        <div className="max-w-[90rem] flex lg:justify-start items-center lg:gap-28 gap-5 lg:flex-row flex-col">
           <div>
             <p className="text-white ms:text-body-thin text-base-thin max-lg:text-center">
               Esta aplicación web utiliza cookies. Puedes personalizar tu
