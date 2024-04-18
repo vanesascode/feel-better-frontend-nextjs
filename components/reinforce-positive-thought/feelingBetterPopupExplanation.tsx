@@ -38,7 +38,7 @@ const FeelingBetterPopupExplanation = ({
               }}
               transition={{ duration: 0.35, ease: "easeInOut" }}
               exit={{ opacity: 0 }}
-              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-[290px] md:w-[720px] sm2:w-[540px] sm:w-[400px] xs:w-[360px] bg-dark p-10 rounded-lg max-h-[90vh] overflow-y-auto"
+              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-[18.125rem] md:w-[45rem] sm2:w-[33.75rem] sm:w-[25rem] xs:w-[22.5rem] bg-dark p-10 rounded-lg max-h-[90vh] overflow-y-auto"
             >
               <div className="flex flex-col items-center text-white gap-10 ">
                 <h2 className="md:text-heading1-bold text-heading2-bold text-center">
