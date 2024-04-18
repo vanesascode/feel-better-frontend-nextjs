@@ -27,7 +27,7 @@ const DeleteThoughtConfirmation = ({
               }}
               transition={{ duration: 0.35, ease: "easeInOut" }}
               exit={{ opacity: 0 }}
-              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-[250px] md:w-[620px] xs:w-[300px] bg-dark p-10 rounded-lg"
+              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-[15.62rem] md:w-[9.92rem] xs:w-[18.75rem] bg-dark p-10 rounded-lg"
             >
               <div className="flex flex-col items-center">
                 <h2 className="text-heading1-bold text-center text-red-500">
