@@ -27,7 +27,7 @@ const CtaButton = ({
         green && "bg-cta-green hover:bg-cta-green-hover text-white"
       }  ${white && "hover:bg-gray text-dark bg-white"} ${
         red && "bg-red-500 hover:bg-red-700 text-white"
-      }  md:text-heading3-bold xs:text-body-bold text-base-bold md:w-[250px] w-[190px] shadow-md ${
+      }  md:text-heading3-bold xs:text-body-bold text-base-bold md:w-[15.62rem] w-[11.87rem] shadow-md ${
         darkerShadow ? "shadow-black" : "shadow-shadow-green"
       }  transition duration-500 ease-in-out `}
       disabled={disabled}
