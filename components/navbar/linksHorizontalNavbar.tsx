@@ -49,7 +49,7 @@ const LinksHorizontalNavbar = ({
         transition={{ duration: 0.35, ease: "easeInOut" }}
         className="flex fixed top-0 w-full bg-dark drop-shadow-lg shadow-lg shadow-black/500 text-white p-horizontal justify-center z-10"
       >
-        <div className="flex justify-between w-full max-w-[1440px] items-center">
+        <div className="flex justify-between w-full max-w-[90rem] items-center">
           <div className="flex gap-14 items-center text-body-regular">
             <button
               onClick={() => setShowOptionsNavbar(false)}
@@ -61,7 +61,7 @@ const LinksHorizontalNavbar = ({
             <div className="relative py-7 hidden lg:block">
               <div className="flex items-center hover:text-light-green gap-3 transition duration-300 ease-in-out cursor-pointer">
                 <Link href="/practice">{t("navbar:practice")}</Link>
-                <ChevronDownIcon className="h-5 w-5 mb-[-3px]" />
+                <ChevronDownIcon className="h-5 w-5 mb-[0.1875rem]" />
               </div>
               <div className="navbar-practice-submenu">
                 <Link
