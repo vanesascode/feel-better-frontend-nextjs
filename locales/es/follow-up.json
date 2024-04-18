@@ -8,5 +8,15 @@
   "congrats": "¡Enhorabuena, has practicado",
   "times": "veces!",
   "time": "vez!",
-  "no-thoughts-yet": "Haz click aquí para empezar a practicar"
+  "no-thoughts-yet": "Haz click aquí para empezar a practicar",
+  "positive-thought": "Pensamiento positivo:",
+  "negative-thought": "Pensamiento negativo:",
+  "are-you-sure": "¿Seguro que quieres eliminar este pensamiento alternativo?",
+  "careful": "Cuidado",
+  "yes": "Si, elimínalo",
+  "no": "No, cancela",
+  "feeling": "Sentimiento",
+  "edit-your-thought": "Edita tus pensamientos",
+  "cancel": "Cancela",
+  "save": "Guarda"
 }

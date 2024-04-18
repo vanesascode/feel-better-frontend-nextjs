@@ -120,7 +120,7 @@ const CalendarUi = ({
       <div className="flex lg:gap-10 justify-between items-center lg:items-start w-full flex-col lg:flex-row ">
         <div className="flex flex-col justify-center items-center rounded-lg">
           <Calendar
-            className="w-full xl:w-[405px] lg:w-[380px]"
+            className="w-full sm2:w-[25.25rem]"
             style={{
               height: 400,
             }}
@@ -139,7 +139,7 @@ const CalendarUi = ({
             fetchThoughtsByFeeling={fetchThoughtsByFeeling}
           />
         </div>
-        <div className="bg-dark flex justify-center items-center w-full rounded-lg border-[1px] border-white p-5 lg:min-h-[495px]">
+        <div className="bg-dark flex justify-start items-start w-full  border-[1px] border-white p-5 lg:min-h-[30.3rem] max-h-[37.5rem] md:max-h-[80vh] overflow-y-auto">
           {(!selectedThoughts || selectedThoughts.length === 0) &&
             thoughts.length > 0 && (
               <p className="text-white text-center md:p-10 p-3 text-base-thin md:text-body-thin">

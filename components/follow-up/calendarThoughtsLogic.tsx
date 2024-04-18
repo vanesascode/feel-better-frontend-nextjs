@@ -3,10 +3,10 @@ import {
   deleteCalendarThought,
   editCalendarThought,
 } from "@/api/follow-up/followUp";
-import ModalToEditThought from "./modalToEditThought";
+import EditThoughtPopup from "./editThoughtPopup";
 import CalendarThoughtsUi from "./calendarThoughtsUi";
 import { CalendarEvent } from "./calendarUi";
-import ModalToDeleteThought from "./modalToDeleteThought";
+import DeleteThoughtConfirmation from "./deleteThoughtConfirmation";
 import PopupsBackground from "../commons/popupsBackground";
 
 interface CalendarThoughtsProps {
@@ -96,7 +96,7 @@ const CalendarThoughtsLogic = ({
         handleOpenModalToDeleteThought={handleOpenModalToDeleteThought}
       />
 
-      <ModalToEditThought
+      <EditThoughtPopup
         handleEditThought={handleEditThought}
         setPositiveThoughtToBeEdited={setPositiveThoughtToBeEdited}
         setNegativeThoughtToBeEdited={setNegativeThoughtToBeEdited}
@@ -108,7 +108,7 @@ const CalendarThoughtsLogic = ({
         modalToEditThought={modalToEditThought}
       />
 
-      <ModalToDeleteThought
+      <DeleteThoughtConfirmation
         setModalToDeleteThought={setModalToDeleteThought}
         modalToDeleteThought={modalToDeleteThought}
         handleDeleteThought={handleDeleteThought}
