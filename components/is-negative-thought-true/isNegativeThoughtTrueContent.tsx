@@ -26,7 +26,7 @@ const IsNegativeThoughtTrueContent = () => {
       </h2>
       <ThoughtChosen thought={negativeThought} />
       <BreathingBall />
-      <p className="md:text-body-thin text-base-thin text-center text-gray mb-10 max-w-[1024px]">
+      <p className="md:text-body-thin text-base-thin text-center text-gray mb-10 max-w-[64rem]">
         {t("take-your-time")}
       </p>
       <CtaButton
