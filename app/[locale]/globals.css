@@ -164,6 +164,8 @@ body {
   }
 }
 
+/* carousel specific classes */
+
 .rbc-header {
   color: #fbfbfb !important;
   padding: 0.62rem 0 !important;
@@ -182,4 +184,23 @@ body {
   cursor: pointer !important;
   background-color: transparent !important;
   height: 0.001rem !important;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  color: transparent !important;
+}
+
+.slick-list {
+  max-width: 70.5rem !important;
+}
+
+.slick-dots li button::before {
+  color: white !important;
+  font-size: 0.75rem !important;
+  top: 0.5rem !important;
+}
+
+.slick-dots li.slick-active button::before {
+  color: #f4f8f5 !important;
 }
