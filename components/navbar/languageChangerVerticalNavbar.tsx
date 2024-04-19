@@ -19,7 +19,7 @@ const LanguageChangerVerticalNavbar = () => {
         >
           <div>{currentLocale}</div>
           <ChevronDownIcon
-            className={`h-5 w-5 mb-[2rem] ${
+            className={`h-5 w-5  ${
               showLanguageOptionMenu && "rotate-180 transition-all duration-500"
             }`}
           />
