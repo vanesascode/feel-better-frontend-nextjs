@@ -12,7 +12,9 @@ export const useShowLoadingCircle = ({
 
   useEffect(() => {
     if (thoughts) {
-      setShowLoadingCircle(false);
+      setTimeout(() => {
+        setShowLoadingCircle(false);
+      }, 1000);
     }
   }, [thoughts]);
 
