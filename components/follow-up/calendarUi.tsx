@@ -151,7 +151,7 @@ const CalendarUi = ({
           {thoughts.length === 0 && (
             <Link
               href="/choose-negative-thought"
-              className="sm:mb-0 mb-3 text-base-bold md:text-body-bold text-cta-green"
+              className="sm:mb-0 mb-3 text-base-bold md:text-body-bold text-cta-green text-center w-full"
             >
               {t("no-thoughts-yet")}
             </Link>
