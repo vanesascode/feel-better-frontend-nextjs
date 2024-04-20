@@ -2,6 +2,7 @@ import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/TranslationProvider";
 import Header from "@/components/commons/header";
 import TokenMaintainer from "@/components/commons/tokenMaintainer";
+import AdviceToMeditateLink from "@/components/meditation/adviceToMeditateLink";
 import GuidedMeditations from "@/components/meditation/guidedMeditations";
 import Navbar from "@/components/navbar/navbar";
 
@@ -30,9 +31,12 @@ export default async function Meditation({
         <header>
           <Navbar />
           <Header>
-            <h1 className="text-heading2-bold text-center px-3">
-              {t("meditations")}
-            </h1>
+            <div className="px-3 text-center">
+              <h1 className="md:text-heading2-bold text-heading3-bold xs:mb-6 mb-3">
+                {t("meditations")}
+              </h1>
+              <AdviceToMeditateLink />
+            </div>
           </Header>
         </header>
         <main>
