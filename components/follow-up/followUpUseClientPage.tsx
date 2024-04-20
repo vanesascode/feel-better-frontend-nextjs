@@ -21,7 +21,7 @@ const FollowUpUseClientPage = () => {
         <Navbar />
         <Header>
           <div className="px-3 text-center">
-            <h1 className="md:text-heading2-bold text-heading3-bold  xs:mb-6 mb-3">
+            <h1 className="md:text-heading2-bold text-heading3-bold xs:mb-6 mb-3">
               {t("follow-up-title")}
             </h1>
             {!showLoadingCircle && (

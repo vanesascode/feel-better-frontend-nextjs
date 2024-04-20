@@ -92,3 +92,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 `npm i @types/react-big-calendar`
 
 `npm i dayjs`
+
+## For the meditation carousel
+
+`npm i react-slick`
+
+`npm install slick-carousel`
+
+`npm i --save-dev @types/react-slick`

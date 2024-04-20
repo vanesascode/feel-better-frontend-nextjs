@@ -36,7 +36,7 @@ const LinksVerticalNavbar = ({
               transition={{ duration: 0.5 }}
               className="absolute top-0 left-0 z-10 bg-dark h-screen sm2:w-[25rem] max-sm2:right-0 text-body-regular lg:hidden block max-h-[100vh] overflow-y-auto"
             >
-              <div className="pt-24 pl-14 pr-10 flex flex-col gap-8">
+              <div className="py-24 pl-14 pr-10 flex flex-col gap-8">
                 <button
                   className="flex items-center hover:text-light-green justify-between"
                   onClick={() =>
@@ -68,7 +68,7 @@ const LinksVerticalNavbar = ({
                       {t("navbar:challenge-a-negative-thought")}
                     </Link>
                     <Link
-                      href="/meditaciones"
+                      href="/meditation"
                       className="hover:text-dark-green-1"
                       onClick={() => setShowOptionsNavbar(false)}
                     >

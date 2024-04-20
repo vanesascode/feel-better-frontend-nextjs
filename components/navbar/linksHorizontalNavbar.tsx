@@ -71,7 +71,7 @@ const LinksHorizontalNavbar = ({
                   {t("navbar:challenge-a-negative-thought")}
                 </Link>
                 <Link
-                  href="/meditaciones"
+                  href="/meditation"
                   className="hover:text-cta-green-hover transition duration-300 ease-in-out cursor-pointer"
                 >
                   {t("navbar:do-a-guided-meditation")}
