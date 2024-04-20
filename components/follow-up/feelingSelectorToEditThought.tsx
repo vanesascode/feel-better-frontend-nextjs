@@ -18,7 +18,7 @@ const FeelingSelectorToEditThought = ({
     <>
       {" "}
       <div className="flex md:flex-row flex-col gap-1 items-center mb-5">
-        <label className="md:text-body-bold text-base-bold md:w-1/6 md:mb-0 mb-2 max-md:text-center text-gray">
+        <label className="md:text-body-bold text-base-bold md:w-[7rem] md:mb-0 mb-2 max-md:text-center text-gray md:mr-5 ">
           {t("feeling")}{" "}
         </label>
 
@@ -27,9 +27,9 @@ const FeelingSelectorToEditThought = ({
             e.preventDefault();
             setShowFeelingOptions(!showFeelingOptions);
           }}
-          className="white-green-input flex justify-center items-center gap-2"
+          className="white-green-input flex justify-center   items-center gap-2"
         >
-          {feelingToBeEdited} <ChevronDownIcon className="h-5 w-5 " />
+          {feelingToBeEdited} <ChevronDownIcon className="h-5 w-5" />
         </button>
         {showFeelingOptions && (
           <>
