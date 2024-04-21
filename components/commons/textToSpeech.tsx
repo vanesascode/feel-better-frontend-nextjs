@@ -33,10 +33,12 @@ const TextToSpeech = ({ textToSpeak }: { textToSpeak: string }) => {
   };
 
   return (
-    <SpeakerWaveIcon
-      className="md:h-10 md:w-10 h-8 w-8 text-white mt-[-0.625rem] pb-2"
-      onClick={handleSpeech}
-    />
+    <div className="flex justify-end">
+      <SpeakerWaveIcon
+        className="md:h-10 md:w-10 xs:h-8 xs:w-8 h-7 w-7 text-white sm1:mt-[-0.625rem] pb-2 cursor-pointer"
+        onClick={handleSpeech}
+      />
+    </div>
   );
 };
 
