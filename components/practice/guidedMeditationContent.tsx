@@ -72,8 +72,8 @@ const GuidedMeditationContent = () => {
                 <Image
                   src="/meditation/meditation-explanation-1.jpg"
                   alt="meditation activity"
-                  width={1000}
-                  height={1000}
+                  width={2000}
+                  height={2000}
                   className="rounded-xl w-full object-cover "
                 />
               </div>
@@ -81,8 +81,8 @@ const GuidedMeditationContent = () => {
                 <Image
                   src="/meditation/meditation-explanation-1-narrow.jpg"
                   alt="meditation activity"
-                  width={1000}
-                  height={1000}
+                  width={2000}
+                  height={2000}
                   className="rounded-xl w-full object-cover "
                 />
               </div>
@@ -94,8 +94,8 @@ const GuidedMeditationContent = () => {
                 <Image
                   src="/meditation/meditation-explanation-2.jpg"
                   alt="meditation activity"
-                  width={1000}
-                  height={1000}
+                  width={2000}
+                  height={2000}
                   className="rounded-xl w-full object-cover "
                 />
               </div>
@@ -138,8 +138,8 @@ const GuidedMeditationContent = () => {
                 <Image
                   src="/meditation/meditation-explanation-2.jpg"
                   alt="meditation activity"
-                  width={1000}
-                  height={1000}
+                  width={2000}
+                  height={2000}
                   className="rounded-xl w-full object-cover "
                 />
               </div>
@@ -147,8 +147,8 @@ const GuidedMeditationContent = () => {
                 <Image
                   src="/meditation/meditation-explanation-2-narrow.jpg"
                   alt="meditation activity"
-                  width={1000}
-                  height={1000}
+                  width={2000}
+                  height={2000}
                   className="rounded-xl w-full object-cover "
                 />
               </div>
