@@ -41,12 +41,11 @@ const ChallengeNegativeThoughtDropdown = () => {
             transition={{ duration: 0.5, ease: "easeInOut" }}
             exit={{ height: 0, opacity: 0, overflow: "hidden" }}
           >
-            <PracticeCta url="/choose-negative-thought">
+            <PracticeCta url="/choose-negative-thought" thin>
               {t("top-challenge-thought-cta-explanation-1")}
               <br /> <br />
               {t("top-challenge-thought-cta-explanation-2")}
             </PracticeCta>
-
             <ChallengeNegativeThoughtContent />
           </motion.div>
         )}
