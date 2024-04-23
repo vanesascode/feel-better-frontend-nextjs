@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { useAppDispatch } from "@/redux/hooks";
 import { setNegativeThought } from "@/redux/features/thoughtSlice";
 import ChooseNegativeThoughtForm from "./chooseNegativeThoughtForm";
-import { useAskToLogin } from "@/hooks/useAskToLogin";
+import { useAskUserToLogin } from "@/hooks/useAskUserToLogin";
 
 const ChooseNegativeThoughtLogic = () => {
   const [selectedNegativeThought, setSelectedNegativeThought] =
@@ -16,7 +16,8 @@ const ChooseNegativeThoughtLogic = () => {
   ] = useState<boolean>(false);
   const router = useRouter();
   const dispatch = useAppDispatch();
-  const { showPopupAskingToLogin, setShowPopupAskingToLogin } = useAskToLogin();
+  const { showPopupAskingToLogin, setShowPopupAskingToLogin } =
+    useAskUserToLogin();
 
   useEffect(() => {
     if (selectedNegativeThought) {

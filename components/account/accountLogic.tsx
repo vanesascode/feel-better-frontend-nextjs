@@ -12,7 +12,7 @@ import {
   deleteCurrentUserAccount,
   editCurrentUserAccountDetails,
 } from "@/api/users/users";
-import { useExistingUsersEmails } from "@/hooks/useExistingUsersEmails";
+import { useGetExistingUsersEmails } from "@/hooks/useGetExistingUsersEmails";
 
 export interface FormFields {
   name: string;
@@ -33,7 +33,7 @@ const AccountLogic = () => {
   const router = useRouter();
   const dispatch = useAppDispatch();
   const { _id } = useAppSelector(selectAuth);
-  const { existingUsersEmails } = useExistingUsersEmails();
+  const { existingUsersEmails } = useGetExistingUsersEmails();
 
   const handleSubmitAccountChanges: SubmitHandler<FormFields> = async (
     data

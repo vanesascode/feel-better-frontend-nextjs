@@ -7,7 +7,7 @@ import { useAppDispatch } from "@/redux/hooks";
 import { setUser } from "@/redux/features/authSlice";
 import { SubmitHandler } from "react-hook-form";
 import RegisterForm from "./registerForm";
-import { useExistingUsersEmails } from "@/hooks/useExistingUsersEmails";
+import { useGetExistingUsersEmails } from "@/hooks/useGetExistingUsersEmails";
 
 export interface FormFields {
   name: string;
@@ -19,7 +19,7 @@ export interface FormFields {
 const RegisterLogic = () => {
   const dispatch = useAppDispatch();
   const router = useRouter();
-  const { existingUsersEmails } = useExistingUsersEmails();
+  const { existingUsersEmails } = useGetExistingUsersEmails();
   const handleSubmitRegisterForm: SubmitHandler<FormFields> = async (data) => {
     await registerUser(data);
   };

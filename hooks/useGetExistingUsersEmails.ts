@@ -1,7 +1,7 @@
 import { fetchExistingUsersEmails } from "@/api/users/users";
 import { useEffect, useState } from "react";
 
-export const useExistingUsersEmails = () => {
+export const useGetExistingUsersEmails = () => {
   const [existingUsersEmails, setExistingUsersEmails] = useState<string[]>([]);
 
   useEffect(() => {

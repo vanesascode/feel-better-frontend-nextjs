@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import { useAppDispatch } from "@/redux/hooks";
 import { logout } from "@/redux/features/authSlice";
 import ResetPasswordForm from "./resetPasswordForm";
-import { useExistingUsersEmails } from "@/hooks/useExistingUsersEmails";
+import { useGetExistingUsersEmails } from "@/hooks/useGetExistingUsersEmails";
 
 export interface FormFields {
   email: string;
@@ -22,7 +22,7 @@ const ResetPasswordLogic = () => {
     useState<boolean>(false);
   const router = useRouter();
   const dispatch = useAppDispatch();
-  const { existingUsersEmails } = useExistingUsersEmails();
+  const { existingUsersEmails } = useGetExistingUsersEmails();
 
   const handleSubmitResetPasswordForm: SubmitHandler<FormFields> = async (
     data

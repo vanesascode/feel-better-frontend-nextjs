@@ -2,7 +2,7 @@ import { useAppSelector } from "@/redux/hooks";
 import { selectAuth } from "@/redux/features/authSlice";
 import { useEffect, useState } from "react";
 
-export const useAskToLogin = () => {
+export const useAskUserToLogin = () => {
   const { name } = useAppSelector(selectAuth);
   const [showPopupAskingToLogin, setShowPopupAskingToLogin] =
     useState<boolean>(false);

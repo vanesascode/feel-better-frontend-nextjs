@@ -38,75 +38,75 @@ const AdviceToMeditatePopupExplanation = ({
                   {t("advice-to-meditate")}
                 </h2>
 
-                <div className="flex flex-col justify-start items-start gap-5">
+                <ul className="flex flex-col justify-start items-start gap-5 list-disc">
                   <p className="md:text-heading3-bold text-body-bold">
                     {t("preparation")}
                   </p>
 
-                  <p className="md:text-body-thin text-base-thin text-white text-start">
-                    &#x2022; {t("preparation-point-one")}{" "}
+                  <li className="md:text-body-thin text-base-thin text-white text-start ml-5">
+                    {t("preparation-point-one")}{" "}
                     <span className="md:text-body-thin text-base-thin text-gray">
                       {t("preparation-point-one-explanation")}
                     </span>
-                  </p>
+                  </li>
 
-                  <p className="md:text-body-thin text-base-thin text-white text-start">
-                    &#x2022; {t("preparation-point-two")}{" "}
+                  <li className="md:text-body-thin text-base-thin text-white text-start ml-5">
+                    {t("preparation-point-two")}{" "}
                     <span className="md:text-body-thin text-base-thin text-gray">
                       {t("preparation-point-two-explanation")}
                     </span>
-                  </p>
+                  </li>
 
-                  <p className="md:text-body-thin text-base-thin text-white text-start">
-                    &#x2022; {t("preparation-point-three")}{" "}
+                  <li className="md:text-body-thin text-base-thin text-white text-start ml-5">
+                    {t("preparation-point-three")}{" "}
                     <span className="md:text-body-thin text-base-thin text-gray">
                       {t("preparation-point-three-explanation")}
                     </span>
-                  </p>
+                  </li>
 
                   <p className="md:text-heading3-bold text-body-bold">
                     {t("attitude")}
                   </p>
 
-                  <p className="md:text-body-thin text-base-thin text-white text-start">
-                    &#x2022; {t("attitude-point-one")}{" "}
+                  <li className="md:text-body-thin text-base-thin text-white text-start ml-5">
+                    {t("attitude-point-one")}{" "}
                     <span className="md:text-body-thin text-base-thin text-gray">
                       {t("attitude-point-one-explanation")}
                     </span>
-                  </p>
+                  </li>
 
-                  <p className="md:text-body-thin text-base-thin text-white text-start">
-                    &#x2022; {t("attitude-point-two")}{" "}
+                  <li className="md:text-body-thin text-base-thin text-white text-start ml-5">
+                    {t("attitude-point-two")}{" "}
                     <span className="md:text-body-thin text-base-thin text-gray">
                       {t("attitude-point-two-explanation")}
                     </span>
-                  </p>
+                  </li>
 
-                  <p className="md:text-body-thin text-base-thin text-white text-start">
-                    &#x2022; {t("attitude-point-three")}{" "}
+                  <li className="md:text-body-thin text-base-thin text-white text-start ml-5">
+                    {t("attitude-point-three")}{" "}
                     <span className="md:text-body-thin text-base-thin text-gray">
                       {t("attitude-point-three-explanation")}
                     </span>
-                  </p>
+                  </li>
 
                   <p className="md:text-heading3-bold text-body-bold">
                     {t("remember")}
                   </p>
 
-                  <p className="md:text-body-thin text-base-thin text-white text-start">
-                    &#x2022; {t("remember-point-one")}{" "}
+                  <li className="md:text-body-thin text-base-thin text-white text-start ml-5">
+                    {t("remember-point-one")}{" "}
                     <span className="md:text-body-thin text-base-thin text-gray">
                       {t("remember-point-one-explanation")}
                     </span>
-                  </p>
+                  </li>
 
-                  <p className="md:text-body-thin text-base-thin text-white text-start">
-                    &#x2022; {t("remember-point-two")}{" "}
+                  <li className="md:text-body-thin text-base-thin text-white text-start ml-5">
+                    {t("remember-point-two")}{" "}
                     <span className="md:text-body-thin text-base-thin text-gray">
                       {t("remember-point-two-explanation")}
                     </span>
-                  </p>
-                </div>
+                  </li>
+                </ul>
                 <CtaButton
                   onClick={() => setShowAdviceToMeditatePopup(false)}
                   type="button"

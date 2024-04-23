@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import Link from "next/link";
 import CtaButton from "../commons/ctaButton";
 import TextToSpeech from "../commons/textToSpeech";
-import ActivityImage from "./activityImage";
+import ImageComponent from "../commons/imageComponent";
 
 const HomeExplanationActivities = () => {
   const { t } = useTranslation();
@@ -39,14 +39,14 @@ const HomeExplanationActivities = () => {
               </Link>
             </div>
             <div className="lg:w-[48%] hidden lg:block max-sm2:block">
-              <ActivityImage
+              <ImageComponent
                 image="/thoughts/thoughts-cover-background.jpg"
                 alt="thoughts activity"
               />
             </div>
           </div>
           <div className="block lg:hidden max-sm2:hidden pb-10">
-            <ActivityImage
+            <ImageComponent
               image="/home/thoughts-cover-narrow.jpg"
               alt="thoughts activity"
             />
@@ -55,7 +55,7 @@ const HomeExplanationActivities = () => {
         <article>
           <div className="md:flex-row flex-col flex justify-between pb-10 items-center">
             <div className="lg:w-[48%] hidden lg:block">
-              <ActivityImage
+              <ImageComponent
                 image="/meditation/meditation-cover-background.jpg"
                 alt="meditation activity"
               />
@@ -75,14 +75,14 @@ const HomeExplanationActivities = () => {
               </Link>
             </div>
             <div className="lg:w-[48%] hidden max-sm2:block">
-              <ActivityImage
+              <ImageComponent
                 image="/meditation/meditation-cover-background.jpg"
                 alt="meditation activity"
               />
             </div>
           </div>
           <div className="block lg:hidden max-sm2:hidden pb-10">
-            <ActivityImage
+            <ImageComponent
               image="/home/meditation-cover-narrow.jpg"
               alt="meditation activity"
             />
@@ -105,14 +105,14 @@ const HomeExplanationActivities = () => {
               </Link>
             </div>
             <div className="lg:w-[48%] hidden lg:block max-sm2:block">
-              <ActivityImage
+              <ImageComponent
                 image="/learn/learn-cover-background.jpg"
                 alt="learn activity"
               />
             </div>
           </div>
           <div className="block lg:hidden max-sm2:hidden pb-10">
-            <ActivityImage
+            <ImageComponent
               image="/home/learn-cover-narrow.jpg"
               alt="learn activity"
             />
