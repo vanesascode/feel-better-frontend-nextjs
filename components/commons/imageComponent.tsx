@@ -1,20 +1,20 @@
 import Image from "next/image";
 
-interface ActivityImageProps {
+interface ImageComponentProps {
   image: string;
   alt: string;
 }
 
-const ActivityImage = ({ image, alt }: ActivityImageProps) => {
+const ImageComponent = ({ image, alt }: ImageComponentProps) => {
   return (
     <Image
       src={image}
       alt={alt}
-      width={1000}
-      height={1000}
+      width={2000}
+      height={2000}
       className="rounded-xl w-full"
     />
   );
 };
 
-export default ActivityImage;
+export default ImageComponent;
