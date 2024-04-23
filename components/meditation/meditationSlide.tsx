@@ -1,58 +1,70 @@
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-interface Meditation {
+import { useSetSelectedIndexInList } from "@/hooks/useSetSelectedIndexInList";
+
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
+import VideoComponent from "./videoComponent";
+
+interface Thought {
   id: number;
   url: string;
 }
 
-const MeditationSlide = ({ list }: { list: Meditation[] }) => {
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 600,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: false,
-    initialSlide: 0,
-    swipeToSlide: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 470,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+interface listOfMeditations {
+  list1: Thought[];
+  list2: Thought[];
+  list3: Thought[];
+}
+
+const MeditationSlide = ({ list1, list2, list3 }: listOfMeditations) => {
+  const { currentIndex, handleNext, handlePrevious } =
+    useSetSelectedIndexInList(list1);
+
   return (
     <>
-      <Slider {...settings}>
-        {list.map((meditation: Meditation) => (
-          <div key={meditation.id}>
-            <iframe
-              src={meditation.url}
-              title="0"
-              allowFullScreen
-              className="w-full px-5 xxxxl:h-[15.5rem] lg:h-[14.5rem] md:h-[15.5rem] xxs:h-[10.5rem] xs:h-[12rem] sm:h-[13rem] sm1:h-[9.75rem] sm2:h-[10.5rem] h-[10rem]"
-            ></iframe>
-          </div>
+      <div className="flex md:p-5 p-4 rounded-xl items-center justify-between">
+        <div>
+          <ChevronLeftIcon
+            className="md:h-8 md:w-8 h-5 w-5 cursor-pointer text-white"
+            onClick={handlePrevious}
+          />
+        </div>
+        {list1.map((thought: any, index: number) => (
+          <>
+            <VideoComponent
+              index={index}
+              currentIndex={currentIndex}
+              url={thought.url}
+            />
+          </>
         ))}
-      </Slider>
+        <div className="hidden sm2:block">
+          {list2.map((thought: any, index: number) => (
+            <>
+              <VideoComponent
+                index={index}
+                currentIndex={currentIndex}
+                url={thought.url}
+              />
+            </>
+          ))}
+        </div>
+        <div className="hidden lg:block">
+          {list3.map((thought: any, index: number) => (
+            <>
+              <VideoComponent
+                index={index}
+                currentIndex={currentIndex}
+                url={thought.url}
+              />
+            </>
+          ))}
+        </div>
+        <div>
+          <ChevronRightIcon
+            className="md:h-8 md:w-8 h-5 w-5 cursor-pointer text-white"
+            onClick={handleNext}
+          />
+        </div>
+      </div>
     </>
   );
 };
