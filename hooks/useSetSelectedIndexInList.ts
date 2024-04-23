@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const useSetSelectedIndexInList = (list: any) => {
+export const useSetSelectedIndexInList = <T>(list: T[]) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   const handleNext = () => {

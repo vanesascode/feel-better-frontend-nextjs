@@ -5,6 +5,11 @@ import { useTranslation } from "react-i18next";
 import SelectorButton from "../commons/selectorButton";
 import PopupAskingToLogin from "./popupAskingToLogin";
 import NegativeThoughtTextarea from "./negativeThoughtTextarea";
+import {
+  englishNegativeThoughts,
+  frenchNegativeThoughts,
+  spanishNegativeThoughts,
+} from "@/constants/negativeThoughts";
 
 interface ChooseNegativeThoughtFormProps {
   selectedNegativeThought: string;
@@ -24,6 +29,15 @@ const ChooseNegativeThoughtForm = ({
   setShowPopupAskingToLogin,
 }: ChooseNegativeThoughtFormProps) => {
   const { t } = useTranslation();
+  const { i18n } = useTranslation();
+  const currentLocale = i18n.language;
+
+  const negativeThoughtsList =
+    currentLocale === "en"
+      ? englishNegativeThoughts
+      : currentLocale === "es"
+      ? spanishNegativeThoughts
+      : frenchNegativeThoughts;
 
   return (
     <section className="flex flex-col justify-center items-center w-full gap-2">
@@ -35,69 +49,16 @@ const ChooseNegativeThoughtForm = ({
           selectedNegativeThought={selectedNegativeThought}
           setSelectedNegativeThought={setSelectedNegativeThought}
         />
-        <SelectorButton
-          onClick={() => {
-            setSelectedNegativeThought(t("thought-1"));
-          }}
-        >
-          {t("thought-1")}
-        </SelectorButton>
-        <SelectorButton
-          onClick={() => {
-            setSelectedNegativeThought(t("thought-2"));
-          }}
-        >
-          {t("thought-2")}
-        </SelectorButton>
-        <SelectorButton
-          onClick={() => {
-            setSelectedNegativeThought(t("thought-3"));
-          }}
-        >
-          {t("thought-3")}
-        </SelectorButton>
-        <SelectorButton
-          onClick={() => {
-            setSelectedNegativeThought(t("thought-4"));
-          }}
-        >
-          {t("thought-4")}
-        </SelectorButton>
-        <SelectorButton
-          onClick={() => {
-            setSelectedNegativeThought(t("thought-5"));
-          }}
-        >
-          {t("thought-5")}
-        </SelectorButton>
-        <SelectorButton
-          onClick={() => {
-            setSelectedNegativeThought(t("thought-6"));
-          }}
-        >
-          {t("thought-6")}
-        </SelectorButton>
-        <SelectorButton
-          onClick={() => {
-            setSelectedNegativeThought(t("thought-7"));
-          }}
-        >
-          {t("thought-7")}
-        </SelectorButton>
-        <SelectorButton
-          onClick={() => {
-            setSelectedNegativeThought(t("thought-8"));
-          }}
-        >
-          {t("thought-8")}
-        </SelectorButton>
-        <SelectorButton
-          onClick={() => {
-            setSelectedNegativeThought(t("thought-9"));
-          }}
-        >
-          {t("thought-9")}
-        </SelectorButton>
+        {negativeThoughtsList.map((thought, index) => (
+          <SelectorButton
+            onClick={() => {
+              setSelectedNegativeThought(thought.negativeThought);
+            }}
+            key={index}
+          >
+            {thought.negativeThought}
+          </SelectorButton>
+        ))}
         {chooseNegativeThoughtFirstMessage && (
           <p className="text-red-500 text-base-regular text-center">
             {t("choose-first")}
