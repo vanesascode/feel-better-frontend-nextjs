@@ -36,7 +36,7 @@ const HomeActivities = () => {
               alt="learn icon"
               greenLight
             >
-              {t("activity-two")}
+              {t("activity-three")}
             </ActivityCard>
           </div>
         </div>
