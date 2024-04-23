@@ -27,7 +27,8 @@ const GuidedMeditationContent = () => {
             t("meditation-benefits-7") +
             t("meditation-benefits-7-explanation") +
             t("meditation-benefits-8") +
-            t("meditation-benefits-8-explanation")
+            t("meditation-benefits-8-explanation") +
+            t("knowing-it-try")
           }
         />
         <section>
