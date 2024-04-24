@@ -17,8 +17,9 @@ export interface Thought {
 
 export const useGetThoughtsByUser = () => {
   const [thoughts, setThoughts] = useState<Thought[]>([]);
-  const [getThouthgsByUserError, setGetThouthgsByUserError] =
+  const [getThoughtsByUserError, setGetThoughtsByUserError] =
     useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const dispatch = useAppDispatch();
   useEffect(() => {
     dispatch(maintainUserDataStoredinRedux());
@@ -33,19 +34,22 @@ export const useGetThoughtsByUser = () => {
         _id,
       });
       setThoughts(thoughtsData);
-      console.log("thoughtsData", thoughtsData);
+      if (Array.isArray(thoughtsData)) {
+        setIsLoading(false);
+      }
     } catch (error) {
-      setGetThouthgsByUserError(true);
+      setGetThoughtsByUserError(true);
     }
   };
 
   useEffect(() => {
     fetchThoughts();
-  }, [token, _id]);
+  }, [token, _id, thoughts]);
 
   return {
     thoughts,
     token,
-    getThouthgsByUserError,
+    getThoughtsByUserError,
+    isLoading,
   };
 };
