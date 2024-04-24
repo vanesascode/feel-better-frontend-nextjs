@@ -4,16 +4,16 @@ import Link from "next/link";
 import ContentFrame from "../commons/contentFrame";
 import Header from "../commons/header";
 import Navbar from "../navbar/navbar";
-import FollowUpContent from "./followUpContent";
 import { useGetThoughtsByUser } from "@/hooks/useGetThoughtsByUser";
 import { useTranslation } from "react-i18next";
 import LoadingCircle from "../commons/loadingCircle";
 import { useShowLoadingCircle } from "@/hooks/useShowLoadingCircle";
+import CalendarUi from "./calendarUi";
 
 const FollowUpUseClientPage = () => {
-  const { thoughts } = useGetThoughtsByUser();
   const { t } = useTranslation();
-  const { showLoadingCircle } = useShowLoadingCircle({ thoughts });
+  const { showLoadingCircle } = useShowLoadingCircle();
+  const { thoughts, getThoughtsByUserError } = useGetThoughtsByUser();
 
   return (
     <>
@@ -26,14 +26,18 @@ const FollowUpUseClientPage = () => {
             </h1>
             {!showLoadingCircle && (
               <div>
-                {thoughts.length === 0 ? (
+                {getThoughtsByUserError && (
+                  <p className="text-red-400 pb-5">{t("sorry-server-error")}</p>
+                )}
+                {thoughts.length === 0 && !getThoughtsByUserError && (
                   <Link
                     href="/choose-negative-thought"
                     className="sm:mb-0 mb-3 text-base-bold md:text-body-bold text-cta-green"
                   >
                     {t("no-thoughts-yet")}
                   </Link>
-                ) : (
+                )}{" "}
+                {thoughts.length > 0 && !getThoughtsByUserError && (
                   <p className="sm:mb-0 mb-3 text-base-thin md:text-body-thin">
                     {t("congrats")}{" "}
                     <span className="text-cta-green font-bold">
@@ -51,7 +55,7 @@ const FollowUpUseClientPage = () => {
       {!showLoadingCircle && (
         <main>
           <ContentFrame>
-            <FollowUpContent />
+            <CalendarUi />
           </ContentFrame>
         </main>
       )}
