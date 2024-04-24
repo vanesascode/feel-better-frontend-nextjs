@@ -1,22 +1,21 @@
 import { useEffect, useState } from "react";
-import { Thought } from "./useGetThoughtsByUser";
+import { useGetThoughtsByUser } from "./useGetThoughtsByUser";
 
-interface useShowLoadingCircleProps {
-  thoughts: Thought[];
-}
-
-export const useShowLoadingCircle = ({
-  thoughts,
-}: useShowLoadingCircleProps) => {
+export const useShowLoadingCircle = () => {
   const [showLoadingCircle, setShowLoadingCircle] = useState(true);
+  const { thoughts, isLoading } = useGetThoughtsByUser();
+  const [showServerError, setShowServerError] = useState(false);
 
   useEffect(() => {
-    if (thoughts) {
+    if (thoughts && !isLoading) {
       setTimeout(() => {
         setShowLoadingCircle(false);
       }, 1000);
     }
+    setTimeout(() => {
+      setShowServerError(true);
+    }, 6000);
   }, [thoughts]);
 
-  return { showLoadingCircle };
+  return { showLoadingCircle, showServerError };
 };
