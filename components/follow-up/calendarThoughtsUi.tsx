@@ -26,7 +26,9 @@ const CalendarThoughtsUi = ({
   return (
     <section>
       {selectedDate && (
-        <div className={selectedThoughts.length > 0 ? "p-5" : "p-0"}>
+        <div
+          className={selectedThoughts.length > 0 ? "p-0 xs:p-2 sm:p-3" : "p-0"}
+        >
           <ul>
             {selectedThoughts.map((thought, index) => (
               <div
@@ -38,7 +40,7 @@ const CalendarThoughtsUi = ({
                 <div className="flex justify-between items-center mb-4 sm:gap-2">
                   <div className="flex items-center md:text-heading3-bold sm:text-body-bold text-base-bold gap-1 md:gap-2 xl:gap-3">
                     <p className="underline">
-                      {dayjs(selectedDate).format("DD MMMM, YYYY")}
+                      {dayjs(thought.start).format("DD MMMM, YYYY")}
                     </p>
                     <p>{thought.feeling}</p>
                   </div>
