@@ -5,20 +5,12 @@ import "dayjs/locale/fr";
 import "dayjs/locale/en";
 import "dayjs/locale/es";
 import { useState, useEffect } from "react";
-import { Thought } from "@/hooks/useGetThoughtsByUser";
-import CalendarThoughtsLogic from "./calendarThoughtsLogic";
+import { useGetThoughtsByUser } from "@/hooks/useGetThoughtsByUser";
+import { useGetThoughtsByUserAndFeeling } from "@/hooks/useGetThoughtsByUserAndFeeling";
 import { useCalendarStyle } from "@/hooks/useCalendarStyle";
 import FeelingFilterOfThoughts from "./feelingFilterOfThoughts";
 import { useTranslation } from "react-i18next";
-import Link from "next/link";
-
-interface CalendarUiProps {
-  thoughts: Thought[];
-  thoughtsByFeeling?: Thought[];
-  token: string | null;
-  //eslint-disable-next-line
-  fetchThoughtsByFeeling: (feeling: string) => void;
-}
+import CalendarThoughtsBox from "./calendarThoughtsBox";
 
 export interface CalendarEvent {
   id: string;
@@ -30,18 +22,15 @@ export interface CalendarEvent {
   feeling: string;
 }
 
-const CalendarUi = ({
-  thoughts,
-  token,
-  thoughtsByFeeling,
-  fetchThoughtsByFeeling,
-}: CalendarUiProps) => {
+const CalendarUi = () => {
   const localizer = dayjsLocalizer(dayjs);
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [selectedThoughts, setSelectedThoughts] = useState<CalendarEvent[]>([]);
   const { i18n } = useTranslation();
   const currentLocale = i18n.language;
-  const { t } = useTranslation();
+  const { thoughts } = useGetThoughtsByUser();
+  const { thoughtsByFeeling, fetchThoughtsByFeeling } =
+    useGetThoughtsByUserAndFeeling();
 
   let calendarLanguage = "es";
   if (currentLocale === "en") {
@@ -139,29 +128,10 @@ const CalendarUi = ({
             fetchThoughtsByFeeling={fetchThoughtsByFeeling}
           />
         </div>
-        <div className="bg-dark flex justify-start items-start w-full border-[1px] border-white p-5 lg:min-h-[30.3rem] max-h-[37.5rem] md:max-h-[80vh] overflow-y-auto">
-          {(!selectedThoughts || selectedThoughts.length === 0) &&
-            thoughts.length > 0 && (
-              <div className="w-full">
-                <p className="text-white text-center md:p-10 p-3 text-base-thin md:text-body-thin">
-                  {t("instructions")}
-                </p>
-              </div>
-            )}
-          {thoughts.length === 0 && (
-            <Link
-              href="/choose-negative-thought"
-              className="sm:mb-0 mb-3 text-base-bold md:text-body-bold text-cta-green text-center w-full"
-            >
-              {t("no-thoughts-yet")}
-            </Link>
-          )}
-          <CalendarThoughtsLogic
-            selectedDate={selectedDate}
-            selectedThoughts={selectedThoughts}
-            token={token}
-          />
-        </div>
+        <CalendarThoughtsBox
+          selectedThoughts={selectedThoughts}
+          selectedDate={selectedDate}
+        />
       </div>
     </>
   );
