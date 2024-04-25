@@ -32,7 +32,7 @@ const HomeExplanationActivities = () => {
                 {" "}
                 {t("activity-one-explanation")}
               </p>
-              <Link href="/pensamientos-negativos">
+              <Link href="/challenge-thoughts-info">
                 <CtaButton type="button" darkerShadow green>
                   {t("learn-more")}
                 </CtaButton>
@@ -68,7 +68,7 @@ const HomeExplanationActivities = () => {
                 {" "}
                 {t("activity-two-explanation")}
               </p>
-              <Link href="/meditacion">
+              <Link href="/meditation-info">
                 <CtaButton type="button" darkerShadow green>
                   {t("learn-more")}
                 </CtaButton>
@@ -98,7 +98,7 @@ const HomeExplanationActivities = () => {
                 {" "}
                 {t("activity-three-explanation")}
               </p>
-              <Link href="/aprender">
+              <Link href="/learn">
                 <CtaButton type="button" darkerShadow green>
                   {t("learn-more")}
                 </CtaButton>
