@@ -4,6 +4,7 @@ import { useAppSelector } from "@/redux/hooks";
 import { selectAuth } from "@/redux/features/authSlice";
 import { useTranslation } from "react-i18next";
 import CtaButton from "../commons/ctaButton";
+import Link from "next/link";
 
 const HomeCover = () => {
   const { t } = useTranslation();
@@ -67,9 +68,11 @@ const HomeCover = () => {
             {t("welcome")}
           </h2>
           <div className="pl-[10%] lg:pl-[13%] mt-6">
-            <CtaButton type="button" green>
-              {t("start")}
-            </CtaButton>
+            <Link href="#start">
+              <CtaButton type="button" green>
+                {t("start")}
+              </CtaButton>
+            </Link>
           </div>
         </div>
       </article>
