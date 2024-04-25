@@ -185,6 +185,7 @@ const config: Config = {
       sm1: "29.375rem",
       sm2: "35.9375rem",
       md: "48rem",
+      md1: "52rem",
       lg: "64rem",
       lg1: "66.375rem",
       xl: "80rem",

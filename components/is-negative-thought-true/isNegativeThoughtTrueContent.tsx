@@ -3,11 +3,12 @@
 import CtaButton from "../commons/ctaButton";
 import { useRouter } from "next/navigation";
 import { useTranslation } from "react-i18next";
-import Link from "next/link";
+
 import BreathingBall from "./breathingBall";
 import { useAppSelector } from "@/redux/hooks";
 import { selectThought } from "@/redux/features/thoughtSlice";
 import ThoughtChosen from "../commons/thoughtChosen";
+import Link from "next/link";
 
 const IsNegativeThoughtTrueContent = () => {
   const router = useRouter();
@@ -18,7 +19,10 @@ const IsNegativeThoughtTrueContent = () => {
     <section className="flex flex-col justify-center items-center w-full gap-2">
       <h2 className="md:text-heading3-thin text-body-thin text-center text-white mb-5">
         {t("relax")}{" "}
-        <Link href="/cbt-info" target="_blank">
+        <Link
+          href="/challenge-thoughts-info#identify-negative-thoughts"
+          onClick={() => setTimeout(() => router.back(), 500)}
+        >
           <span className="md:text-heading3-bold text-body-bold hover:text-light-green cursor-pointer underline">
             {t("distorted-thought")}
           </span>

@@ -15,7 +15,7 @@ export const useShowLoadingCircle = () => {
     setTimeout(() => {
       setShowServerError(true);
     }, 6000);
-  }, [thoughts]);
+  }, [thoughts, isLoading]);
 
   return { showLoadingCircle, showServerError };
 };
