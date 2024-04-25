@@ -47,7 +47,7 @@ const ChallengeNegativeThoughtContent = () => {
         />
         <section>
           <article>
-            <h3 className="md:text-heading2-bold sm:text-heading3-bold text-body-bold  mb-8 md:mb-16 sm:text-center">
+            <h3 className="md:text-heading2-bold sm:text-heading3-bold text-body-bold mb-8 md:mb-16 sm:text-center">
               {t("steps-for-challenging-thoughts")}
             </h3>
             <div className="xl:flex-row flex-col flex justify-between lg:pb-10 items-center ">
@@ -101,7 +101,8 @@ const ChallengeNegativeThoughtContent = () => {
             </div>
           </article>
           <article>
-            <h3 className="md:text-heading2-bold sm:text-heading3-bold text-body-bold my-8 md:my-16 sm:text-center">
+            <br id="identify-negative-thoughts" />
+            <h3 className="md:text-heading2-bold sm:text-heading3-bold text-body-bold mb-8 md:mb-16  sm:text-center">
               {t("identify-negative-thoughts")}
             </h3>
             <p className="md:text-body-thin text-base-thin text-gray lg:mb-5 ">
@@ -170,7 +171,8 @@ const ChallengeNegativeThoughtContent = () => {
               </div>
             </div>
           </article>
-          <h3 className="md:text-heading2-bold sm:text-heading3-bold text-body-bold my-5 pl-4 lg:pl-10">
+          <br id="examples-negative-thoughts" />
+          <h3 className="md:text-heading2-bold sm:text-heading3-bold text-body-bold mb-5 pl-4 lg:pl-10">
             {t("examples")}
           </h3>
           <ThoughtsExamplesBar />
