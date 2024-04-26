@@ -6,7 +6,11 @@ import MeditationInfoContent from "@/components/meditation-info/meditationInfoCo
 
 const i18nNamespaces = ["practice", "navbar"];
 
-export default async function Home({ params }: { params: { locale: string } }) {
+export default async function MeditationInfo({
+  params,
+}: {
+  params: { locale: string };
+}) {
   const { resources } = await initTranslations(
     params.locale,
     i18nNamespaces,
