@@ -6,7 +6,11 @@ import ChallengeThoughtsInfoContent from "@/components/challenge-thoughts-info/c
 
 const i18nNamespaces = ["practice", "navbar"];
 
-export default async function Home({ params }: { params: { locale: string } }) {
+export default async function ChallengeThoughtsInfo({
+  params,
+}: {
+  params: { locale: string };
+}) {
   const { resources } = await initTranslations(
     params.locale,
     i18nNamespaces,
