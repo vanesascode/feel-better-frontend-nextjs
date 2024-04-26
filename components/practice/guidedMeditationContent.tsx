@@ -1,8 +1,8 @@
-import Image from "next/image";
 import ContentFrame from "../commons/contentFrame";
 import TextToSpeech from "../commons/textToSpeech";
 import { useTranslation } from "react-i18next";
 import PracticeCta from "./practiceCta";
+import ImageComponent from "../commons/imageComponent";
 
 const GuidedMeditationContent = () => {
   const { t } = useTranslation();
@@ -32,10 +32,10 @@ const GuidedMeditationContent = () => {
           }
         />
         <section>
-          <h3 className="md:text-heading2-bold sm:text-heading3-bold text-body-bold  mb-8 md:mb-16 sm:text-center">
-            {t("meditation-benefits")}
-          </h3>
           <article>
+            <h3 className="md:text-heading2-bold sm:text-heading3-bold text-body-bold  mb-8 md:mb-16 sm:text-center">
+              {t("meditation-benefits")}
+            </h3>
             <div className="lg:flex-row flex-col flex justify-between lg:pb-10 items-center ">
               <div className="lg:w-[48%] w-full ">
                 <ol className="md:text-body-bold text-base-bold pb-5 text-white list-decimal pl-4 lg:pl-10 flex flex-col gap-5">
@@ -70,21 +70,15 @@ const GuidedMeditationContent = () => {
                 </ol>
               </div>
               <div className="xl:w-[35%] md:w-[48%] hidden lg:block max-sm2:block xl:mr-16">
-                <Image
-                  src="/meditation/meditation-explanation-1.jpg"
+                <ImageComponent
+                  image="/meditation/meditation-explanation-1.jpg"
                   alt="meditation activity"
-                  width={2000}
-                  height={2000}
-                  className="rounded-xl w-full object-cover "
                 />
               </div>
               <div className="block lg:hidden max-sm2:hidden ">
-                <Image
-                  src="/meditation/meditation-explanation-1-narrow.jpg"
+                <ImageComponent
+                  image="/meditation/meditation-explanation-1-narrow.jpg"
                   alt="meditation activity"
-                  width={2000}
-                  height={2000}
-                  className="rounded-xl w-full object-cover "
                 />
               </div>
             </div>
@@ -92,12 +86,9 @@ const GuidedMeditationContent = () => {
           <article>
             <div className="lg:flex-row flex-col flex justify-between items-center lg:pb-10">
               <div className="xl:w-[35%] md:w-[48%] hidden lg:block xl:ml-16">
-                <Image
-                  src="/meditation/meditation-explanation-2.jpg"
+                <ImageComponent
+                  image="/meditation/meditation-explanation-2.jpg"
                   alt="meditation activity"
-                  width={2000}
-                  height={2000}
-                  className="rounded-xl w-full object-cover "
                 />
               </div>
               <div className="lg:w-[48%] w-full max-lg:mt-5">
@@ -136,21 +127,15 @@ const GuidedMeditationContent = () => {
                 </ol>
               </div>
               <div className="xl:w-[35%] md:w-[48%] hidden max-sm2:block xl:pl-16">
-                <Image
-                  src="/meditation/meditation-explanation-2.jpg"
+                <ImageComponent
+                  image="/meditation/meditation-explanation-2.jpg"
                   alt="meditation activity"
-                  width={2000}
-                  height={2000}
-                  className="rounded-xl w-full object-cover "
                 />
               </div>
               <div className="block lg:hidden max-sm2:hidden ">
-                <Image
-                  src="/meditation/meditation-explanation-2-narrow.jpg"
+                <ImageComponent
+                  image="/meditation/meditation-explanation-2-narrow.jpg"
                   alt="meditation activity"
-                  width={2000}
-                  height={2000}
-                  className="rounded-xl w-full object-cover "
                 />
               </div>
             </div>
