@@ -85,6 +85,10 @@ body {
   box-shadow: 0 0 1.25rem rgba(255, 251, 251, 0.5);
 }
 
+.contentTitleBar {
+  @apply text-white md:text-heading3-thin sm:text-body-thin text-base-thin flex justify-between items-center p-horizontal xxxl:px-28 xxxxl:px-36 xxxxxl:px-48 py-5 w-full;
+}
+
 /* calendar specific classes */
 
 .rbc-day-bg,
