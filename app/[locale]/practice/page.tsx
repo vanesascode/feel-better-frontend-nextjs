@@ -3,8 +3,7 @@ import TranslationsProvider from "@/components/TranslationProvider";
 import Header from "@/components/commons/header";
 import TokenMaintainer from "@/components/commons/tokenMaintainer";
 import Navbar from "@/components/navbar/navbar";
-import ChallengeNegativeThoughtDropdown from "@/components/practice/challengeNegativeThoughtDropdown";
-import GuidedMeditationDropdown from "@/components/practice/guidedMeditationDropdown";
+import PracticeContent from "@/components/practice/practiceContent";
 
 const i18nNamespaces = ["practice", "navbar"];
 
@@ -37,8 +36,7 @@ export default async function Practice({
           </Header>
         </header>
         <main>
-          <ChallengeNegativeThoughtDropdown />
-          <GuidedMeditationDropdown />
+          <PracticeContent />
         </main>
       </TranslationsProvider>
     </>
