@@ -4,11 +4,12 @@ import ContentFrame from "@/components/commons/contentFrame";
 import Header from "@/components/commons/header";
 import ThoughtsMaintainer from "@/components/commons/thoughtsMaintainer";
 import TokenMaintainer from "@/components/commons/tokenMaintainer";
+import Footer from "@/components/footer/footer";
 import IsNegativeThoughtTrueContent from "@/components/is-negative-thought-true/isNegativeThoughtTrueContent";
 import Navbar from "@/components/navbar/navbar";
 import Image from "next/image";
 
-const i18nNamespaces = ["is-negative-thought-true", "navbar"];
+const i18nNamespaces = ["is-negative-thought-true", "navbar", "footer"];
 
 export default async function IsNegativeThoughtTrue({
   params,
@@ -53,6 +54,9 @@ export default async function IsNegativeThoughtTrue({
             <IsNegativeThoughtTrueContent />
           </ContentFrame>
         </main>
+        <footer>
+          <Footer />
+        </footer>
       </TranslationsProvider>
     </>
   );
