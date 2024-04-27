@@ -4,11 +4,12 @@ import ContentFrame from "@/components/commons/contentFrame";
 import Header from "@/components/commons/header";
 import ThoughtsMaintainer from "@/components/commons/thoughtsMaintainer";
 import TokenMaintainer from "@/components/commons/tokenMaintainer";
+import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 import ReinforcePositiveThoughtLogic from "@/components/reinforce-positive-thought/reinforcePositiveThoughtLogic";
 import Image from "next/image";
 
-const i18nNamespaces = ["reinforce-positive-thought", "navbar"];
+const i18nNamespaces = ["reinforce-positive-thought", "navbar", "footer"];
 
 export default async function ReinforcePositiveThought({
   params,
@@ -53,6 +54,9 @@ export default async function ReinforcePositiveThought({
             <ReinforcePositiveThoughtLogic />
           </ContentFrame>
         </main>
+        <footer>
+          <Footer />
+        </footer>
       </TranslationsProvider>
     </>
   );
