@@ -6,8 +6,9 @@ import HomeCover from "@/components/home/homeCover";
 import HomeActivities from "@/components/home/homeActivities";
 import HomeExplanationActivities from "@/components/home/homeExplanationActivities";
 import ContentFrame from "@/components/commons/contentFrame";
+import Footer from "@/components/footer/footer";
 
-const i18nNamespaces = ["home", "navbar"];
+const i18nNamespaces = ["home", "navbar", "footer"];
 
 export default async function Home({ params }: { params: { locale: string } }) {
   const { resources } = await initTranslations(
@@ -35,6 +36,9 @@ export default async function Home({ params }: { params: { locale: string } }) {
             <HomeExplanationActivities />
           </ContentFrame>
         </main>
+        <footer>
+          <Footer />
+        </footer>
       </TranslationsProvider>
     </>
   );
