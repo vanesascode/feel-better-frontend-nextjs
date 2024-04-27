@@ -2,11 +2,12 @@ import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/TranslationProvider";
 import Header from "@/components/commons/header";
 import TokenMaintainer from "@/components/commons/tokenMaintainer";
+import Footer from "@/components/footer/footer";
 import AdviceToMeditateLink from "@/components/meditation/adviceToMeditateLink";
 import GuidedMeditations from "@/components/meditation/guidedMeditations";
 import Navbar from "@/components/navbar/navbar";
 
-const i18nNamespaces = ["meditation", "navbar"];
+const i18nNamespaces = ["meditation", "navbar", "footer"];
 
 export default async function Meditation({
   params,
@@ -42,6 +43,9 @@ export default async function Meditation({
         <main>
           <GuidedMeditations />
         </main>
+        <footer>
+          <Footer />
+        </footer>
       </TranslationsProvider>
     </>
   );
