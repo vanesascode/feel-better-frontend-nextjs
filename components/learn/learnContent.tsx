@@ -9,6 +9,8 @@ import QuestionTwoContent from "./questionTwoContent";
 import QuestionThreeContent from "./questionThreeContent";
 import QuestionFourContent from "./questionFourContent";
 import QuestionFiveContent from "./questionFiveContent";
+import QuestionSixContent from "./questionSixContent";
+import BibliographyBox from "./bibliographyBox";
 
 const LearnContent = () => {
   const { t } = useTranslation();
@@ -46,7 +48,13 @@ const LearnContent = () => {
       >
         <QuestionFiveContent />
       </QuestionDropdown>
-      {t("bibliography")}
+      <QuestionDropdown
+        className="bg-cta-green contentTitleBar"
+        copy={t("question-6")}
+      >
+        <QuestionSixContent />
+      </QuestionDropdown>
+      <BibliographyBox />
     </>
   );
 };
