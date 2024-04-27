@@ -4,9 +4,10 @@ import AccountLogic from "@/components/account/accountLogic";
 import ContentFrame from "@/components/commons/contentFrame";
 import Header from "@/components/commons/header";
 import TokenMaintainer from "@/components/commons/tokenMaintainer";
+import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 
-const i18nNamespaces = ["account", "navbar"];
+const i18nNamespaces = ["account", "navbar", "footer"];
 
 export default async function Account({
   params,
@@ -41,6 +42,9 @@ export default async function Account({
             <AccountLogic />
           </ContentFrame>
         </main>
+        <footer>
+          <Footer />
+        </footer>
       </TranslationsProvider>
     </>
   );
