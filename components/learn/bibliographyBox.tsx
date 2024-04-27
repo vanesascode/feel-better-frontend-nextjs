@@ -3,13 +3,15 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import BibliographyText from "./bibliographyText";
 import { AnimatePresence, motion } from "framer-motion";
+import ScrollToTop from "../commons/scrollToTop";
 
 const BibliographyBox = () => {
   const [openBibliography, setOpenBibliography] = useState<boolean>(false);
   const { t } = useTranslation();
 
   return (
-    <div>
+    <>
+      <ScrollToTop />
       <div
         className="text-white flex justify-center items-center m-10 text-body-thin md:text-heading3-thin gap-5 cursor-pointer"
         onClick={() => setOpenBibliography(!openBibliography)}
@@ -33,7 +35,7 @@ const BibliographyBox = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </>
   );
 };
 

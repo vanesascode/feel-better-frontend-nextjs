@@ -3,12 +3,13 @@ import TranslationsProvider from "@/components/TranslationProvider";
 import ContentFrame from "@/components/commons/contentFrame";
 import Header from "@/components/commons/header";
 import TokenMaintainer from "@/components/commons/tokenMaintainer";
+import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 import RecoveryLogic from "@/components/recovery/recoveryLogic";
 
-const i18nNamespaces = ["recovery", "navbar"];
+const i18nNamespaces = ["recovery", "navbar", "footer"];
 
-export default async function Account({
+export default async function Recovery({
   params,
 }: {
   params: { locale: string };
@@ -41,6 +42,9 @@ export default async function Account({
             <RecoveryLogic />
           </ContentFrame>
         </main>
+        <footer>
+          <Footer />
+        </footer>
       </TranslationsProvider>
     </div>
   );

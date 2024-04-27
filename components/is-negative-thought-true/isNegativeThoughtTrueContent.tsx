@@ -19,10 +19,7 @@ const IsNegativeThoughtTrueContent = () => {
     <section className="flex flex-col justify-center items-center w-full gap-2">
       <h2 className="md:text-heading3-thin text-body-thin text-center text-white mb-5">
         {t("relax")}{" "}
-        <Link
-          href="/challenge-thoughts-info#identify-negative-thoughts"
-          onClick={() => setTimeout(() => router.back(), 500)}
-        >
+        <Link href="/challenge-thoughts-info#identify-negative-thoughts">
           <span className="md:text-heading3-bold text-body-bold hover:text-light-green cursor-pointer underline">
             {t("distorted-thought")}
           </span>

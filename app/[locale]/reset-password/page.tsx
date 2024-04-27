@@ -3,10 +3,11 @@ import TranslationsProvider from "@/components/TranslationProvider";
 import ContentFrame from "@/components/commons/contentFrame";
 import Header from "@/components/commons/header";
 import TokenMaintainer from "@/components/commons/tokenMaintainer";
+import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 import ResetPasswordLogic from "@/components/reset-password/resetPasswordLogic";
 
-const i18nNamespaces = ["reset-password", "navbar"];
+const i18nNamespaces = ["reset-password", "navbar", "footer"];
 
 export default async function Account({
   params,
@@ -41,6 +42,9 @@ export default async function Account({
             <ResetPasswordLogic />
           </ContentFrame>
         </main>
+        <footer>
+          <Footer />
+        </footer>
       </TranslationsProvider>
     </div>
   );

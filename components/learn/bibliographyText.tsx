@@ -1,6 +1,6 @@
 const BibliographyText = () => {
   return (
-    <div className="p-horizontal text-gray text-base-thin md:text-body-thin flex flex-col gap-5">
+    <div className="p-horizontal text-gray text-base-thin md:text-body-thin flex flex-col gap-5 pb-5">
       <p>
         Almadi, T., Cathers, I., Chow, C.M. (2013). Associations among
         work-related stress, cortisol, inflammation, and metabolic syndrome.

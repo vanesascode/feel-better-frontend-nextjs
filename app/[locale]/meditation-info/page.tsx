@@ -3,8 +3,9 @@ import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/TranslationProvider";
 import TokenMaintainer from "@/components/commons/tokenMaintainer";
 import MeditationInfoContent from "@/components/meditation-info/meditationInfoContent";
+import Footer from "@/components/footer/footer";
 
-const i18nNamespaces = ["practice", "navbar"];
+const i18nNamespaces = ["practice", "navbar", "footer"];
 
 export default async function MeditationInfo({
   params,
@@ -32,6 +33,9 @@ export default async function MeditationInfo({
         <main>
           <MeditationInfoContent />
         </main>
+        <footer>
+          <Footer />
+        </footer>
       </TranslationsProvider>
     </>
   );
