@@ -23,13 +23,13 @@ const ScrollToTop = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
             exit={{ opacity: 0 }}
-            className="fixed xxxxl:right-[10%] xxxxxl:right-[15%] md:bottom-10 md:right-10 bottom-5 right-5 "
+            className="fixed xxxxl:right-[10%] xxxxxl:right-[15%] bottom-20 md:right-12 right-5 "
           >
             <button
-              className="text-white xs:p-3 p-2 rounded-full bg-dark scroll-to-top-shadow"
+              className="text-white sm:p-3 p-2 rounded-full bg-dark scroll-to-top-shadow"
               onClick={scrollToTop}
             >
-              <ArrowUpIcon className="xs:w-8 xs:h-8 w-6 h-6 text-white" />
+              <ArrowUpIcon className="sm:w-8 sm:h-8 w-6 h-6 text-white" />
             </button>
           </motion.div>
         )}
