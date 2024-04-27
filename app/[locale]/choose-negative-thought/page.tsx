@@ -4,10 +4,11 @@ import ChooseNegativeThoughtLogic from "@/components/choose-negative-thought/cho
 import ContentFrame from "@/components/commons/contentFrame";
 import Header from "@/components/commons/header";
 import TokenMaintainer from "@/components/commons/tokenMaintainer";
+import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 import Image from "next/image";
 
-const i18nNamespaces = ["choose-negative-thought", "navbar"];
+const i18nNamespaces = ["choose-negative-thought", "navbar", "footer"];
 
 export default async function ChooseNegativeThought({
   params,
@@ -52,6 +53,9 @@ export default async function ChooseNegativeThought({
             <ChooseNegativeThoughtLogic />
           </ContentFrame>
         </main>
+        <footer>
+          <Footer />
+        </footer>
       </TranslationsProvider>
     </>
   );
