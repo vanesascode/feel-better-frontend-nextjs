@@ -2,10 +2,11 @@ import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/TranslationProvider";
 import Header from "@/components/commons/header";
 import TokenMaintainer from "@/components/commons/tokenMaintainer";
+import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 import PracticeContent from "@/components/practice/practiceContent";
 
-const i18nNamespaces = ["practice", "navbar"];
+const i18nNamespaces = ["practice", "navbar", "footer"];
 
 export default async function Practice({
   params,
@@ -38,6 +39,9 @@ export default async function Practice({
         <main>
           <PracticeContent />
         </main>
+        <footer>
+          <Footer />
+        </footer>
       </TranslationsProvider>
     </>
   );
