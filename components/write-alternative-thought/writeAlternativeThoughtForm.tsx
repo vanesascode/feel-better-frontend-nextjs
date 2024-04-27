@@ -6,7 +6,6 @@ import Link from "next/link";
 import { useAppSelector } from "@/redux/hooks";
 import { selectThought } from "@/redux/features/thoughtSlice";
 import ThoughtChosen from "../commons/thoughtChosen";
-import { useRouter } from "next/navigation";
 
 interface WriteAlternativeThoughtFormProps {
   selectedPositiveThought: string;
@@ -23,16 +22,12 @@ const WriteAlternativeThoughtForm = ({
 }: WriteAlternativeThoughtFormProps) => {
   const { t } = useTranslation();
   const { negativeThought } = useAppSelector(selectThought);
-  const router = useRouter();
 
   return (
     <section className="flex flex-col justify-center items-center w-full gap-2">
       <h2 className="md:text-heading3-thin text-body-thin text-center text-white mb-5">
         {t("challenge-your-thought")}{" "}
-        <Link
-          href="/challenge-thoughts-info#examples-negative-thoughts"
-          onClick={() => setTimeout(() => router.back(), 500)}
-        >
+        <Link href="/challenge-thoughts-info#examples-negative-thoughts">
           <span className="md:text-heading3-bold text-body-bold hover:text-light-green cursor-pointer underline">
             {t("examples")}
           </span>
