@@ -4,9 +4,10 @@ import ContentFrame from "@/components/commons/contentFrame";
 import Header from "@/components/commons/header";
 import TokenMaintainer from "@/components/commons/tokenMaintainer";
 import CookiesPolicyText from "@/components/cookies-policy/cookiesPolicyText";
+import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 
-const i18nNamespaces = ["cookies-policy", "navbar"];
+const i18nNamespaces = ["cookies-policy", "navbar", "footer"];
 
 export default async function CookiesPolicy({
   params,
@@ -41,6 +42,9 @@ export default async function CookiesPolicy({
             <CookiesPolicyText />
           </ContentFrame>
         </main>
+        <footer>
+          <Footer />
+        </footer>
       </TranslationsProvider>
     </>
   );
