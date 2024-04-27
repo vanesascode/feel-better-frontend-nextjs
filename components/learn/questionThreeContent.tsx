@@ -26,7 +26,6 @@ const QuestionThreeContent = () => {
               <br />
               {t("question-3-explanation-2")}
             </p>
-
             <div className="xl:flex-row flex-col flex justify-between items-center">
               <div className="xl:w-[48%] w-full">
                 <div className="md:text-body-bold text-base-bold pb-5 text-white list-decimal flex flex-col gap-5">
@@ -44,7 +43,6 @@ const QuestionThreeContent = () => {
                   </div>
                   <p className="md:text-body-thin text-base-thin text-gray">
                     {t("question-3-explanation-3")}
-
                     <br />
                     <br />
                     {t("question-3-explanation-4")}
