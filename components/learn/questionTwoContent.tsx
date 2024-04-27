@@ -35,13 +35,13 @@ const QuestionTwoContent = () => {
             <div className="max-sm2:hidden block">
               <ImageComponent
                 image="/learn/learn-explanation-1-narrow.jpg"
-                alt="thoughts activity"
+                alt="learn activity"
               />
             </div>
             <div className="max-sm2:block hidden">
               <ImageComponent
                 image="/learn/learn-explanation-1.jpg"
-                alt="thoughts activity"
+                alt="learn activity"
               />
             </div>
             <p className="md:text-body-thin text-base-thin text-gray lg:mb-5 pt-5">
