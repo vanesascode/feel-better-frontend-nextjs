@@ -2,11 +2,11 @@ import Navbar from "@/components/navbar/navbar";
 import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/TranslationProvider";
 import TokenMaintainer from "@/components/commons/tokenMaintainer";
-import MeditationInfoContent from "@/components/meditation-info/meditationInfoContent";
+import LearnContent from "@/components/learn/learnContent";
 
-const i18nNamespaces = ["practice", "navbar"];
+const i18nNamespaces = ["learn", "navbar"];
 
-export default async function MeditationInfo({
+export default async function Learn({
   params,
 }: {
   params: { locale: string };
@@ -30,7 +30,7 @@ export default async function MeditationInfo({
           <Navbar />
         </header>
         <main>
-          <MeditationInfoContent />
+          <LearnContent />
         </main>
       </TranslationsProvider>
     </>
