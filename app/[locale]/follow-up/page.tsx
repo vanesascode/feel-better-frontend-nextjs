@@ -2,8 +2,9 @@ import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/TranslationProvider";
 import TokenMaintainer from "@/components/commons/tokenMaintainer";
 import FollowUpUseClientPage from "@/components/follow-up/followUpUseClientPage";
+import Footer from "@/components/footer/footer";
 
-const i18nNamespaces = ["follow-up", "navbar"];
+const i18nNamespaces = ["follow-up", "navbar", "footer"];
 
 export default async function FollowUp({
   params,
@@ -26,6 +27,9 @@ export default async function FollowUp({
         namespaces={i18nNamespaces}
       >
         <FollowUpUseClientPage />
+        <footer>
+          <Footer />
+        </footer>
       </TranslationsProvider>
     </>
   );
