@@ -3,8 +3,9 @@ import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/components/TranslationProvider";
 import TokenMaintainer from "@/components/commons/tokenMaintainer";
 import ChallengeThoughtsInfoContent from "@/components/challenge-thoughts-info/challengeThoughtsInfoContent";
+import Footer from "@/components/footer/footer";
 
-const i18nNamespaces = ["practice", "navbar"];
+const i18nNamespaces = ["practice", "navbar", "footer"];
 
 export default async function ChallengeThoughtsInfo({
   params,
@@ -32,6 +33,9 @@ export default async function ChallengeThoughtsInfo({
         <main>
           <ChallengeThoughtsInfoContent />
         </main>
+        <footer>
+          <Footer />
+        </footer>
       </TranslationsProvider>
     </>
   );
