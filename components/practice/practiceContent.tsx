@@ -4,6 +4,7 @@ import QuestionDropdown from "../commons/questionDropdown";
 import ChallengeNegativeThoughtContent from "./challengeNegativeThoughtContent";
 import { useTranslation } from "react-i18next";
 import GuidedMeditationContent from "./guidedMeditationContent";
+import ImageComponent from "../commons/imageComponent";
 
 const PracticeContent = () => {
   const { t } = useTranslation();
@@ -23,6 +24,9 @@ const PracticeContent = () => {
       >
         <GuidedMeditationContent />
       </QuestionDropdown>
+      <div className="bg-black md:p-10 p-5">
+        <ImageComponent image="/practice/practice.jpg" alt="practice image" />
+      </div>
     </>
   );
 };
