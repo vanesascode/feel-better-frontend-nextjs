@@ -5,6 +5,7 @@ import { useState } from "react";
 import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
+import LoginGoogle from "../login/loginGoogle";
 
 interface RegisterFormProps {
   handleSubmitRegisterForm: SubmitHandler<FormFields>;
@@ -151,7 +152,13 @@ const RegisterForm = ({
           </CtaButton>
         </div>
       </form>
-      <div className="mt-5">
+      <p className="text-base-bold self-end mb-6 text-white cursor-pointer text-center pt-5">
+        {t("or-register-with")}
+      </p>
+      <div className="w-full justify-center flex">
+        <LoginGoogle />
+      </div>
+      <div className="mt-10">
         <Link href="/login">
           <p className="text-base-bold self-end mb-6 text-white cursor-pointer text-center">
             {t("do-you-have-an-account")}{" "}
