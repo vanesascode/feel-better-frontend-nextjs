@@ -5,6 +5,7 @@ import { Providers } from "@/redux/provider";
 import Script from "next/script";
 import { CookiesConsentLogic } from "@/components/cookies-consent-bar/cookiesConsentLogic";
 const inter = Inter({ subsets: ["latin"] });
+import { GoogleOAuthProvider } from "@react-oauth/google";
 
 export const metadata: Metadata = {
   title: "Feel Better",
@@ -32,7 +33,11 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={inter.className}>
-        <Providers>{children}</Providers>
+        <GoogleOAuthProvider
+          clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID!}
+        >
+          <Providers>{children}</Providers>
+        </GoogleOAuthProvider>
         <CookiesConsentLogic />
       </body>
     </html>
