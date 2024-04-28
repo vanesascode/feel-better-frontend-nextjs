@@ -10,5 +10,7 @@
   "continue": "Continuar",
   "loading": "Cargando...",
   "dont-have-account-yet": "¿No tienes cuenta aún?",
-  "register": "Regístrate"
+  "register": "Regístrate",
+  "sorry-server-error": "Lo sentimos, ha ocurrido un error. Por favor, prueba más tarde",
+  "or-access-with": "o accede con"
 }
