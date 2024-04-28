@@ -1,5 +1,7 @@
 "use client";
 
+import { useAppSelector } from "@/redux/hooks";
+import { selectAuth } from "@/redux/features/authSlice";
 import { socialMediaIcons } from "@/constants/socialMediaIcons";
 import SocialMediaIcon from "./socialMediaIcon";
 import Link from "next/link";
@@ -8,6 +10,7 @@ import { useTranslation } from "react-i18next";
 
 const Footer = () => {
   const { t } = useTranslation();
+  const { name } = useAppSelector(selectAuth);
 
   return (
     <>
@@ -28,8 +31,16 @@ const Footer = () => {
             </p>
           </div>
           <div className="grid sm1:grid-cols-3 grid-cols-2 text-white lg:w-2/3 w-full md:text-body-regular text-base-regular">
-            <FooterLink href="/account">{t("footer:account")}</FooterLink>
-            <FooterLink href="/follow-up">{t("footer:follow-up")}</FooterLink>
+            {name ? (
+              <FooterLink href="/account">{t("footer:account")}</FooterLink>
+            ) : (
+              <FooterLink href="/login">{t("footer:login")}</FooterLink>
+            )}
+            {name ? (
+              <FooterLink href="/follow-up">{t("footer:follow-up")}</FooterLink>
+            ) : (
+              <FooterLink href="/register">{t("footer:register")}</FooterLink>
+            )}
             <FooterLink href="/conditions">{t("footer:conditions")}</FooterLink>
             <FooterLink href="/learn">{t("footer:learn")}</FooterLink>
             <FooterLink href="/meditation-info">
@@ -56,12 +67,13 @@ const Footer = () => {
           </a>
           <div className="flex md:gap-6 gap-7 sm1:max-w-[10rem] max-w-[11rem] ">
             {socialMediaIcons.map((icon) => (
-              <SocialMediaIcon
-                key={icon.id}
-                href={icon.href}
-                src={icon.src}
-                alt={icon.alt}
-              />
+              <div key={icon.id}>
+                <SocialMediaIcon
+                  href={icon.href}
+                  src={icon.src}
+                  alt={icon.alt}
+                />
+              </div>
             ))}
           </div>
         </div>
