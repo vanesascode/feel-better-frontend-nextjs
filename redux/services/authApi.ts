@@ -13,6 +13,13 @@ export const authApi = createApi({
         body,
       }),
     }),
+    loginGoogleUser: builder.mutation({
+      query: (body: { name: string; email: string }) => ({
+        url: "/auth/google-login",
+        method: "POST",
+        body,
+      }),
+    }),
     registerUser: builder.mutation({
       query: (body: { name: string; email: string; password: string }) => ({
         url: "/auth/register",
@@ -20,7 +27,19 @@ export const authApi = createApi({
         body,
       }),
     }),
+    registerGoogleUser: builder.mutation({
+      query: (body: { name: string; email: string }) => ({
+        url: "/auth/google-register",
+        method: "POST",
+        body,
+      }),
+    }),
   }),
 });
 
-export const { useLoginUserMutation, useRegisterUserMutation } = authApi;
+export const {
+  useLoginUserMutation,
+  useRegisterUserMutation,
+  useLoginGoogleUserMutation,
+  useRegisterGoogleUserMutation,
+} = authApi;

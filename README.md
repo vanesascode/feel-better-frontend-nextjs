@@ -92,3 +92,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 `npm i @types/react-big-calendar`
 
 `npm i dayjs`
+
+## To OAuth2 Google Login
+
+`npm i @react-oauth/google`
+
+`npm i jwt-decode`

@@ -5,6 +5,7 @@ import { useState } from "react";
 import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
+import LoginGoogle from "./loginGoogle";
 
 interface LoginFormProps {
   handleSubmitLoginForm: SubmitHandler<FormFields>;
@@ -91,10 +92,16 @@ const LoginForm = ({ handleSubmitLoginForm, isLoginError }: LoginFormProps) => {
           </CtaButton>
         </div>
       </form>
-      <div className="mt-5">
+      <p className="text-base-bold self-end mb-6 text-white cursor-pointer text-center pt-5">
+        {t("or-access-with")}
+      </p>
+      <div className="w-full justify-center flex">
+        <LoginGoogle />
+      </div>
+      <div className="mt-10">
         <Link href="/register">
-          <p className="text-base-bold self-end mb-6 text-white cursor-pointer text-center">
-            {t("dont-have-account-yet")}{" "}
+          <p className="text-base-bold self-end mb-6 text-white cursor-pointer text-center text-wrap">
+            {t("dont-have-account-yet")} <br className="xxs:hidden" />
             <span className="text-cta-green">{t("register")}</span>
           </p>
         </Link>

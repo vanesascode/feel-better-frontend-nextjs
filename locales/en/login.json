@@ -10,5 +10,7 @@
   "continue": "Continue",
   "loading": "Loading...",
   "dont-have-account-yet": "Don't have an account yet?",
-  "register": "Sign up"
+  "register": "Sign up",
+  "sorry-server-error": "Sorry an error occurred. Please, try later",
+  "or-access-with": "or log in with"
 }
