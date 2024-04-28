@@ -36,6 +36,12 @@ const CookiesPolicyText = () => {
         <p className="md:text-body-thin text-base-thin pb-10 text-gray">
           {t("analysis-cookies-explanation")}
         </p>
+        <h2 className="md:text-heading3-bold text-body-bold text-white mb-5">
+          {t("your-rights")}
+        </h2>
+        <p className="md:text-body-thin text-base-thin text-gray">
+          {t("your-rights-explanation")}
+        </p>
       </article>
     </section>
   );
