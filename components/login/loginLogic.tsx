@@ -16,7 +16,6 @@ export interface FormFields {
 const LoginLogic = () => {
   const dispatch = useAppDispatch();
   const router = useRouter();
-  const { setError } = useForm<FormFields>();
   const handleSubmitLoginForm: SubmitHandler<FormFields> = async (data) => {
     await loginUser(data);
   };
@@ -36,8 +35,6 @@ const LoginLogic = () => {
         })
       );
       router.push("/");
-    } else if (isLoginError) {
-      setError("root", { message: "El email o la contraseña son incorrectos" });
     }
   }, [isLoginSuccess, isLoginError]);
 
