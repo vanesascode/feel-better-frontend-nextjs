@@ -9,7 +9,7 @@ const LoadingCircle = () => {
     <div className="bg-[#000000] flex justify-center items-center h-[50vh] flex-col text-center">
       <Image
         src="/loading.gif"
-        alt="loading"
+        alt="loading circle that spins while fetching data"
         width={400}
         height={400}
         className="p-[3.12rem]"
