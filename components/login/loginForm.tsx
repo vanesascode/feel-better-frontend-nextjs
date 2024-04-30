@@ -102,7 +102,7 @@ const LoginForm = ({ handleSubmitLoginForm, isLoginError }: LoginFormProps) => {
         <Link href="/register">
           <p className="text-base-bold self-end mb-6 text-white cursor-pointer text-center text-wrap">
             {t("dont-have-account-yet")} <br className="xxs:hidden" />
-            <span className="text-cta-green">{t("register")}</span>
+            <span className="text-light-green">{t("register")}</span>
           </p>
         </Link>
       </div>
