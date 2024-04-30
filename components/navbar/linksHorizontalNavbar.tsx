@@ -52,6 +52,8 @@ const LinksHorizontalNavbar = ({
         <div className="flex justify-between w-full max-w-[90rem] items-center">
           <div className="flex gap-14 items-center text-body-regular">
             <button
+              id="link-to-go-home"
+              aria-label="Button to go home"
               onClick={() => setShowOptionsNavbar(false)}
               className="sm:text-heading2-bold text-body-bold z-20 py-5"
             >
@@ -60,17 +62,27 @@ const LinksHorizontalNavbar = ({
 
             <div className="relative py-7 hidden lg:block">
               <div className="flex items-center hover:text-light-green gap-3 transition duration-300 ease-in-out cursor-pointer">
-                <Link href="/practice">{t("navbar:practice")}</Link>
+                <Link
+                  href="/practice"
+                  id="link-to-practice"
+                  aria-label="Button to practice"
+                >
+                  {t("navbar:practice")}
+                </Link>
                 <ChevronDownIcon className="h-5 w-5" />
               </div>
               <div className="navbar-practice-submenu">
                 <Link
+                  id="link-to-practice-thoughts"
+                  aria-label="Button to practice thoughts"
                   href="/choose-negative-thought"
                   className="hover:text-cta-green-hover transition duration-300 ease-in-out cursor-pointer"
                 >
                   {t("navbar:challenge-a-negative-thought")}
                 </Link>
                 <Link
+                  id="link-to-practice-meditation"
+                  aria-label="Button to practice meditation"
                   href="/meditation"
                   className="hover:text-cta-green-hover transition duration-300 ease-in-out cursor-pointer"
                 >
@@ -81,11 +93,15 @@ const LinksHorizontalNavbar = ({
             <Link
               href="/learn"
               className="hidden lg:block hover:text-light-green transition duration-300 ease-in-out cursor-pointer"
+              id="link-to-learn"
+              aria-label="Button to learn about chronic pain"
             >
               {t("navbar:learn")}
             </Link>
             {name && (
               <Link
+                id="link-to-go-to-follow-up"
+                aria-label="Button to see your follow up"
                 href="/follow-up"
                 className="hidden lg:block hover:text-light-green transition duration-300 ease-in-out cursor-pointer"
               >
@@ -94,7 +110,11 @@ const LinksHorizontalNavbar = ({
             )}
           </div>
           <div className="flex text-body-regular items-center">
-            <Link href={name ? "/account" : "/login"}>
+            <Link
+              href={name ? "/account" : "/login"}
+              id="link-to-login"
+              aria-label="link to login or go to your account"
+            >
               <button className="border-[1px] border-gray px-5 py-2 rounded-full hidden lg:block hover:bg-black transition duration-500 ease-in-out">
                 {name ? t("navbar:account") : t("navbar:login")}
               </button>
@@ -102,7 +122,12 @@ const LinksHorizontalNavbar = ({
             <div className="ml-5">
               <LanguageChangerHorizontalNavbar />
             </div>
-            <button onClick={handleShowOptionsNavbar} className="z-20">
+            <button
+              onClick={handleShowOptionsNavbar}
+              className="z-20"
+              id="button-to-open-vertical-navbar"
+              aria-label="Button to open navbar"
+            >
               <Bars3BottomRightIcon className="h-8 w-8 text-white lg:hidden block" />
             </button>
             <LinksVerticalNavbar

@@ -42,7 +42,12 @@ const LinksVerticalNavbar = ({
                   setShowOptionsPracticeMenu(!showOptionsPracticeMenu)
                 }
               >
-                <Link href="/practice" className="hover:text-light-green">
+                <Link
+                  href="/practice"
+                  className="hover:text-light-green"
+                  id="link-to-practice"
+                  aria-label="Button to practice"
+                >
                   {t("navbar:practice")}
                 </Link>
                 <ChevronDownIcon
@@ -60,6 +65,8 @@ const LinksVerticalNavbar = ({
                   className="bg-white px-5 py-4 rounded-lg flex xs:flex-row flex-col text-black gap-10"
                 >
                   <Link
+                    id="link-to-practice-thoughts"
+                    aria-label="Button to practice thoughts"
                     href="/choose-negative-thought"
                     className="hover:text-dark-green-1"
                     onClick={() => setShowOptionsNavbar(false)}
@@ -67,6 +74,8 @@ const LinksVerticalNavbar = ({
                     {t("navbar:challenge-a-negative-thought")}
                   </Link>
                   <Link
+                    id="link-to-practice-meditation"
+                    aria-label="Button to practice meditation"
                     href="/meditation"
                     className="hover:text-dark-green-1"
                     onClick={() => setShowOptionsNavbar(false)}
@@ -76,6 +85,8 @@ const LinksVerticalNavbar = ({
                 </motion.div>
               )}
               <Link
+                id="link-to-learn"
+                aria-label="Button to learn about chronic pain"
                 href="/learn"
                 className="hover:text-light-green"
                 onClick={() => setShowOptionsNavbar(false)}
@@ -84,6 +95,8 @@ const LinksVerticalNavbar = ({
               </Link>
               {name && (
                 <Link
+                  id="link-to-go-to-follow-up"
+                  aria-label="Button to see your follow up"
                   href="/follow-up"
                   className="hover:text-light-green"
                   onClick={() => setShowOptionsNavbar(false)}
@@ -92,6 +105,8 @@ const LinksVerticalNavbar = ({
                 </Link>
               )}
               <Link
+                id="link-to-login"
+                aria-label="link to login or go to your account"
                 href={name ? "/account" : "/login"}
                 className="hover:text-light-green"
                 onClick={() => setShowOptionsNavbar(false)}
@@ -100,6 +115,8 @@ const LinksVerticalNavbar = ({
               </Link>
               {name && (
                 <Link
+                  id="button-to-logout"
+                  aria-label="Button to logout"
                   href="/login"
                   onClick={handleLogout}
                   className="hover:text-light-green"

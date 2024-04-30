@@ -27,35 +27,35 @@ const MeditationSlide = ({ list1, list2, list3 }: listOfMeditations) => {
             onClick={handlePrevious}
           />
         </div>
-        {list1.map((thought: any, index: number) => (
-          <>
+        {list1.map((thought: Thought, index: number) => (
+          <div key={index}>
             <VideoComponent
               index={index}
               currentIndex={currentIndex}
               url={thought.url}
             />
-          </>
+          </div>
         ))}
         <div className="hidden sm2:block">
-          {list2.map((thought: any, index: number) => (
-            <>
+          {list2.map((thought: Thought, index: number) => (
+            <div key={index}>
               <VideoComponent
                 index={index}
                 currentIndex={currentIndex}
                 url={thought.url}
               />
-            </>
+            </div>
           ))}
         </div>
         <div className="hidden lg:block">
-          {list3.map((thought: any, index: number) => (
-            <>
+          {list3.map((thought: Thought, index: number) => (
+            <div key={index}>
               <VideoComponent
                 index={index}
                 currentIndex={currentIndex}
                 url={thought.url}
               />
-            </>
+            </div>
           ))}
         </div>
         <div>

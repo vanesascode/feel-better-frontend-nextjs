@@ -42,7 +42,7 @@ const WriteAlternativeThoughtForm = ({
       </div>
       {writePositiveThoughtFirstMessage && (
         <p className="text-red-500 text-base-regular text-center">
-          {t("choose-first")}
+          {t("challenge-first")}
         </p>
       )}
       <div className="mt-10">

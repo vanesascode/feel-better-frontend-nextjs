@@ -50,14 +50,15 @@ const ChooseNegativeThoughtForm = ({
           setSelectedNegativeThought={setSelectedNegativeThought}
         />
         {negativeThoughtsList.map((thought, index) => (
-          <SelectorButton
-            onClick={() => {
-              setSelectedNegativeThought(thought.negativeThought);
-            }}
-            key={index}
-          >
-            {thought.negativeThought}
-          </SelectorButton>
+          <div key={index} className="flex flex-col w-full">
+            <SelectorButton
+              onClick={() => {
+                setSelectedNegativeThought(thought.negativeThought);
+              }}
+            >
+              {thought.negativeThought}
+            </SelectorButton>
+          </div>
         ))}
         {chooseNegativeThoughtFirstMessage && (
           <p className="text-red-500 text-base-regular text-center">

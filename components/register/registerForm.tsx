@@ -162,7 +162,7 @@ const RegisterForm = ({
         <Link href="/login">
           <p className="text-base-bold self-end mb-6 text-white cursor-pointer text-center">
             {t("do-you-have-an-account")}{" "}
-            <span className="text-cta-green">{t("access-here")}</span>
+            <span className="text-light-green">{t("access-here")}</span>
           </p>
         </Link>
       </div>

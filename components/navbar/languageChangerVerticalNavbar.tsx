@@ -33,6 +33,8 @@ const LanguageChangerVerticalNavbar = () => {
               className="bg-white px-10 py-4 rounded-lg text-black flex"
             >
               <button
+                id="link-to-es"
+                aria-label="Button to change to Spanish"
                 onClick={() => setLanguageValue("es")}
                 className={`${
                   currentLocale === "es" ? "hidden" : ""
@@ -41,6 +43,8 @@ const LanguageChangerVerticalNavbar = () => {
                 ES
               </button>
               <button
+                id="link-to-en"
+                aria-label="Button to change to English"
                 onClick={() => setLanguageValue("en")}
                 className={`${
                   currentLocale === "en" ? "hidden" : ""
@@ -49,6 +53,8 @@ const LanguageChangerVerticalNavbar = () => {
                 EN
               </button>
               <button
+                id="link-to-fr"
+                aria-label="Button to change to French"
                 onClick={() => setLanguageValue("fr")}
                 className={`${
                   currentLocale === "fr" ? "hidden" : ""

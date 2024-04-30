@@ -46,7 +46,7 @@ const ThoughtsExamplesBar = () => {
               {thought.negativeThought}
             </span>
           </div>
-          <div className="md:text-body-bold text-base-bold text-cta-green">
+          <div className="md:text-body-bold text-base-bold text-light-green">
             {t("positive-thought")}:{" "}
             <span className="md:text-body-thin text-base-thin text-gray">
               {thought.positiveThought}{" "}

@@ -61,7 +61,7 @@ const Footer = () => {
           <p>Copyright © 2024 FeelBetter</p>
           <a
             href="mailto:mejoraconfeelbetter@gmail.com?subject=&body="
-            className=" hover:text-cta-green transition duration-300 ease-in-out cursor-pointer"
+            className=" hover:text-light-green transition duration-300 ease-in-out cursor-pointer"
           >
             {t("footer:contact-us")}
           </a>

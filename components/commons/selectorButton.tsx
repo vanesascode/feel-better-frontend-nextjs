@@ -3,12 +3,11 @@ import { ReactNode } from "react";
 interface SelectorButtonProps {
   children: ReactNode;
   onClick: () => void;
-  key?: number;
 }
 
-const SelectorButton = ({ children, onClick, key }: SelectorButtonProps) => {
+const SelectorButton = ({ children, onClick }: SelectorButtonProps) => {
   return (
-    <button onClick={onClick} className="white-green-input" key={key}>
+    <button onClick={onClick} className="white-green-input">
       {children}
     </button>
   );
