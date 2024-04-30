@@ -170,7 +170,7 @@ const config: Config = {
         white: "#FBFBFB",
         gray: "#BABABA",
         "light-green": "#68A576",
-        "cta-green": "#0F9E2E",
+        "cta-green": "#0e8327",
         "cta-green-hover": "#10782d",
         "dark-green-1": "#11421F",
         "dark-green-2": "#1A2E29",
