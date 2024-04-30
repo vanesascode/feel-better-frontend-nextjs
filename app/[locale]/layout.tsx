@@ -8,8 +8,9 @@ const inter = Inter({ subsets: ["latin"] });
 import { GoogleOAuthProvider } from "@react-oauth/google";
 
 export const metadata: Metadata = {
-  title: "Feel Better",
-  description: "Aplicación web para ayudar a gente con dolor crónico",
+  title: "FeelBetter",
+  description:
+    "FeelBetter es una aplicación web diseñada para ayudarte en el manejo diario de tu dolor crónico a través de trabajo cognitivo y de la meditación.",
 };
 
 export default function RootLayout({
