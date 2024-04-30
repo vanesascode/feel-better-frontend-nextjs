@@ -17,7 +17,7 @@ const HomeActivities = () => {
             <ActivityCard
               link="/challenge-thoughts-info"
               image="/home/head-icon.svg"
-              alt="head icon"
+              alt="head icon representing thoughts"
               greenDark
             >
               {t("activity-one")}
@@ -25,7 +25,7 @@ const HomeActivities = () => {
             <ActivityCard
               link="/meditation-info"
               image="/home/loto-icon.svg"
-              alt="meditation icon"
+              alt="meditation icon representing meditation"
               greenMedium
             >
               {t("activity-two")}
@@ -33,7 +33,7 @@ const HomeActivities = () => {
             <ActivityCard
               link="/learn"
               image="/home/learn-icon.svg"
-              alt="learn icon"
+              alt="learn icon representing learning content"
               greenLight
             >
               {t("activity-three")}
