@@ -19,6 +19,8 @@ const LanguageChangerHorizontalNavbar = () => {
             className={`${
               currentLocale === "es" ? "hidden" : ""
             } hover:text-cta-green-hover`}
+            id="link-to-es"
+            aria-label="Button to change to Spanish"
           >
             ES
           </button>
@@ -27,6 +29,8 @@ const LanguageChangerHorizontalNavbar = () => {
             className={`${
               currentLocale === "en" ? "hidden" : ""
             } hover:text-cta-green-hover`}
+            id="link-to-en"
+            aria-label="Button to change to English"
           >
             EN
           </button>
@@ -35,6 +39,8 @@ const LanguageChangerHorizontalNavbar = () => {
             className={`${
               currentLocale === "fr" ? "hidden" : ""
             } hover:text-cta-green-hover`}
+            id="link-to-fr"
+            aria-label="Button to change to French"
           >
             FR
           </button>
