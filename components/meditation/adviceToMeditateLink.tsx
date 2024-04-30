@@ -16,7 +16,7 @@ const AdviceToMeditateLink = () => {
           {t("advice")}{" "}
           <span
             onClick={() => setShowAdviceToMeditatePopup(true)}
-            className="text-cta-green text-base-bold md:text-body-bold cursor-pointer"
+            className="text-light-green text-base-bold md:text-body-bold cursor-pointer"
           >
             {t("here")}
           </span>
