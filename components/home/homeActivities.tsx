@@ -8,12 +8,15 @@ const HomeActivities = () => {
 
   return (
     <>
-      <section className="bg-dark p-horizontal flex justify-center" id="start">
+      <section className="bg-dark p-horizontal flex justify-center">
         <div className="max-w-[90rem]">
-          <h3 className="md:text-heading2-bold text-heading3-bold text-white text-center md:pt-20 sm:pt-14 pt-10 md:pb-14 sm:pb-10 pb-8 p-horizontal">
+          <h3 className="md:text-heading2-bold text-heading3-bold text-white text-center md:pt-20 sm:pt-14 pt-10 md:pb-14 sm:pb-5 pb-4 p-horizontal">
             {t("activities-title")}
           </h3>
-          <div className="flex sm2:flex-row flex-col justify-around sm2:items-start items-center md:pb-20 sm:pb-14 pb-10 gap-3">
+          <div
+            className="flex sm2:flex-row flex-col justify-around sm2:items-start items-center md:pb-20 sm:pb-14 pb-10 gap-3 sm:pt-5 pt-4"
+            id="start"
+          >
             <ActivityCard
               link="/challenge-thoughts-info"
               image="/home/head-icon.svg"
