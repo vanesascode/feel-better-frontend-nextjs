@@ -54,7 +54,7 @@ export const englishNegativeThoughts = [
 export const spanishNegativeThoughts = [
   {
     id: 1,
-    negativeThought: "Nadie entiende que me estoy pasando, me siento sol@.",
+    negativeThought: "Nadie entiende lo que estoy pasando, me siento sol@.",
   },
   {
     id: 2,
