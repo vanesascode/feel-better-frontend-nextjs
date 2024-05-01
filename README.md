@@ -4,6 +4,12 @@ FeelBetter es una aplicación web diseñada para ayudar en el manejo diario del 
 
 Debido a la poca difusión actualizada de este tipo de contenido en español, decidí investigar y recoger la información ordenadamente, además de añadir herramientas para ayudar a ponerla en práctica. La web está disponible en español, en francés y también en inglés.
 
+<div style="display:flex; justify-content:center;">
+  <img src="public/presentation.gif" alt="Image description" height="400">
+</div>
+
+---
+
 ![Screenshot 2024-05-01 at 11 40 31](https://github.com/vanesascode/vanesascode/assets/131259155/924a3679-0145-454b-b75b-67b1f50d9d10)
 
 ![Screenshot 2024-05-01 at 11 41 28](https://github.com/vanesascode/vanesascode/assets/131259155/9da99bea-e302-44df-bbe0-39ed3c4d8d8e)
