@@ -13,7 +13,7 @@ import CalendarUi from "./calendarUi";
 const FollowUpUseClientPage = () => {
   const { t } = useTranslation();
   const { showLoadingCircle } = useShowLoadingCircle();
-  const { thoughts, getThoughtsByUserError } = useGetThoughtsByUser();
+  const { thoughts } = useGetThoughtsByUser();
 
   return (
     <>
@@ -24,29 +24,22 @@ const FollowUpUseClientPage = () => {
             <h1 className="md:text-heading2-bold text-heading3-bold xs:mb-6 mb-3">
               {t("follow-up-title")}
             </h1>
-            {!showLoadingCircle && (
-              <div>
-                {getThoughtsByUserError && (
-                  <p className="text-red-400 pb-5">{t("sorry-server-error")}</p>
-                )}
-                {thoughts.length === 0 && !getThoughtsByUserError && (
-                  <Link
-                    href="/choose-negative-thought"
-                    className="sm:mb-0 mb-3 text-base-bold md:text-body-bold text-cta-green"
-                  >
-                    {t("no-thoughts-yet")}
-                  </Link>
-                )}{" "}
-                {thoughts.length > 0 && !getThoughtsByUserError && (
-                  <p className="sm:mb-0 mb-3 text-base-thin md:text-body-thin">
-                    {t("congrats")}{" "}
-                    <span className="text-cta-green font-bold">
-                      {thoughts.length}{" "}
-                      {thoughts.length === 1 ? t("time") : t("times")}
-                    </span>
-                  </p>
-                )}
-              </div>
+            {thoughts.length === 0 && !showLoadingCircle && (
+              <Link
+                href="/choose-negative-thought"
+                className="sm:mb-0 mb-3 text-base-bold md:text-body-bold text-cta-green"
+              >
+                {t("no-thoughts-yet")}
+              </Link>
+            )}{" "}
+            {thoughts.length > 0 && !showLoadingCircle && (
+              <p className="sm:mb-0 mb-3 text-base-thin md:text-body-thin">
+                {t("congrats")}{" "}
+                <span className="text-cta-green font-bold">
+                  {thoughts.length}{" "}
+                  {thoughts.length === 1 ? t("time") : t("times")}
+                </span>
+              </p>
             )}
           </div>
         </Header>
