@@ -40,7 +40,7 @@ const ActivityCard = ({
               <Image src={image} alt={alt} width={60} height={60} />
             </div>
           </div>
-          <div className="max-w-32 flex justify-center items-center pt-5 md:pb-0 pb-5">
+          <div className="sm2:max-w-32 flex justify-center items-center pt-5 md:pb-0 pb-5">
             <p className="text-center text-white md:text-body-regular text-base-thin">
               {children}
             </p>
