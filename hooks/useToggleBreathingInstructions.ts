@@ -6,7 +6,7 @@ export const useToggleBreathingInstructions = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setToggleBreathe((prevState) => !prevState);
-    }, 7500);
+    }, 6500);
 
     return () => clearInterval(interval);
   }, []);
