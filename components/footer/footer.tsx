@@ -16,7 +16,7 @@ const Footer = () => {
     <>
       <div className="flex justify-center items-center bg-black">
         <div className="flex justify-center items-center w-[87rem]">
-          <div className="bg-dark h-[0.05rem] w-full md:my-10 my-5 max-[89.5rem]:mx-10"></div>
+          <div className="bg-[#1f211f] h-[0.06rem] w-full md:my-10 my-5 max-[89.5rem]:mx-10 max-sm1:mx-5"></div>
         </div>
       </div>
 
