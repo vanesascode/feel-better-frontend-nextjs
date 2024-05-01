@@ -26,7 +26,7 @@ const HomeCover = () => {
           className={`absolute ${
             name
               ? "top-[25%] xxs:top-[27%] md:top-[15%] lg:top-[20%] xl:top-[25%] xxl:top-[30%]"
-              : "top-[17%] xxs:top-[20%] sm:top-[26%] sm2:top-[30%] md:top-[32%] lg:top-[36%] xl:top-[38%] xxl:top-[42%]"
+              : "top-[25%] xxs:top-[30%]  sm:top-[35%] sm2:top-[30%] md:top-[32%] lg:top-[36%] xl:top-[38%] xxl:top-[42%]"
           }  xxxl:left-[10%] xxxxl:left-[15%] xxxxxl:left-[20%]`}
         >
           <h1 className="md:text-cover1-semibold xs:text-cover2-semibold text-cover3-semibold capitalize text-white pl-[5%] sm:pl-[10%] lg:pl-[13%] mb-2">
