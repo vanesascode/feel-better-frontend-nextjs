@@ -14,7 +14,7 @@ const CalendarThoughtsBox = ({
   selectedThoughts,
 }: CalendarThoughtsBoxProps) => {
   const { t } = useTranslation();
-  const { thoughts, token, getThoughtsByUserError } = useGetThoughtsByUser();
+  const { thoughts, token } = useGetThoughtsByUser();
 
   return (
     <>
@@ -27,11 +27,7 @@ const CalendarThoughtsBox = ({
               </p>
             </div>
           )}
-        {getThoughtsByUserError ? (
-          <p className="text-red-400 pb-5 text-center w-full">
-            {t("sorry-server-error")}
-          </p>
-        ) : thoughts.length === 0 ? (
+        {thoughts.length === 0 ? (
           <Link
             href="/choose-negative-thought"
             className="sm:mb-0 mb-3 text-base-bold md:text-body-bold text-cta-green text-center w-full"
