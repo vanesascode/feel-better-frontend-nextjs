@@ -14,7 +14,7 @@ const BreathingBall = () => {
         scale: [1, 0.5, 1],
       }}
       transition={{
-        scale: { duration: 15, ease: "easeInOut", repeat: Infinity },
+        scale: { duration: 13, ease: "easeInOut", repeat: Infinity },
       }}
       className="bg-dark bg-cover bg-center sm2:h-[23.75rem] sm2:w-[23.75rem] sm:h-[19.37rem] sm:w-[19.37rem] xs:h-[16.87rem] xs:w-[16.87rem] h-[14.37rem] w-[14.37rem] rounded-full md:my-8 my-5 border-[0.125rem] border-white"
       style={{
