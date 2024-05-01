@@ -11,6 +11,45 @@ export const metadata: Metadata = {
   title: "FeelBetter",
   description:
     "FeelBetter es una aplicación web diseñada para ayudarte en el manejo diario de tu dolor crónico a través de trabajo cognitivo y de la meditación.",
+  applicationName: "FeelBetter",
+  referrer: "origin-when-cross-origin",
+  keywords: [
+    "dolor crónico",
+    "fibromialgia",
+    "chronic pain",
+    "meditation",
+    "cbt",
+    "health",
+    "web application",
+    "positive thoughts therapy",
+    "terapia de pensamientos positivo",
+    "divulgación de contenido de autoayuda",
+    "divulgación educativa sobre el dolor crónico",
+    "health educational content",
+  ],
+  authors: [
+    {
+      name: "Vanesa Juarez",
+      url: "https://www.linkedin.com/in/vanesajuarezparis",
+    },
+  ],
+  creator: "Vanesa Juarez",
+  publisher: "Vanesa Juarez",
+
+  openGraph: {
+    title:
+      "FeelBetter | Aplicación web para ayudarte en el manejo diario de tu dolor crónico a través de trabajo cognitivo y de la meditación.",
+    description:
+      "FeelBetter es una aplicación web desarrollada para ayudarte en el manejo diario de tu dolor crudo a través de trabajo cognitivo y de la meditación.",
+    siteName: "FeelBetter",
+    url: "https://www.mejoraconfeelbetter.online",
+    images: {
+      url: "https://feel-better-ds7o8l2du-vanesascodes-projects.vercel.app/opengraph-image.png?b7ee1efe9c5429d5",
+    },
+    locale: "es-ES",
+    type: "website",
+  },
+  metadataBase: new URL("https://www.mejoraconfeelbetter.online"),
 };
 
 export default function RootLayout({
