@@ -12,6 +12,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.gbody {
+  color: #1f211f;
+}
+
 body {
   @apply bg-dark;
 }
@@ -22,6 +26,10 @@ body {
 
 .bg-gray-gradient {
   @apply bg-gradient-to-b from-[#C4C3C3] to-black;
+}
+
+.contentTitleBar {
+  @apply text-white md:text-heading3-thin sm:text-body-thin text-base-thin flex justify-between items-center p-horizontal xxxl:px-28 xxxxl:px-36 xxxxxl:px-48 py-5 w-full;
 }
 
 .navbar-practice-submenu {
@@ -69,24 +77,20 @@ body {
   pointer-events: auto;
 }
 
-.white-green-input {
-  @apply xs:px-5 px-3 py-3 rounded-lg bg-dark border-[1px] border-white sm:text-body-thin xs:text-base-thin text-small-thin hover:border-light-green focus:outline-none active:outline-none;
-}
-
 .p-horizontal {
   @apply px-5 md:px-10;
-}
-
-.textarea-input {
-  @apply xs:px-5 px-3 py-3 rounded-lg bg-dark border-[1px] sm:text-body-thin text-base-thin  border-light-green focus:outline-none active:outline-none;
 }
 
 .scroll-to-top-shadow {
   box-shadow: 0 0 1.25rem rgba(255, 251, 251, 0.5);
 }
 
-.contentTitleBar {
-  @apply text-white md:text-heading3-thin sm:text-body-thin text-base-thin flex justify-between items-center p-horizontal xxxl:px-28 xxxxl:px-36 xxxxxl:px-48 py-5 w-full;
+.textarea-input {
+  @apply xs:px-5 px-3 py-3 rounded-lg bg-dark border-[1px] sm:text-body-thin text-base-thin  border-light-green focus:outline-none active:outline-none;
+}
+
+.white-green-input {
+  @apply xs:px-5 px-3 py-3 rounded-lg bg-dark border-[1px] border-white sm:text-body-thin xs:text-base-thin text-small-thin hover:border-light-green focus:outline-none active:outline-none;
 }
 
 /* calendar specific classes */
@@ -172,8 +176,6 @@ body {
   }
 }
 
-/* carousel specific classes */
-
 .rbc-header {
   color: #fbfbfb !important;
   padding: 0.62rem 0 !important;
@@ -192,294 +194,4 @@ body {
   cursor: pointer !important;
   background-color: transparent !important;
   height: 0.001rem !important;
-}
-
-.slick-prev::before,
-.slick-next::before {
-  color: transparent !important;
-}
-
-.slick-dots li button::before {
-  color: white !important;
-  font-size: 0.75rem !important;
-  top: 0.5rem !important;
-}
-
-@media (max-width: 768px) {
-  .slick-dots li button::before {
-    font-size: 0.6rem !important;
-  }
-}
-
-@media (max-width: 375px) {
-  .slick-dots li button::before {
-    font-size: 0.4rem !important;
-  }
-}
-
-.slick-dots li.slick-active button::before {
-  color: #f4f8f5 !important;
-}
-
-.slick-list {
-  max-width: 77.5rem !important;
-}
-
-@media (max-width: 1480px) {
-  .slick-list {
-    max-width: 75.5rem !important;
-  }
-}
-
-@media (max-width: 1450px) {
-  .slick-list {
-    max-width: 73.5rem !important;
-  }
-}
-
-@media (max-width: 1420px) {
-  .slick-list {
-    max-width: 71.5rem !important;
-  }
-}
-@media (max-width: 1390px) {
-  .slick-list {
-    max-width: 70.5rem !important;
-  }
-}
-@media (max-width: 1360px) {
-  .slick-list {
-    max-width: 69.5rem !important;
-  }
-}
-@media (max-width: 1330px) {
-  .slick-list {
-    max-width: 68.5rem !important;
-  }
-}
-
-@media (max-width: 1300px) {
-  .slick-list {
-    max-width: 67.5rem !important;
-  }
-}
-
-@media (max-width: 1370px) {
-  .slick-list {
-    max-width: 66.5rem !important;
-  }
-}
-
-@media (max-width: 1340px) {
-  .slick-list {
-    max-width: 65.5rem !important;
-  }
-}
-
-@media (max-width: 1310px) {
-  .slick-list {
-    max-width: 64.5rem !important;
-  }
-}
-
-@media (max-width: 1290px) {
-  .slick-list {
-    max-width: 63.5rem !important;
-  }
-}
-
-@media (max-width: 1260px) {
-  .slick-list {
-    max-width: 62.5rem !important;
-  }
-}
-
-@media (max-width: 1230px) {
-  .slick-list {
-    max-width: 61.5rem !important;
-  }
-}
-
-@media (max-width: 1200px) {
-  .slick-list {
-    max-width: 60.5rem !important;
-  }
-}
-
-@media (max-width: 1170px) {
-  .slick-list {
-    max-width: 59.5rem !important;
-  }
-}
-
-@media (max-width: 1140px) {
-  .slick-list {
-    max-width: 58.5rem !important;
-  }
-}
-
-@media (max-width: 1110px) {
-  .slick-list {
-    max-width: 57.5rem !important;
-  }
-}
-
-@media (max-width: 1080px) {
-  .slick-list {
-    max-width: 56.5rem !important;
-  }
-}
-
-@media (max-width: 1050px) {
-  .slick-list {
-    max-width: 55.5rem !important;
-  }
-}
-
-@media (max-width: 1020px) {
-  .slick-list {
-    max-width: 54.5rem !important;
-  }
-}
-
-@media (max-width: 990px) {
-  .slick-list {
-    max-width: 52.5rem !important;
-  }
-}
-
-@media (max-width: 960px) {
-  .slick-list {
-    max-width: 51.5rem !important;
-  }
-}
-
-@media (max-width: 930px) {
-  .slick-list {
-    max-width: 50.5rem !important;
-  }
-}
-
-@media (max-width: 900px) {
-  .slick-list {
-    max-width: 47.5rem !important;
-  }
-}
-
-@media (max-width: 870px) {
-  .slick-list {
-    max-width: 45.5rem !important;
-  }
-}
-
-@media (max-width: 840px) {
-  .slick-list {
-    max-width: 43.5rem !important;
-  }
-}
-
-@media (max-width: 810px) {
-  .slick-list {
-    max-width: 41.5rem !important;
-  }
-}
-
-@media (max-width: 780px) {
-  .slick-list {
-    max-width: 39.5rem !important;
-  }
-}
-
-@media (max-width: 750px) {
-  .slick-list {
-    max-width: 37.5rem !important;
-  }
-}
-
-@media (max-width: 720px) {
-  .slick-list {
-    max-width: 36.5rem !important;
-  }
-}
-
-@media (max-width: 690px) {
-  .slick-list {
-    max-width: 35.5rem !important;
-  }
-}
-
-@media (max-width: 660px) {
-  .slick-list {
-    max-width: 33.5rem !important;
-  }
-}
-
-@media (max-width: 630px) {
-  .slick-list {
-    max-width: 31.5rem !important;
-  }
-}
-
-@media (max-width: 600px) {
-  .slick-list {
-    max-width: 29.5rem !important;
-  }
-}
-
-@media (max-width: 570px) {
-  .slick-list {
-    max-width: 27.5rem !important;
-  }
-}
-
-@media (max-width: 540px) {
-  .slick-list {
-    max-width: 25.5rem !important;
-  }
-}
-
-@media (max-width: 510px) {
-  .slick-list {
-    max-width: 23.5rem !important;
-  }
-}
-@media (max-width: 480px) {
-  .slick-list {
-    max-width: 21.5rem !important;
-  }
-}
-@media (max-width: 450px) {
-  .slick-list {
-    max-width: 19.5rem !important;
-  }
-}
-
-@media (max-width: 420px) {
-  .slick-list {
-    max-width: 18.5rem !important;
-  }
-}
-
-@media (max-width: 390px) {
-  .slick-list {
-    max-width: 17.5rem !important;
-  }
-}
-
-@media (max-width: 360px) {
-  .slick-list {
-    max-width: 16.5rem !important;
-  }
-}
-
-@media (max-width: 330px) {
-  .slick-list {
-    max-width: 15.5rem !important;
-  }
-}
-
-@media (max-width: 300px) {
-  .slick-list {
-    max-width: 12.5rem !important;
-  }
 }

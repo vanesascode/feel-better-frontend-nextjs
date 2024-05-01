@@ -55,7 +55,7 @@ const LinksHorizontalNavbar = ({
               id="link-to-go-home"
               aria-label="Button to go home"
               onClick={() => setShowOptionsNavbar(false)}
-              className="sm:text-heading2-bold text-body-bold z-20 py-5"
+              className="sm:text-heading2-bold text-heading3-bold z-20 py-5"
             >
               <Link href="/">FeelBetter</Link>
             </button>
