@@ -14,7 +14,9 @@ const CookiesPolicyText = () => {
           t("essential-cookies") +
           t("essential-cookies-explanation") +
           t("analysis-cookies") +
-          t("analysis-cookies-explanation")
+          t("analysis-cookies-explanation") +
+          t("your-rights") +
+          t("your-rights-explanation")
         }
       />
       <article>
