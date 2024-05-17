@@ -36,39 +36,11 @@ const config: Config = {
           fontWeight: "600",
         },
       ],
-      "heading1-thin": [
-        "2.25rem",
-        {
-          lineHeight: "140%",
-          fontWeight: "300",
-        },
-      ],
-      "heading1-regular": [
-        "2.25rem",
-        {
-          lineHeight: "140%",
-          fontWeight: "400",
-        },
-      ],
       "heading1-bold": [
         "2.25rem",
         {
           lineHeight: "140%",
           fontWeight: "600",
-        },
-      ],
-      "heading2-thin": [
-        "2rem",
-        {
-          lineHeight: "140%",
-          fontWeight: "300",
-        },
-      ],
-      "heading2-regular": [
-        "2rem",
-        {
-          lineHeight: "140%",
-          fontWeight: "400",
         },
       ],
       "heading2-bold": [
@@ -83,13 +55,6 @@ const config: Config = {
         {
           lineHeight: "140%",
           fontWeight: "300",
-        },
-      ],
-      "heading3-regular": [
-        "1.5rem",
-        {
-          lineHeight: "140%",
-          fontWeight: "400",
         },
       ],
       "heading3-bold": [
@@ -146,20 +111,6 @@ const config: Config = {
         {
           lineHeight: "140%",
           fontWeight: "300",
-        },
-      ],
-      "small-regular": [
-        "0.87rem",
-        {
-          lineHeight: "140%",
-          fontWeight: "400",
-        },
-      ],
-      "small-bold": [
-        "0.87rem",
-        {
-          lineHeight: "140%",
-          fontWeight: "600",
         },
       ],
     },
