@@ -3,24 +3,19 @@ import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
 import PopupsBackground from "../commons/popupsBackground";
+import { useShowPopupAfterDelay } from "@/hooks/useShowPopupAfterDelay";
 
-interface PopupAskingToLoginProps {
-  showPopupAskingToLogin: boolean;
-  setShowPopupAskingToLogin: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-const PopupAskingToLogin = ({
-  showPopupAskingToLogin,
-  setShowPopupAskingToLogin,
-}: PopupAskingToLoginProps) => {
+const PopupAskingToLogin = () => {
   const { t } = useTranslation();
   const router = useRouter();
+  const { showPopupAfterDelay, setShowPopupAfterDelay } =
+    useShowPopupAfterDelay();
 
   return (
     <AnimatePresence>
-      {showPopupAskingToLogin && (
+      {showPopupAfterDelay && (
         <>
-          <PopupsBackground onClick={() => setShowPopupAskingToLogin(false)} />
+          <PopupsBackground onClick={() => setShowPopupAfterDelay(false)} />
           <motion.div
             initial={{ opacity: 0 }}
             animate={{
@@ -36,7 +31,7 @@ const PopupAskingToLogin = ({
               </h2>
               <div className="flex flex-col md:flex-row gap-5">
                 <CtaButton
-                  onClick={() => setShowPopupAskingToLogin(false)}
+                  onClick={() => setShowPopupAfterDelay(false)}
                   type="button"
                   darkerShadow
                   white
