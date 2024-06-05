@@ -2,18 +2,18 @@ import { useAppSelector } from "@/redux/hooks";
 import { selectAuth } from "@/redux/features/authSlice";
 import { useEffect, useState } from "react";
 
-export const useAskUserToLogin = () => {
+export const useShowPopupAfterDelay = () => {
   const { name } = useAppSelector(selectAuth);
-  const [showPopupAskingToLogin, setShowPopupAskingToLogin] =
+  const [showPopupAfterDelay, setShowPopupAfterDelay] =
     useState<boolean>(false);
 
   useEffect(() => {
     setTimeout(() => {
       if (!name) {
-        setShowPopupAskingToLogin(true);
+        setShowPopupAfterDelay(true);
       }
     }, 2000);
   }, []);
 
-  return { showPopupAskingToLogin, setShowPopupAskingToLogin };
+  return { showPopupAfterDelay, setShowPopupAfterDelay };
 };
