@@ -5,6 +5,7 @@ import { selectAuth } from "@/redux/features/authSlice";
 import { useTranslation } from "react-i18next";
 import CtaButton from "../commons/ctaButton";
 import Link from "next/link";
+import PopupWarning from "./popupWarning";
 
 const HomeCover = () => {
   const { t } = useTranslation();
@@ -76,6 +77,7 @@ const HomeCover = () => {
           </div>
         </div>
       </article>
+      <PopupWarning />
     </>
   );
 };
