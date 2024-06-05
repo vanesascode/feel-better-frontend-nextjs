@@ -16,8 +16,6 @@ interface ChooseNegativeThoughtFormProps {
   setSelectedNegativeThought: React.Dispatch<React.SetStateAction<string>>;
   chooseNegativeThoughtFirstMessage: boolean;
   handleGoToNextStep: () => void;
-  showPopupAskingToLogin: boolean;
-  setShowPopupAskingToLogin: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const ChooseNegativeThoughtForm = ({
@@ -25,8 +23,6 @@ const ChooseNegativeThoughtForm = ({
   setSelectedNegativeThought,
   chooseNegativeThoughtFirstMessage,
   handleGoToNextStep,
-  showPopupAskingToLogin,
-  setShowPopupAskingToLogin,
 }: ChooseNegativeThoughtFormProps) => {
   const { t } = useTranslation();
   const { i18n } = useTranslation();
@@ -69,10 +65,7 @@ const ChooseNegativeThoughtForm = ({
       <CtaButton darkerShadow type="button" onClick={handleGoToNextStep} green>
         {t("continue")}
       </CtaButton>
-      <PopupAskingToLogin
-        showPopupAskingToLogin={showPopupAskingToLogin}
-        setShowPopupAskingToLogin={setShowPopupAskingToLogin}
-      />
+      <PopupAskingToLogin />
     </section>
   );
 };
